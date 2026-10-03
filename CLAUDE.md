@@ -92,6 +92,13 @@ Work one step at a time with the user, and confirm before each step.
 - Run long jobs inside **tmux** so they survive a dropped SSH session.
 - IT: "don't shut the machine down; just close the browser."
 - **Never write the HPC password anywhere** (repo, memory, scripts).
+- **Never upload any SSH key to GitHub** (no deploy keys, not even public halves). The GPU
+  machine has no GitHub access. Code reaches it only by pushing from the PC:
+  `git push gpu main` (remote `gpu` = `gpu:roomrecon/repo`, which has
+  `receive.denyCurrentBranch updateInstead`, so the working tree updates on push). Never
+  `git pull` on the GPU machine. GitHub (`origin`) is the PC's backup remote only.
+- Inside a script piped to `ssh gpu bash -s`, give any inner `ssh`/`git` command
+  `</dev/null`, or it swallows the rest of the script.
 
 **Running commands on the GPU machine from Claude (PowerShell)**
 

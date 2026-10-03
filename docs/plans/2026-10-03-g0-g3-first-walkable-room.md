@@ -252,7 +252,7 @@ On the PC: `git add scripts/setup_gpu.sh; git commit -m "feat: GPU machine setup
 On the GPU machine, in tmux (the install takes a while):
 
 ```bash
-cd ~/roomrecon/repo && git pull -q
+cd ~/roomrecon/repo
 tmux new-session -d -s setup "bash scripts/setup_gpu.sh 2>&1 | tee ~/roomrecon/setup_gpu.log"
 ```
 
@@ -398,7 +398,7 @@ Expected: 2 passed
 
 - [ ] **Step 5: Check it against the real machine**
 
-Push, then on the GPU machine: `cd ~/roomrecon/repo && git pull -q && ~/.pixi/bin/pixi run --manifest-path ~/roomrecon/tools/dn-splatter/pixi.toml python -m roomrecon.gpu`
+Push, then on the GPU machine: `cd ~/roomrecon/repo && ~/.pixi/bin/pixi run --manifest-path ~/roomrecon/tools/dn-splatter/pixi.toml python -m roomrecon.gpu`
 Expected: `free_mib=<number>`, consistent with the MIG row of `nvidia-smi` run right after.
 
 - [ ] **Step 6: Commit**
@@ -597,7 +597,7 @@ ssh gpu "mkdir -p ~/roomrecon/datasets/mushroom"
 scp "E:\IIT Jammu Internship\IIITK CLASS\SEM-7\Computer_vision\Project\storage\projects\m1-mushroom-inspect\vr_room_iphone.tar.gz" gpu:roomrecon/datasets/mushroom/
 ```
 
-Commit + push the script, then on the GPU machine: `cd ~/roomrecon/repo && git pull -q && tmux new-session -d -s data "bash scripts/fetch_mushroom.sh vr_room 2>&1 | tee ~/roomrecon/fetch_vr_room.log"`.
+Commit + push the script, then on the GPU machine: `cd ~/roomrecon/repo && tmux new-session -d -s data "bash scripts/fetch_mushroom.sh vr_room 2>&1 | tee ~/roomrecon/fetch_vr_room.log"`.
 Expected end of log: `long_capture images=N normals=N` and `short_capture images=M normals=M` with equal counts per line.
 If `normals_from_pretrain` writes somewhere else (count 0), run `ls $P` to find the folder it created and tell the user before Task 6; the dataparser must find normals there.
 
@@ -713,7 +713,7 @@ git push
 On the GPU machine:
 
 ```bash
-cd ~/roomrecon/repo && git pull -q
+cd ~/roomrecon/repo
 DATA=~/roomrecon/datasets/mushroom/room_datasets/vr_room
 tmux new-session -d -s smoke "bash scripts/train_room.sh vr_room smoke dn-splatter $DATA 3000"
 ```
@@ -768,7 +768,7 @@ git push
 - [ ] **Step 1: Start the full run (30k steps, DN-Splatter's default length)**
 
 ```bash
-cd ~/roomrecon/repo && git pull -q
+cd ~/roomrecon/repo
 DATA=~/roomrecon/datasets/mushroom/room_datasets/vr_room
 tmux new-session -d -s full "bash scripts/train_room.sh vr_room dns-30k dn-splatter $DATA 30000"
 ```
@@ -1087,7 +1087,7 @@ If the voxel flag is spelled differently, fix the `gs-mesh` line in `export_room
 Commit + push both files, then on the GPU machine:
 
 ```bash
-cd ~/roomrecon/repo && git pull -q
+cd ~/roomrecon/repo
 bash scripts/export_room.sh vr_room dns-30k 2>&1 | tee ~/roomrecon/scenes/vr_room/dns-30k/export.log
 head -c 600 ~/roomrecon/scenes/vr_room/dns-30k/export/transforms_train.json
 cat ~/roomrecon/scenes/vr_room/dns-30k/export/scene.json
