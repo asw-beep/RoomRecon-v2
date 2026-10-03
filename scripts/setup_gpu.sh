@@ -34,6 +34,12 @@ sed -n '/^\[dependencies\]/,/^\[pypi-dependencies\]/p;/^\[pypi-options\]/,$p' pi
 # eval-all-images step. The "with" branch already uses the bare key; make "within" match.
 sed -i 's/^\(\s*\)metrics_dict\["within_" + key\]$/\1metrics_dict[key]/' dn_splatter/dn_pipeline.py
 grep -c 'metrics_dict\["within_" + key\]$' dn_splatter/dn_pipeline.py || true
+# Resume bug: DN-Splatter's `normals` optimizer saves an empty per-parameter Adam state, and
+# torch's Adam.load_state_dict raises KeyError 'step' on it. An empty state means "no moments
+# yet", so dropping it before loading is exact. Patched in nerfstudio's optimizer loader.
+NSOPT="$("$PIXI" run python -c 'import nerfstudio.engine.optimizers as m; print(m.__file__)' 2>/dev/null | tail -1)"
+grep -q 'ROOMRECON: drop empty' "$NSOPT" || sed -i 's/^\(\s*\)self.optimizers\[k\].load_state_dict(v)$/\1v["state"] = {i: s for i, s in v["state"].items() if s}  # ROOMRECON: drop empty Adam states\n\1self.optimizers[k].load_state_dict(v)/' "$NSOPT"
+grep -n -A1 'ROOMRECON: drop empty' "$NSOPT"
 "$PIXI" install
 "$PIXI" run download-omnidata
 "$PIXI" run python -c "import torch, nerfstudio, gsplat; print('torch', torch.__version__, 'cuda', torch.version.cuda, 'gpu', torch.cuda.is_available(), torch.cuda.get_device_name(0)); print('gsplat', gsplat.__version__)"
