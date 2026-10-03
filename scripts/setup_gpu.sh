@@ -19,6 +19,10 @@ if [ -n "$PIN" ]; then git -C "$DNS" checkout -q "$PIN"; fi
 git -C "$DNS" rev-parse HEAD
 
 cd "$DNS"
+# Upstream pixi.toml installs nerfstudio from git commit a64026f, but dn-splatter's pyproject
+# pins nerfstudio==1.1.3, so pixi cannot solve. Use the PyPI release the pyproject asks for.
+sed -i 's#^nerfstudio = { git = .*#nerfstudio = "==1.1.3"#' pixi.toml
+grep -n '^nerfstudio' pixi.toml
 "$PIXI" install
 "$PIXI" run download-omnidata
 "$PIXI" run python -c "import torch, nerfstudio, gsplat; print('torch', torch.__version__, 'cuda', torch.version.cuda, 'gpu', torch.cuda.is_available(), torch.cuda.get_device_name(0)); print('gsplat', gsplat.__version__)"
