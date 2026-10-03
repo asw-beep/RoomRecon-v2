@@ -22,4 +22,4 @@ Reference mesh tarball (`vr_room_mesh_pd.tar.gz`) contents:
 - `room_datasets/vr_room/icp_iphone.json` — alignment of the iPhone sequence to the reference
 - `room_datasets/vr_room/icp_kinect.json` — same for the Kinect sequence (not used)
 
-Normals (`normals_from_pretrain/`): pending the Omnidata model download.
+Normals (`normals_from_pretrain/`, Omnidata, `--resolution low`, batch 4 via `scripts/normals.py`): long_capture 844 files, short_capture 372 files = one `.png` + one `.npy` per image (422 and 186 images).
