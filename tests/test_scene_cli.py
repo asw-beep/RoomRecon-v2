@@ -1,7 +1,17 @@
 import json
 import pytest
 import numpy as np
-from roomrecon.scene_cli import build_scene, load_c2w
+from roomrecon.scene_cli import build_scene, load_c2w, viewer_settings
+
+
+def test_viewer_settings_start_at_spawn_looking_forward():
+    s = {"spawn_position": [1.0, 1.45, -2.0], "spawn_forward": [0.0, 0.0, 1.0]}
+    v = viewer_settings(s)
+    cam = v["cameras"][0]["initial"]
+    assert v["version"] == 2 and v["startMode"] == "default"
+    assert cam["position"] == [1.0, 1.45, -2.0]
+    assert cam["target"] == [1.0, 1.45, -1.0]       # 1 m ahead, same eye height
+    assert 30 <= cam["fov"] <= 120
 
 
 def test_build_scene_minus_y_up_ply_needs_no_rotation_in_playcanvas():

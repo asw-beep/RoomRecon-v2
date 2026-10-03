@@ -21,6 +21,17 @@ def build_scene(c2w_ply: np.ndarray, verts_ply: np.ndarray, *, room: str, run_id
     return frame
 
 
+def viewer_settings(scene: dict, fov: float = 75.0) -> dict:
+    """SuperSplat Viewer settings.json (v2) that starts the camera at the spawn point."""
+    p = [float(v) for v in scene["spawn_position"]]
+    f = scene["spawn_forward"]
+    target = [p[i] + float(f[i]) for i in range(3)]
+    return {"version": 2, "tonemapping": "linear", "highPrecisionRendering": False,
+            "background": {"color": [0, 0, 0]}, "animTracks": [], "annotations": [],
+            "cameras": [{"initial": {"position": p, "target": target, "fov": fov}}],
+            "startMode": "default"}
+
+
 def load_c2w(transforms_json: Path) -> np.ndarray:
     """(N,4,4) camera-to-world from `ns-export cameras` output (list or {"frames": [...]},
     key "transform" or "transform_matrix", 3x4 or 4x4)."""
@@ -50,6 +61,7 @@ def main(argv=None) -> int:
     frame = build_scene(load_c2w(d / "transforms_train.json"), verts,
                         room=a.room, run_id=a.run_id)
     (d / "scene.json").write_text(json.dumps(frame, indent=2))
+    (d / "settings.json").write_text(json.dumps(viewer_settings(frame), indent=2))
     print(json.dumps({k: frame[k] for k in ("scale", "floor_y", "spawn_position")}))
     return 0
 
