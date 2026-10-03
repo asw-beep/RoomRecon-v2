@@ -29,6 +29,11 @@ grep -n '^nerfstudio' pixi.toml
 grep -q '^numpy = ' pixi.toml || sed -i '/^\[dependencies\]/a numpy = ">=1.26,<2"\ncython = "<3.1"\nsetuptools = "*"' pixi.toml
 grep -q '^\[pypi-options\]' pixi.toml || printf '\n[pypi-options]\nno-build-isolation = ["pymcubes"]\n' >> pixi.toml
 sed -n '/^\[dependencies\]/,/^\[pypi-dependencies\]/p;/^\[pypi-options\]/,$p' pixi.toml
+# DN-Splatter bug: with periodic eval on (get_std=False), the MuSHRoom "within" average reads
+# each per-image dict with the prefixed key -> KeyError 'within_rgb_psnr' at the first
+# eval-all-images step. The "with" branch already uses the bare key; make "within" match.
+sed -i 's/^\(\s*\)metrics_dict\["within_" + key\]$/\1metrics_dict[key]/' dn_splatter/dn_pipeline.py
+grep -c 'metrics_dict\["within_" + key\]$' dn_splatter/dn_pipeline.py || true
 "$PIXI" install
 "$PIXI" run download-omnidata
 "$PIXI" run python -c "import torch, nerfstudio, gsplat; print('torch', torch.__version__, 'cuda', torch.version.cuda, 'gpu', torch.cuda.is_available(), torch.cuda.get_device_name(0)); print('gsplat', gsplat.__version__)"

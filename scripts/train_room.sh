@@ -26,7 +26,7 @@ RESUME=(); [ -n "${RESUME_FROM:-}" ] && RESUME=(--load-dir "$RESUME_FROM")
 CMD=(ns-train "$METHOD" --output-dir "$OUT/train" --experiment-name "$ROOM" --timestamp "$RUN"
      --max-num-iterations "$ITERS" --steps-per-save 1000 --save-only-latest-checkpoint False
      --steps-per-eval-all-images 1000 --vis tensorboard --viewer.quit-on-train-completion True
-     --pipeline.datamanager.cache-images cpu
+     --pipeline.datamanager.cache-images cpu --pipeline.datamanager.cache-images-type uint8
      "${MODEL_ARGS[@]}" "${RESUME[@]}" "$@" mushroom --data "$DATA" --mode iphone)
 
 PY -m roomrecon.runrecord start "$OUT/run.json" --run-id "$RUN" --room "$ROOM" --method "$METHOD" \
