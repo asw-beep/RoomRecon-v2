@@ -19,7 +19,11 @@
 - No fabricated numbers: every number in `results/` comes from a file produced by a run, with the machine named.
 - GPU machine: `ssh gpu`; shared A100 (~5 GB was free on 2026-10-03); no sudo for Claude; no backup; jobs run in `tmux`.
 - Claude runs remote commands with: `"<script>" | ssh -o BatchMode=yes gpu "tr -d '\r' | sed 's/^\xEF\xBB\xBF//' | bash -s"` (PowerShell adds BOM/CRLF).
-- Never write the HPC password anywhere.
+- Never write the HPC password anywhere. **Never upload any SSH key to GitHub.**
+- Code reaches the GPU machine only by pushing from the PC: every "git push" in this plan
+  means `git push origin main; git push gpu main` (remote `gpu` = `gpu:roomrecon/repo`,
+  `receive.denyCurrentBranch updateInstead`). The GPU machine never pulls from GitHub.
+  (Amended 2026-10-03 after the user's instruction; Task 1 Step 8's deploy key was removed.)
 - Paths on the GPU machine: tools `~/roomrecon/tools/`, data `~/roomrecon/datasets/`, runs `~/roomrecon/scenes/`, repo clone `~/roomrecon/repo/`.
 - Repo on the PC: `E:\IIT Jammu Internship\IIITK CLASS\SEM-7\Computer_vision\RoomRecon`, GitHub `asw-beep/RoomRecon-v2` (private).
 
@@ -179,7 +183,7 @@ gh repo create asw-beep/RoomRecon-v2 --private --source . --push
 
 Expected: `gh` prints the new repo URL; `git log --oneline` shows one commit.
 
-- [ ] **Step 8: Give the GPU machine read-only access (deploy key)**
+- [ ] **Step 8 (superseded, do NOT do this; see Global Constraints): ~~deploy key~~.** Instead: clone once on the GPU machine, set `git config receive.denyCurrentBranch updateInstead` there, and on the PC `git remote add gpu gpu:roomrecon/repo; git push gpu main`. The original text below is kept only as a record.
 
 ```powershell
 "ssh-keygen -t ed25519 -N '' -f ~/.ssh/roomrecon_deploy -C roomrecon-gpu -q; cat ~/.ssh/roomrecon_deploy.pub" | ssh -o BatchMode=yes gpu "tr -d '\r' | sed 's/^\xEF\xBB\xBF//' | bash -s" > "$env:TEMP\roomrecon_deploy.pub"
