@@ -21,7 +21,12 @@ if [ "$METHOD" = "dn-splatter" ]; then
               --pipeline.model.use-depth-smooth-loss True --pipeline.model.use-normal-loss True
               --pipeline.model.normal-supervision mono)
 fi
-RESUME=(); [ -n "${RESUME_FROM:-}" ] && RESUME=(--load-dir "$RESUME_FROM")
+RESUME=()
+if [ -n "${RESUME_FROM:-}" ]; then
+  RESUME=(--load-dir "$RESUME_FROM")
+  # nerfstudio counts --max-num-iterations from the loaded step: pass only what is left
+  ITERS=$(PY -m roomrecon.resume "$RESUME_FROM" "$ITERS") || exit 4
+fi
 
 CMD=(ns-train "$METHOD" --output-dir "$OUT/train" --experiment-name "$ROOM" --timestamp "$RUN"
      --max-num-iterations "$ITERS" --steps-per-save 1000 --save-only-latest-checkpoint False
