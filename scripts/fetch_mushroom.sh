@@ -4,6 +4,7 @@
 # The iPhone tarball may already be uploaded (scp from the PC); otherwise it is downloaded.
 set -euo pipefail
 ROOM="${1:?room name, e.g. vr_room}"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
 D="$HOME/roomrecon/datasets/mushroom"
 DNS="$HOME/roomrecon/tools/dn-splatter"
 PIXI="$HOME/.pixi/bin/pixi"
@@ -18,7 +19,8 @@ cd "$DNS"
 for seq in long_capture short_capture; do
   P="$D/room_datasets/${ROOM}/iphone/${seq}"
   if [ ! -d "$P/normals_from_pretrain" ]; then
-    "$PIXI" run python dn_splatter/scripts/normals_from_pretrain.py --data-dir "$P" --resolution low
+    # batch 4: DN-Splatter's default 15 runs out of the ~6 GB free on the shared GPU
+    NORMALS_BATCH=4 "$PIXI" run python "$REPO/scripts/normals.py" --data-dir "$P" --resolution low
   fi
   echo "$seq images=$(ls "$P/images" | wc -l) normals=$(ls "$P/normals_from_pretrain" | wc -l)"
 done
