@@ -8,6 +8,29 @@ eye height; the factor is recorded, and a factor near 1 means the poses were alr
 """
 import numpy as np
 
+# splat-transform / SuperSplat load a PLY into PlayCanvas' frame by turning it 180° about Z
+# (x -> -x, y -> -y). Their transforms, seed positions and the viewer all work in that frame,
+# so scene.json is computed there. Measured with splat-transform v3.9.0 on 2026-10-03.
+PLAYCANVAS_FROM_PLY = np.diag([-1.0, -1.0, 1.0])
+
+
+def to_playcanvas(c2w: np.ndarray, vertices: np.ndarray):
+    """Express cameras and vertices from the PLY/nerfstudio frame in PlayCanvas' frame."""
+    F = PLAYCANVAS_FROM_PLY
+    out = c2w.copy()
+    out[:, :3, :3] = F @ c2w[:, :3, :3]
+    out[:, :3, 3] = c2w[:, :3, 3] @ F.T
+    return out, vertices @ F.T
+
+
+def euler_xyz_deg(R: np.ndarray) -> list[float]:
+    """Angles (x, y, z) in degrees such that splat-transform `-r x,y,z` applies R in
+    PlayCanvas' frame. Measured convention: R = Rz(z) @ Ry(y) @ Rx(x)."""
+    y = np.degrees(np.arcsin(-np.clip(R[2, 0], -1.0, 1.0)))
+    x = np.degrees(np.arctan2(R[2, 1], R[2, 2]))
+    z = np.degrees(np.arctan2(R[1, 0], R[0, 0]))
+    return [float(x), float(y), float(z)]
+
 
 def estimate_up(c2w: np.ndarray) -> np.ndarray:
     u = c2w[:, :3, 1].mean(axis=0)

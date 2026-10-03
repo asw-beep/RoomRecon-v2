@@ -1,6 +1,25 @@
 import json
+import pytest
 import numpy as np
-from roomrecon.scene_cli import load_c2w
+from roomrecon.scene_cli import build_scene, load_c2w
+
+
+def test_build_scene_minus_y_up_ply_needs_no_rotation_in_playcanvas():
+    # Cameras upright with world up = -Y in the PLY frame (INRIA/COLMAP style); room floor at y=+1.
+    n = 12
+    c2w = np.tile(np.eye(4), (n, 1, 1))
+    for i in range(n):
+        a = 2 * np.pi * i / n
+        Ry = np.array([[np.cos(a), 0, np.sin(a)], [0, 1, 0], [-np.sin(a), 0, np.cos(a)]])
+        c2w[i, :3, :3] = np.diag([1.0, -1.0, -1.0]) @ Ry     # camera +Y points to world -Y
+        c2w[i, :3, 3] = [np.cos(a), -0.45, np.sin(a)]        # 1.45 above the floor at y=+1
+    rng = np.random.default_rng(0)
+    verts = np.c_[rng.uniform(-2, 2, 3000), np.full(3000, 1.0), rng.uniform(-2, 2, 3000)]
+    s = build_scene(c2w, verts, room="r", run_id="x")
+    assert np.allclose(s["euler_xyz_deg"], [0, 0, 0], atol=1e-6)
+    assert s["frame"] == "playcanvas (PLY rotated 180 deg about Z)"
+    assert s["scale"] == pytest.approx(1.0, rel=0.02)
+    assert s["floor_y"] == pytest.approx(-1.0, abs=0.05)
 
 
 def test_load_c2w_list_of_3x4(tmp_path):

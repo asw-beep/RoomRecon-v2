@@ -6,7 +6,19 @@ from pathlib import Path
 
 import numpy as np
 
-from roomrecon.scene import scene_frame
+from roomrecon.scene import euler_xyz_deg, scene_frame, to_playcanvas
+
+
+def build_scene(c2w_ply: np.ndarray, verts_ply: np.ndarray, *, room: str, run_id: str) -> dict:
+    """scene.json content, in PlayCanvas' frame (what splat-transform and the viewer use)."""
+    c2w, verts = to_playcanvas(c2w_ply, verts_ply)
+    frame = scene_frame(c2w, verts)
+    frame.update({"room": room, "run_id": run_id, "up_axis": "+Y",
+                  "frame": "playcanvas (PLY rotated 180 deg about Z)",
+                  "units": "metres (approximate)", "camera_count": int(len(c2w)),
+                  "mesh_vertex_count": int(len(verts)),
+                  "euler_xyz_deg": euler_xyz_deg(np.asarray(frame["rotation"]))})
+    return frame
 
 
 def load_c2w(transforms_json: Path) -> np.ndarray:
@@ -35,11 +47,8 @@ def main(argv=None) -> int:
     import open3d as o3d
     mesh = o3d.io.read_triangle_mesh(str(d / "mesh.ply"))
     verts = np.asarray(mesh.vertices)
-    c2w = load_c2w(d / "transforms_train.json")
-    frame = scene_frame(c2w, verts)
-    frame.update({"room": a.room, "run_id": a.run_id, "up_axis": "+Y",
-                  "units": "metres (approximate)", "camera_count": int(len(c2w)),
-                  "mesh_vertex_count": int(len(verts)), "euler_xyz_deg": None})
+    frame = build_scene(load_c2w(d / "transforms_train.json"), verts,
+                        room=a.room, run_id=a.run_id)
     (d / "scene.json").write_text(json.dumps(frame, indent=2))
     print(json.dumps({k: frame[k] for k in ("scale", "floor_y", "spawn_position")}))
     return 0

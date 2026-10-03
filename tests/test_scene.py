@@ -57,6 +57,28 @@ def test_floor_ignores_floaters_below():
     assert abs(scene.floor_height(y, camera_y=np.array([1.4, 1.5]))) < 0.05
 
 
+# splat-transform v3.9.0, measured on the PC 2026-10-03: `-r 30,40,50` on a PLY with points at
+# the unit axes, written back to PLY. Rows = where (1,0,0), (0,1,0), (0,0,1) went, PLY frame.
+MEASURED_ROWS_30_40_50 = [[0.49240386486053467, 0.5868240594863892, 0.6427876353263855],
+                          [-0.45682600140571594, 0.802872359752655, -0.3830222189426422],
+                          [-0.7408430576324463, -0.10504046082496643, 0.663413941860199]]
+
+
+def test_euler_matches_measured_splat_transform_convention():
+    F = scene.PLAYCANVAS_FROM_PLY
+    R_internal = F @ np.array(MEASURED_ROWS_30_40_50).T @ F
+    assert np.allclose(scene.euler_xyz_deg(R_internal), [30, 40, 50], atol=1e-4)
+
+
+def test_to_playcanvas_flips_x_and_y():
+    c2w = np.eye(4)[None].copy()
+    c2w[0, :3, 3] = [1, 2, 3]
+    c2w_pc, verts_pc = scene.to_playcanvas(c2w, np.array([[1.0, 2.0, 3.0]]))
+    assert np.allclose(verts_pc, [[-1, -2, 3]])
+    assert np.allclose(c2w_pc[0, :3, 3], [-1, -2, 3])
+    assert np.allclose(c2w_pc[0, :3, 1], [0, -1, 0])    # camera up axis flipped with the world
+
+
 def test_scene_frame_normalises_scale_and_spawns_inside():
     R = _rot_x(-35)
     c2w = _cams(R, [0.70, 0.75])          # half-scale scene: cameras ~0.725 above floor
