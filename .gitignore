@@ -1,0 +1,16 @@
+# data and outputs never go into git (they live on the GPU machine)
+*.ply
+*.glb
+*.obj
+*.ckpt
+*.mp4
+*.tar.gz
+*.zip
+datasets/
+scenes/
+outputs/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.venv/
+.superpowers/

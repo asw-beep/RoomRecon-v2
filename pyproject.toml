@@ -1,0 +1,12 @@
+[project]
+name = "roomrecon"
+version = "0.1.0"
+description = "Phone capture of a room -> walkable 3D model (splat + collision)"
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[tool.setuptools]
+packages = ["roomrecon"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
