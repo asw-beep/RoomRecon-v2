@@ -1,0 +1,17 @@
+{
+  "run_id": "smoke",
+  "room": "vr_room",
+  "method": "dn-splatter",
+  "command": "ns-train dn-splatter --output-dir /home/aswinm/roomrecon/scenes/vr_room/smoke/train --experiment-name vr_room --timestamp smoke --max-num-iterations 3000 --steps-per-save 1000 --save-only-latest-checkpoint False --steps-per-eval-all-images 1000 --vis tensorboard --viewer.quit-on-train-completion True --pipeline.datamanager.cache-images cpu --pipeline.model.use-depth-loss True --pipeline.model.depth-lambda 0.2 --pipeline.model.use-depth-smooth-loss True --pipeline.model.use-normal-loss True --pipeline.model.normal-supervision mono mushroom --data /home/aswinm/roomrecon/datasets/mushroom/room_datasets/vr_room --mode iphone",
+  "repo_commit": "8e3c82f52c5ba3e835799f23f38de4803db2c415",
+  "dn_splatter_commit": "97588b4290128ce7ba6fdbfaac3020b42b17de4c",
+  "machine": "GPU machine A100-PCIE-40GB MIG 7g.40gb (shared)",
+  "free_mib_at_start": 5991,
+  "started_at": "2026-10-03T18:34:54Z",
+  "status": "failed",
+  "ended_at": "2026-10-03T18:55:44Z",
+  "duration_s": 1250,
+  "exit_code": 137,
+  "gpu_used_mib_at_start": 34456,
+  "gpu_used_mib_max": 39268
+}
