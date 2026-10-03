@@ -9,7 +9,7 @@ Course project (IIIT Kottayam, Sem 7 Computer Vision). Team: Aswin M, Sejal Sath
 
 ## Current status
 
-**Building G0–G3.** Spec (revision 2, after a critique review):
+**Building G0–G3 — PAUSED 2026-10-04 by the user.** G0 done; G1 resume test passed; the full `vr_room` run (Task 7) ran out of GPU memory because the other tenant now holds ~37 GB of the A100 (~3 GB free). Progress ledger: `.superpowers/sdd/2026-10-03-g0-g3-first-walkable-room/progress.md` (git-ignored, on the PC); evidence in `results/`. Resume at plan Task 7 after checking free memory. Options on the table: ask IT; shrink to fit (half-res, stop-split-at 7000, auto-resume loop); Kaggle T4; laptop. Spec (revision 2, after a critique review):
 `docs/spec/2026-10-03-roomrecon-v2-design.md`, the source of truth for the
 design. Next steps, in order:
 1. Execute `docs/plans/2026-10-03-g0-g3-first-walkable-room.md` task by task.
