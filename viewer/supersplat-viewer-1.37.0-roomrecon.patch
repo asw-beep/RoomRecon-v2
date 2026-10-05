@@ -1,0 +1,21 @@
+diff --git a/src/index.html b/src/index.html
+index d3d64e1..62f6a8a 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -43,6 +43,16 @@
+ 
+             const url = new URL(location.href);
+ 
++            // RoomRecon local change: `?uiscale=N` enlarges the toolbar and panels (default 1.6;
++            // 1 = upstream size). The ministats graph is drawn into the canvas and is not affected.
++            const uiScale = parseFloat(url.searchParams.get('uiscale') ?? '1.6');
++            if (uiScale > 0 && uiScale !== 1) {
++                const uiStyle = document.createElement('style');
++                uiStyle.textContent = `.sse-controlsHint, .sse-controlsWrap .sse-buttonGroup,
++                    .sse-settingsPanel, .sse-infoPanel, .sse-tooltip { zoom: ${uiScale}; }`;
++                document.head.appendChild(uiStyle);
++            }
++
+             // Embedder-supplied defaults. URL params take precedence over the asset urls below,
+             // so an embed can still be overridden per-instance (e.g. `?skybox=` to preview a
+             // different sky). Inline `settings` is the exception: it wins over `?settings=`, so a
