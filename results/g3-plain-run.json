@@ -1,0 +1,17 @@
+{
+  "run_id": "plain-30k-lite2",
+  "room": "vr_room",
+  "method": "dn-splatter (plain)",
+  "command": "ns-train dn-splatter --output-dir /home/aswinm/roomrecon/scenes/vr_room/plain-30k-lite2/train --experiment-name vr_room --timestamp plain-30k-lite2 --steps-per-save 1000 --save-only-latest-checkpoint False --steps-per-eval-all-images 1000 --vis tensorboard --viewer.quit-on-train-completion True --pipeline.datamanager.cache-images cpu --pipeline.model.use-depth-loss False --pipeline.model.use-depth-smooth-loss False --pipeline.model.use-normal-loss False --pipeline.model.use-normal-tv-loss False --pipeline.model.two-d-gaussians False --pipeline.model.max-gauss-ratio 10.0 --pipeline.model.stop-split-at 10000 --max-num-iterations 30000 mushroom --data /home/aswinm/roomrecon/datasets/mushroom/room_datasets/vr_room --mode iphone --num-init-points 300000 (lite, auto-resume)",
+  "repo_commit": "f6f6f2661c09112a7b1bd667fbd310a02568a78d",
+  "dn_splatter_commit": "97588b4290128ce7ba6fdbfaac3020b42b17de4c",
+  "machine": "GPU machine A100-PCIE-40GB MIG 7g.40gb (shared)",
+  "free_mib_at_start": 7199,
+  "started_at": "2026-10-05T15:27:33Z",
+  "status": "ok",
+  "ended_at": "2026-10-05T16:46:40Z",
+  "duration_s": 4747,
+  "exit_code": 0,
+  "gpu_used_mib_at_start": 33248,
+  "gpu_used_mib_max": 38152
+}

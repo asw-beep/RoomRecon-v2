@@ -9,10 +9,12 @@ Course project (IIIT Kottayam, Sem 7 Computer Vision). Team: Aswin M, Sejal Sath
 
 ## Current status
 
-**Building G0–G3 — G0–G2 done (2026-10-05); next is plan Task 11 (G3, quality measured).**
-`vr_room` trained (`dns-30k-lite`, 26.3 dB) and is walkable with collision in the local
-SuperSplat Viewer at ~55 FPS on the PC (`results/g1-vr_room.md`, `g2-export.md`,
-`g2-walk-test.md`). The shared GPU leaves ~7 GB free, so training uses
+**G0–G3 done (2026-10-06, see `results/`). Next: G4 own room (Pro phone capture; Sejal has the
+capture guide).** `vr_room` trained (`dns-30k-lite`, 26.3 dB) and is walkable with collision in
+the local SuperSplat Viewer at ~55 FPS on the PC (`results/g1-vr_room.md`, `g2-export.md`,
+`g2-walk-test.md`). G3 (`results/g3-vr_room-results.md`): DN-Splatter's mesh is 1.8 cm from the
+laser scan vs 5.9 cm for plain splats (F-score 0.93 vs 0.64), for ~0.5 dB less PSNR. Backup demo:
+private GitHub release `demo-g2-vr_room` (`scripts/make_demo_bundle.ps1`). The shared GPU leaves ~7 GB free, so training uses
 `scripts/train_room_lite.sh` (300k seed points, stop-split 10k, auto-resume); use
 `train_room.sh` (DN-Splatter defaults) only when ≥ ~15 GB is free. Kaggle CLI is installed on the
 GPU machine as a fallback (no token yet). Progress ledger:
