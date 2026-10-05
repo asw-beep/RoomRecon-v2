@@ -9,6 +9,7 @@ ROOM="$1"; RUN="$2"; DATA="$3"
 DNS="$HOME/roomrecon/tools/dn-splatter"; PIXI="$HOME/.pixi/bin/pixi"
 OUT="$HOME/roomrecon/scenes/$ROOM/$RUN"; EV="$OUT/eval"; mkdir -p "$EV"
 CONFIG=$(ls "$OUT"/train/"$ROOM"/*/"$RUN"/config.yml | head -1)
+export PYTHONUNBUFFERED=1   # the mesh evaluation is long and silent otherwise (output buffered)
 # same libstdc++ preload as export_room.sh (open3d imported before torch)
 RUNENV() { "$PIXI" run --manifest-path "$DNS/pixi.toml" env LD_PRELOAD="$DNS/.pixi/envs/default/lib/libstdc++.so.6" "$@"; }
 cd "$DNS"
