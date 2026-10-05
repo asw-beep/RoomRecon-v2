@@ -9,7 +9,15 @@ Course project (IIIT Kottayam, Sem 7 Computer Vision). Team: Aswin M, Sejal Sath
 
 ## Current status
 
-**Building G0–G3 — PAUSED 2026-10-04 by the user.** G0 done; G1 resume test passed; the full `vr_room` run (Task 7) ran out of GPU memory because the other tenant now holds ~37 GB of the A100 (~3 GB free). Progress ledger: `.superpowers/sdd/2026-10-03-g0-g3-first-walkable-room/progress.md` (git-ignored, on the PC); evidence in `results/`. Resume at plan Task 7 after checking free memory. Options on the table: ask IT; shrink to fit (half-res, stop-split-at 7000, auto-resume loop); Kaggle T4; laptop. Spec (revision 2, after a critique review):
+**Building G0–G3 — G0–G2 done (2026-10-05); next is plan Task 11 (G3, quality measured).**
+`vr_room` trained (`dns-30k-lite`, 26.3 dB) and is walkable with collision in the local
+SuperSplat Viewer at ~55 FPS on the PC (`results/g1-vr_room.md`, `g2-export.md`,
+`g2-walk-test.md`). The shared GPU leaves ~7 GB free, so training uses
+`scripts/train_room_lite.sh` (300k seed points, stop-split 10k, auto-resume); use
+`train_room.sh` (DN-Splatter defaults) only when ≥ ~15 GB is free. Kaggle CLI is installed on the
+GPU machine as a fallback (no token yet). Progress ledger:
+`.superpowers/sdd/2026-10-03-g0-g3-first-walkable-room/progress.md` (git-ignored, on the PC);
+evidence in `results/`. Spec (revision 2, after a critique review):
 `docs/spec/2026-10-03-roomrecon-v2-design.md`, the source of truth for the
 design. Next steps, in order:
 1. Execute `docs/plans/2026-10-03-g0-g3-first-walkable-room.md` task by task.
