@@ -43,7 +43,8 @@ grep -n -A1 'ROOMRECON: drop empty' "$NSOPT"
 # Export bug: `ns-export cameras` asserts camera.metadata, which DN-Splatter's MuSHRoom parser
 # never sets. DN-Splatter trains with the camera optimizer off, so the optimized pose IS the
 # dataset pose: use it whenever there is no metadata. Patched in nerfstudio's exporter utils.
-NSEXP="$("$PIXI" run python -c 'import nerfstudio.exporter.exporter_utils as m; print(m.__file__)' 2>/dev/null | tail -1)"
+# (located without importing it: the import itself hits the libstdc++ problem, see export_room.sh)
+NSEXP="$("$PIXI" run python -c 'import importlib.util as u; print(u.find_spec("nerfstudio").submodule_search_locations[0])' 2>/dev/null | tail -1)/exporter/exporter_utils.py"
 grep -q 'ROOMRECON: no metadata' "$NSEXP" || sed -i 's/^\(\s*\)if camera_optimizer is None:$/\1if camera_optimizer is None or cameras.metadata is None:  # ROOMRECON: no metadata/' "$NSEXP"
 grep -n 'ROOMRECON: no metadata' "$NSEXP"
 "$PIXI" install
