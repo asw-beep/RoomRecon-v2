@@ -9,9 +9,24 @@
 # Use train_room.sh instead when the GPU has room (>= ~15 GB free).
 # Usage: scripts/train_room_lite.sh <room> <run_id> <data_dir> <max_iters> [extra ns-train args...]
 # Env: NUM_INIT_POINTS (300000)  STOP_SPLIT_AT (10000)  NEED_MIB (4000)  MAX_ATTEMPTS (8)
+#      PROFILE: dn (default) = depth + normal priors | plain = no priors, splatfacto's settings
+#      (the plain-3DGS baseline, evaluated by the same DN-Splatter pipeline on the same splits;
+#      plain splatfacto would average MuSHRoom's two test sets into one number)
 set -uo pipefail
 ROOM="$1"; RUN="$2"; DATA="$3"; ITERS="$4"; shift 4
 METHOD=dn-splatter
+PROFILE="${PROFILE:-dn}"
+case "$PROFILE" in
+  dn)    MODEL_ARGS=(--pipeline.model.use-depth-loss True --pipeline.model.depth-lambda 0.2
+                     --pipeline.model.use-depth-smooth-loss True --pipeline.model.use-normal-loss True
+                     --pipeline.model.normal-supervision mono) ;;
+  # every DN-Splatter prior off; the remaining defaults set to splatfacto's (nerfstudio 1.1.3)
+  plain) MODEL_ARGS=(--pipeline.model.use-depth-loss False --pipeline.model.use-depth-smooth-loss False
+                     --pipeline.model.use-normal-loss False --pipeline.model.use-normal-tv-loss False
+                     --pipeline.model.two-d-gaussians False --pipeline.model.max-gauss-ratio 10.0
+                     --pipeline.model.num-downscales 2) ;;
+  *) echo "PROFILE must be dn or plain" >&2; exit 2 ;;
+esac
 NUM_INIT_POINTS="${NUM_INIT_POINTS:-300000}"
 STOP_SPLIT_AT="${STOP_SPLIT_AT:-10000}"
 NEED_MIB="${NEED_MIB:-4000}"
@@ -39,14 +54,11 @@ FREE=$(PY -m roomrecon.gpu | sed 's/free_mib=//')
 BASE=(ns-train "$METHOD" --output-dir "$OUT/train" --experiment-name "$ROOM" --timestamp "$RUN"
       --steps-per-save 1000 --save-only-latest-checkpoint False
       --steps-per-eval-all-images 1000 --vis tensorboard --viewer.quit-on-train-completion True
-      --pipeline.datamanager.cache-images cpu
-      --pipeline.model.use-depth-loss True --pipeline.model.depth-lambda 0.2
-      --pipeline.model.use-depth-smooth-loss True --pipeline.model.use-normal-loss True
-      --pipeline.model.normal-supervision mono
+      --pipeline.datamanager.cache-images cpu "${MODEL_ARGS[@]}"
       --pipeline.model.stop-split-at "$STOP_SPLIT_AT" "$@")
 DP=(mushroom --data "$DATA" --mode iphone --num-init-points "$NUM_INIT_POINTS")
 
-PY -m roomrecon.runrecord start "$OUT/run.json" --run-id "$RUN" --room "$ROOM" --method "$METHOD" \
+PY -m roomrecon.runrecord start "$OUT/run.json" --run-id "$RUN" --room "$ROOM" --method "$METHOD ($PROFILE)" \
    --command "${BASE[*]} --max-num-iterations $ITERS ${DP[*]} (lite, auto-resume)" \
    --repo-commit "$(git rev-parse HEAD)" \
    --dn-splatter-commit "$(git -C "$DNS" rev-parse HEAD)" --free-mib "$FREE" \
