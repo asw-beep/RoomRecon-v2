@@ -20,11 +20,12 @@ case "$PROFILE" in
   dn)    MODEL_ARGS=(--pipeline.model.use-depth-loss True --pipeline.model.depth-lambda 0.2
                      --pipeline.model.use-depth-smooth-loss True --pipeline.model.use-normal-loss True
                      --pipeline.model.normal-supervision mono) ;;
-  # every DN-Splatter prior off; the remaining defaults set to splatfacto's (nerfstudio 1.1.3)
+  # every DN-Splatter prior off; the remaining defaults set to splatfacto's (nerfstudio 1.1.3),
+  # except num-downscales stays 0: DN-Splatter's normals-from-depth uses the full-size camera
+  # and crashes on splatfacto's downscaled warm-up (dn_model.py:589, 2026-10-05)
   plain) MODEL_ARGS=(--pipeline.model.use-depth-loss False --pipeline.model.use-depth-smooth-loss False
                      --pipeline.model.use-normal-loss False --pipeline.model.use-normal-tv-loss False
-                     --pipeline.model.two-d-gaussians False --pipeline.model.max-gauss-ratio 10.0
-                     --pipeline.model.num-downscales 2) ;;
+                     --pipeline.model.two-d-gaussians False --pipeline.model.max-gauss-ratio 10.0) ;;
   *) echo "PROFILE must be dn or plain" >&2; exit 2 ;;
 esac
 NUM_INIT_POINTS="${NUM_INIT_POINTS:-300000}"
