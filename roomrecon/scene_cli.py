@@ -26,8 +26,18 @@ def viewer_settings(scene: dict, fov: float = 75.0) -> dict:
     p = [float(v) for v in scene["spawn_position"]]
     f = scene["spawn_forward"]
     target = [p[i] + float(f[i]) for i in range(3)]
+    # postEffectSettings = the viewer's own defaults (schemas/defaults.ts, all off); without
+    # it SuperSplat Viewer 1.37.0 throws on startup and never attaches its controls
+    fx = {"sharpness": {"enabled": False, "amount": 0},
+          "bloom": {"enabled": False, "intensity": 0.1, "blurLevel": 2},
+          "grading": {"enabled": False, "brightness": 1, "contrast": 1, "saturation": 1,
+                      "tint": [1, 1, 1]},
+          "vignette": {"enabled": False, "intensity": 0.5, "inner": 0.3, "outer": 0.75,
+                       "curvature": 1},
+          "fringing": {"enabled": False, "intensity": 0.5}}
     return {"version": 2, "tonemapping": "linear", "highPrecisionRendering": False,
-            "background": {"color": [0, 0, 0]}, "animTracks": [], "annotations": [],
+            "background": {"color": [0, 0, 0]}, "postEffectSettings": fx,
+            "animTracks": [], "annotations": [],
             "cameras": [{"initial": {"position": p, "target": target, "fov": fov}}],
             "startMode": "default"}
 

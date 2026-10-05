@@ -14,6 +14,16 @@ def test_viewer_settings_start_at_spawn_looking_forward():
     assert 30 <= cam["fov"] <= 120
 
 
+def test_viewer_settings_has_every_v2_field():
+    # SuperSplat Viewer 1.37.0 crashes on startup without postEffectSettings (reads .sharpness)
+    v = viewer_settings({"spawn_position": [0.0, 1.45, 0.0], "spawn_forward": [1.0, 0.0, 0.0]})
+    assert {"version", "tonemapping", "highPrecisionRendering", "background", "postEffectSettings",
+            "animTracks", "cameras", "annotations", "startMode"} <= v.keys()
+    fx = v["postEffectSettings"]
+    assert set(fx) == {"sharpness", "bloom", "grading", "vignette", "fringing"}
+    assert not any(e["enabled"] for e in fx.values())
+
+
 def test_build_scene_minus_y_up_ply_needs_no_rotation_in_playcanvas():
     # Cameras upright with world up = -Y in the PLY frame (INRIA/COLMAP style); room floor at y=+1.
     n = 12
