@@ -3,7 +3,7 @@
 # env, then normals, training, final eval and export for one own room, and copies the results to
 # /kaggle/working/out (the session output). Checkpoints other than the last stay in the session.
 # Usage: bash scripts/kaggle/own_room_session.sh <room> <run_id> <iters>
-# Env: STOP_SPLIT_AT (default iters/2)
+# Env: STOP_SPLIT_AT (default iters/3, the 10k-of-30k ratio of the vr_room runs)
 set -uo pipefail
 ROOM="$1"; RUN="$2"; ITERS="$3"
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"
@@ -27,7 +27,7 @@ echo "normals: $(ls "$DATA/normals_from_pretrain" | wc -l) files"
 set +e
 
 GPU="$(nvidia-smi --query-gpu=name,memory.total --format=csv,noheader | head -1)"
-DATASET=own MACHINE="Kaggle $GPU" STOP_SPLIT_AT="${STOP_SPLIT_AT:-$((ITERS / 2))}" \
+DATASET=own MACHINE="Kaggle $GPU" STOP_SPLIT_AT="${STOP_SPLIT_AT:-$((ITERS / 3))}" \
   bash "$REPO/scripts/train_room_lite.sh" "$ROOM" "$RUN" "$DATA" "$ITERS"
 TRAIN_EXIT=$?
 echo "TRAIN_EXIT=$TRAIN_EXIT"
