@@ -20,10 +20,12 @@ meta() {  # meta <dir> <slug>: dataset-metadata.json for a private dataset
   printf '{"title": "%s", "id": "%s/%s", "licenses": [{"name": "other"}]}\n' "$2" "$U" "$2" > "$1/dataset-metadata.json"
 }
 upload() {  # upload <dir> <slug>: create the dataset, or add a new version, then wait until ready
+  # (-t: keep files as they are; by default Kaggle converts "tabular" files, and the first run
+  #  found no transforms.json in the session)
   if "$KG" datasets status "$U/$2" >/dev/null 2>&1; then
-    "$KG" datasets version -p "$1" -m "$(date -u +%FT%TZ)" -r zip -q
+    "$KG" datasets version -p "$1" -m "$(date -u +%FT%TZ)" -r zip -t -q
   else
-    "$KG" datasets create -p "$1" -r zip -q
+    "$KG" datasets create -p "$1" -r zip -t -q
   fi
   for _ in $(seq 60); do
     [ "$("$KG" datasets status "$U/$2" 2>/dev/null)" = ready ] && return 0; sleep 10

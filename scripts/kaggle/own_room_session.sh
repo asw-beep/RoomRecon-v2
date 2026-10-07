@@ -11,8 +11,10 @@ OUTW=/kaggle/working/out; mkdir -p "$OUTW"
 exec > >(tee -a "$OUTW/session.log") 2>&1
 nvidia-smi
 # the data dataset is mounted read-only somewhere under /kaggle/input: find it by its transforms
-DATA_IN="$(dirname "$(find /kaggle/input -name transforms.json -path "*processed*" | head -1)")"
-[ -d "$DATA_IN" ] || { echo "no processed data under /kaggle/input"; exit 2; }
+echo "== /kaggle/input (top of the tree):"; find /kaggle/input -maxdepth 4 | grep -v -E '/(images|depth)/' | head -60
+T="$(find /kaggle/input -name transforms.json -not -path '*/repo/*' | head -1)"
+[ -n "$T" ] || { echo "no transforms.json under /kaggle/input (see the tree above)"; exit 2; }
+DATA_IN="$(dirname "$T")"
 DATA="$HOME/roomrecon/datasets/own/$ROOM/processed"
 mkdir -p "$(dirname "$DATA")" && cp -r "$DATA_IN" "$DATA"
 echo "data: $DATA_IN -> $DATA ($(ls "$DATA/images" | wc -l) images)"
