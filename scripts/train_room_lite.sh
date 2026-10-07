@@ -12,6 +12,10 @@
 #      PROFILE: dn (default) = depth + normal priors | plain = no priors, splatfacto's settings
 #      (the plain-3DGS baseline, evaluated by the same DN-Splatter pipeline on the same splits;
 #      plain splatfacto would average MuSHRoom's two test sets into one number)
+#      DATASET: mushroom (default) | own = our capture after ns-process-data polycam --use-depth,
+#      normals and pointcloud_utils.py (seed points come from its iphone_pointcloud.ply);
+#      phone poses kept as they are (spec §5.1), every 8th frame held out for evaluation
+#      MACHINE: label for run.json (default: the shared A100)
 set -uo pipefail
 ROOM="$1"; RUN="$2"; DATA="$3"; ITERS="$4"; shift 4
 METHOD=dn-splatter
@@ -57,13 +61,18 @@ BASE=(ns-train "$METHOD" --output-dir "$OUT/train" --experiment-name "$ROOM" --t
       --steps-per-eval-all-images 1000 --vis tensorboard --viewer.quit-on-train-completion True
       --pipeline.datamanager.cache-images cpu "${MODEL_ARGS[@]}"
       --pipeline.model.stop-split-at "$STOP_SPLIT_AT" "$@")
-DP=(mushroom --data "$DATA" --mode iphone --num-init-points "$NUM_INIT_POINTS")
+case "${DATASET:-mushroom}" in
+  mushroom) DP=(mushroom --data "$DATA" --mode iphone --num-init-points "$NUM_INIT_POINTS") ;;
+  own)      DP=(normal-nerfstudio --data "$DATA" --orientation-method none --center-method none
+                --auto-scale-poses False --normal-format omnidata --eval-mode interval --eval-interval 8) ;;
+  *) echo "DATASET must be mushroom or own" >&2; exit 2 ;;
+esac
 
 PY -m roomrecon.runrecord start "$OUT/run.json" --run-id "$RUN" --room "$ROOM" --method "$METHOD ($PROFILE)" \
    --command "${BASE[*]} --max-num-iterations $ITERS ${DP[*]} (lite, auto-resume)" \
-   --repo-commit "$(git rev-parse HEAD)" \
+   --repo-commit "$(git rev-parse HEAD 2>/dev/null || cat "$REPO/COMMIT" 2>/dev/null || echo unknown)" \
    --dn-splatter-commit "$(git -C "$DNS" rev-parse HEAD)" --free-mib "$FREE" \
-   --machine "GPU machine A100-PCIE-40GB MIG 7g.40gb (shared)"
+   --machine "${MACHINE:-GPU machine A100-PCIE-40GB MIG 7g.40gb (shared)}"
 
 PY -m roomrecon.gpu --sample "$OUT/vram.csv" --interval 10 & SAMPLER=$!
 CODE=1

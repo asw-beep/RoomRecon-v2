@@ -34,6 +34,11 @@ sed -n '/^\[dependencies\]/,/^\[pypi-dependencies\]/p;/^\[pypi-options\]/,$p' pi
 # eval-all-images step. The "with" branch already uses the bare key; make "within" match.
 sed -i 's/^\(\s*\)metrics_dict\["within_" + key\]$/\1metrics_dict[key]/' dn_splatter/dn_pipeline.py
 grep -c 'metrics_dict\["within_" + key\]$' dn_splatter/dn_pipeline.py || true
+# Install exactly the environment the GPU machine was built and tested with (env/pixi.lock is a
+# copy of its lock), before any `pixi run` below could solve a fresh, unpinned one.
+LOCKED=""
+if [ -f "$REPO/env/pixi.lock" ]; then cp "$REPO/env/pixi.lock" pixi.lock; LOCKED=1; fi
+"$PIXI" install ${LOCKED:+--frozen}
 # Resume bug: DN-Splatter's `normals` optimizer saves an empty per-parameter Adam state, and
 # torch's Adam.load_state_dict raises KeyError 'step' on it. An empty state means "no moments
 # yet", so dropping it before loading is exact. Patched in nerfstudio's optimizer loader.
@@ -47,7 +52,6 @@ grep -n -A1 'ROOMRECON: drop empty' "$NSOPT"
 NSEXP="$("$PIXI" run python -c 'import importlib.util as u; print(u.find_spec("nerfstudio").submodule_search_locations[0])' 2>/dev/null | tail -1)/exporter/exporter_utils.py"
 grep -q 'ROOMRECON: no metadata' "$NSEXP" || sed -i 's/^\(\s*\)if camera_optimizer is None:$/\1if camera_optimizer is None or cameras.metadata is None:  # ROOMRECON: no metadata/' "$NSEXP"
 grep -n 'ROOMRECON: no metadata' "$NSEXP"
-"$PIXI" install
 "$PIXI" run download-omnidata
 "$PIXI" run python -c "import torch, nerfstudio, gsplat; print('torch', torch.__version__, 'cuda', torch.version.cuda, 'gpu', torch.cuda.is_available(), torch.cuda.get_device_name(0)); print('gsplat', gsplat.__version__)"
 "$PIXI" run pip install -e "$REPO" pytest

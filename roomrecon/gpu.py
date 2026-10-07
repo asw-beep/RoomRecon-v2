@@ -1,8 +1,9 @@
-"""Free memory on the shared MIG A100.
+"""Free memory on the shared MIG A100 (or any plain GPU, e.g. a Kaggle T4).
 
 Inside a MIG instance `nvidia-smi --query-gpu=memory.*` returns "Insufficient Permissions",
-so we read the MIG device table of plain `nvidia-smi` instead. Another tenant uses the same
-card, so free memory must be checked at job start, not assumed.
+so we read the MIG device table of plain `nvidia-smi` instead; a GPU without MIG has no such
+table and answers the query. Another tenant uses the A100, so free memory must be checked at
+job start, not assumed.
 """
 import argparse
 import re
@@ -22,12 +23,27 @@ def parse_mig_memory(text: str) -> tuple[int, int]:
     raise ValueError("no MIG device row found in nvidia-smi output")
 
 
-def _smi() -> str:
-    return subprocess.run(["nvidia-smi"], capture_output=True, text=True, check=True).stdout
+def parse_query_memory(text: str) -> tuple[int, int]:
+    """(used_mib, total_mib) of the first GPU in `--query-gpu=memory.used,memory.total
+    --format=csv,noheader,nounits` output."""
+    used, total = (int(v) for v in text.splitlines()[0].split(","))
+    return used, total
+
+
+def _smi(*args: str) -> str:
+    return subprocess.run(["nvidia-smi", *args], capture_output=True, text=True, check=True).stdout
+
+
+def used_total() -> tuple[int, int]:
+    try:
+        return parse_mig_memory(_smi())
+    except ValueError:
+        return parse_query_memory(
+            _smi("--query-gpu=memory.used,memory.total", "--format=csv,noheader,nounits"))
 
 
 def free_mib() -> int:
-    used, total = parse_mig_memory(_smi())
+    used, total = used_total()
     return total - used
 
 
@@ -39,7 +55,7 @@ def main(argv=None) -> int:
     a = ap.parse_args(argv)
     if a.sample:
         while True:
-            used, total = parse_mig_memory(_smi())
+            used, total = used_total()
             with open(a.sample, "a") as f:
                 f.write(f"{int(time.time())},{used},{total}\n")
             time.sleep(a.interval)

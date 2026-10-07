@@ -1,5 +1,5 @@
 import pytest
-from roomrecon.gpu import parse_mig_memory
+from roomrecon.gpu import parse_mig_memory, parse_query_memory
 
 # Real `nvidia-smi` excerpt from the GPU machine, 2026-10-03.
 SMI = """\
@@ -22,3 +22,13 @@ def test_parses_mig_row_not_bar1_row():
 def test_no_mig_table_raises():
     with pytest.raises(ValueError, match="no MIG device row"):
         parse_mig_memory("| NVIDIA-SMI 555.42.06 |\n")
+
+
+def test_query_output_of_a_plain_gpu_first_device():
+    # `nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits`, two T4s
+    assert parse_query_memory("312, 15360\n0, 15360\n") == (312, 15360)
+
+
+def test_query_output_rejects_mig_permission_message():
+    with pytest.raises(ValueError):
+        parse_query_memory("[Insufficient Permissions], [Insufficient Permissions]\n")
