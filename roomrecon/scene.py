@@ -2,7 +2,7 @@
 
 Inputs are in the exported (nerfstudio) frame: camera-to-world matrices in the OpenGL
 convention (camera +Y up, -Z forward) and mesh/splat vertices. People hold phones upright,
-so the mean camera +Y is gravity's up. The scene is rotated so up is +Y (the viewer's
+so the mean camera +Y (or -X, for frames saved sideways) is gravity's up. The scene is rotated so up is +Y (the viewer's
 convention) and scaled so the median camera height above the floor is a typical handheld
 eye height; the factor is recorded, and a factor near 1 means the poses were already metric.
 """
@@ -33,11 +33,18 @@ def euler_xyz_deg(R: np.ndarray) -> list[float]:
 
 
 def estimate_up(c2w: np.ndarray) -> np.ndarray:
-    u = c2w[:, :3, 1].mean(axis=0)
-    n = np.linalg.norm(u)
-    if n < 0.5:
-        raise ValueError(f"camera up vectors disagree (mean norm {n:.2f}); cannot estimate up")
-    return u / n
+    """Mean camera up: +Y for landscape frames; -X for a phone held upright whose frames are
+    saved sideways in the sensor's orientation (iPhone Polycam raw export, sejal-cap2: ceiling on
+    the left edge of every frame, 2026-10-08)."""
+    norms = []
+    for axis, sign in ((1, 1.0), (0, -1.0)):
+        u = sign * c2w[:, :3, axis].mean(axis=0)
+        n = np.linalg.norm(u)
+        if n >= 0.5:
+            return u / n
+        norms.append(n)
+    raise ValueError(f"camera up vectors disagree (mean norm +Y {norms[0]:.2f}, -X {norms[1]:.2f}); "
+                     "cannot estimate up")
 
 
 def rotation_to_y_up(up: np.ndarray) -> np.ndarray:

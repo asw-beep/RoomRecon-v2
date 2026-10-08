@@ -37,6 +37,16 @@ def test_up_recovered_under_tilted_world():
     assert np.allclose(up, R @ [0, 1, 0], atol=1e-6)
 
 
+def test_up_from_portrait_frames_in_sensor_orientation():
+    # phone held upright, frames saved sideways (iPhone sensor orientation): camera -X is up
+    R = _rot_x(70)
+    c2w = _cams(R, [1.4, 1.5])
+    roll = np.array([[0, 1, 0], [-1, 0, 0], [0, 0, 1]])   # Rz(-90): camera x -> world down
+    c2w[:, :3, :3] = c2w[:, :3, :3] @ roll
+    up = scene.estimate_up(c2w)
+    assert np.allclose(up, R @ [0, 1, 0], atol=1e-6)
+
+
 def test_up_rejects_inconsistent_cameras():
     c2w = _cams(np.eye(3), [1.4])
     c2w[::2, :3, 1] *= -1
