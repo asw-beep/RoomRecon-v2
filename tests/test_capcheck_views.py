@@ -85,6 +85,16 @@ def test_texture_high_on_checker_low_on_flat(tmp_path):
     assert np.median(vs.texture[checker]) > 10 * np.median(vs.texture[flat]) + 1e-6
 
 
+def test_frames_mask_skips_frames(tmp_path):
+    cap = load_capture(make_room(tmp_path, ring_cams(n=3), **HI))
+    surface = build_surface(cap)
+    vs = accumulate(surface, cap, frames_mask=np.zeros(3, bool))
+    assert vs.n_views.sum() == 0
+    one = accumulate(surface, cap, frames_mask=np.array([True, False, False]))
+    first = accumulate(surface, load_capture(cap.root, exclude=frozenset({"frame_00002", "frame_00003"})))
+    assert np.array_equal(one.n_views, first.n_views)
+
+
 def test_all_zero_depth_frame_sees_nothing(tmp_path):
     root = make_room(tmp_path, ring_cams(n=3), **HI)
     cap = load_capture(root)

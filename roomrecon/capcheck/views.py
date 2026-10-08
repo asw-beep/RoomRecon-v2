@@ -80,7 +80,8 @@ def _median_by_group(idx: np.ndarray, vals: np.ndarray, n: int) -> np.ndarray:
     return out
 
 
-def accumulate(surface: Surface, cap: Capture) -> ViewStats:
+def accumulate(surface: Surface, cap: Capture, frames_mask: np.ndarray | None = None) -> ViewStats:
+    """Views of every surface point; `frames_mask` (one bool per frame) skips frames."""
     pts = surface.points
     n = len(pts)
     dirs64 = fibonacci_sphere(64)
@@ -89,7 +90,9 @@ def accumulate(surface: Surface, cap: Capture) -> ViewStats:
     footprint = np.full(n, np.inf, np.float32)
     dir_sum = np.zeros((n, 3))
     tex_idx, tex_val = [], []
-    for f in cap.frames:
+    for k, f in enumerate(cap.frames):
+        if frames_mask is not None and not frames_mask[k]:
+            continue
         idx, uv = visible(pts, f, load_depth_m(f))
         if len(idx) == 0:
             continue
