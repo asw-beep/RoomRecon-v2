@@ -16,6 +16,14 @@ def cam_rotation(yaw_deg: float, pitch_deg: float) -> np.ndarray:
     return ry @ rx
 
 
+def look_at(pos, target):
+    """(position, yaw, pitch) of a camera at `pos` looking at `target` (see cam_rotation)."""
+    pos = np.asarray(pos, float)
+    d = np.asarray(target, float) - pos
+    d /= np.linalg.norm(d)
+    return pos, np.degrees(np.arctan2(-d[0], -d[2])), np.degrees(np.arcsin(d[1]))
+
+
 def _slab(o, d, lo, hi):
     """Entry distance of rays o + t d into the box [lo, hi] (inf where missed)."""
     with np.errstate(divide="ignore", invalid="ignore"):
