@@ -15,7 +15,7 @@ HOW TO RUN (Windows)
   http://localhost:8000/?content=room/aligned.ply&collision=room/room.collision.glb&settings=room/settings.json
 
   Needs: Python 3.7+ and a recent Chrome or Edge. No internet, Node or install needed.
-  The room file is 225 MB, so the first load takes a few seconds.
+  The room file is @@SIZE_MB@@ MB, so the first load takes a few seconds.
 
 CONTROLS
   Pick walk mode in the toolbar (bottom right), click into the view, then
@@ -30,12 +30,11 @@ CONTENTS
   index.html, index.js, index.css   SuperSplat Viewer 1.37.0 (MIT, see
                                     LICENSE-supersplat-viewer.txt), with a RoomRecon patch
                                     for bigger buttons
-  room/aligned.ply                  the room: 908,249 Gaussians, metric scale, Y up
+  room/aligned.ply                  the room: @@GAUSSIANS@@ Gaussians, metric scale, Y up
   room/room.collision.glb           collision mesh (walls and floor)
   room/settings.json                start position (inside the room, eye height)
   room/scene.json                   how the room was aligned
   serve.py, start-demo.cmd          local web server and launcher
 
 DATA
-  Room: "vr_room" from the MuSHRoom dataset (Ren et al.), CC BY 4.0.
-  Trained on the GPU machine, run dns-30k-lite (2026-10-05); see results/ in the repo.
+@@DATA@@
