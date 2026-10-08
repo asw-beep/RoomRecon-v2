@@ -1,0 +1,17 @@
+{
+  "run_id": "dns-30k-lite",
+  "room": "sejal-cap2",
+  "method": "dn-splatter (dn)",
+  "command": "ns-train dn-splatter --output-dir /home/aswinm/roomrecon/scenes/sejal-cap2/dns-30k-lite/train --experiment-name sejal-cap2 --timestamp dns-30k-lite --steps-per-save 1000 --save-only-latest-checkpoint False --steps-per-eval-all-images 1000 --vis tensorboard --viewer.quit-on-train-completion True --pipeline.datamanager.cache-images cpu --pipeline.model.use-depth-loss True --pipeline.model.depth-lambda 0.2 --pipeline.model.use-depth-smooth-loss True --pipeline.model.use-normal-loss True --pipeline.model.normal-supervision mono --pipeline.model.stop-split-at 10000 --max-num-iterations 30000 normal-nerfstudio --data /home/aswinm/roomrecon/datasets/own/sejal-cap2/processed --orientation-method none --center-method none --auto-scale-poses False --normal-format omnidata --eval-mode interval --eval-interval 8 (lite, auto-resume)",
+  "repo_commit": "4dc9f74140cd30d2a5ae3ca7e8bee7b28ca7be38",
+  "dn_splatter_commit": "97588b4290128ce7ba6fdbfaac3020b42b17de4c",
+  "machine": "GPU machine A100-PCIE-40GB MIG 7g.40gb (shared)",
+  "free_mib_at_start": 6755,
+  "started_at": "2026-10-08T12:14:26Z",
+  "status": "ok",
+  "ended_at": "2026-10-08T13:53:46Z",
+  "duration_s": 5960,
+  "exit_code": 0,
+  "gpu_used_mib_at_start": 33692,
+  "gpu_used_mib_max": 38948
+}

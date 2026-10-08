@@ -1,0 +1,2341 @@
+step,tag,value
+500,Eval Images Metrics/depth_a1,0.9882901906967163
+500,Eval Images Metrics/depth_a2,0.9994451999664307
+500,Eval Images Metrics/depth_a3,1.0
+500,Eval Images Metrics/depth_abs_rel,0.025918899103999138
+500,Eval Images Metrics/depth_rmse,0.0802759900689125
+500,Eval Images Metrics/depth_rmse_log,0.0264268908649683
+500,Eval Images Metrics/depth_sq_rel,0.0036999660078436136
+500,Eval Images Metrics/normal_mae,0.26549476385116577
+500,Eval Images Metrics/normal_mean_err,0.07933525741100311
+500,Eval Images Metrics/normal_med_err,0.05018055438995361
+500,Eval Images Metrics/normal_rsme,0.12341084331274033
+500,Eval Images Metrics/num_rays,733572.0
+500,Eval Images Metrics/rgb_lpips,0.49932998418807983
+500,Eval Images Metrics/rgb_psnr,18.126876831054688
+500,Eval Images Metrics/rgb_ssim,0.7431875467300415
+500,Eval Loss,0.23189768195152283
+500,Eval Loss Dict/main_loss,0.23189768195152283
+500,Eval Loss Dict/scale_reg,0.0
+500,Eval Metrics Dict/avg_min_scale,0.000517067383043468
+500,Eval Metrics Dict/depth_a1,0.999979555606842
+500,Eval Metrics Dict/depth_a2,1.0
+500,Eval Metrics Dict/depth_a3,1.0
+500,Eval Metrics Dict/depth_abs_rel,0.022562522441148758
+500,Eval Metrics Dict/depth_rmse,0.05006588622927666
+500,Eval Metrics Dict/depth_rmse_log,0.02291662059724331
+500,Eval Metrics Dict/depth_sq_rel,0.0013229863252490759
+500,Eval Metrics Dict/gaussian_count,300000.0
+500,Eval Metrics Dict/rgb_lpips,0.3504387140274048
+500,Eval Metrics Dict/rgb_mse,0.012894176878035069
+500,Eval Metrics Dict/rgb_psnr,18.89606285095215
+500,Eval Metrics Dict/rgb_ssim,0.8762310147285461
+1000,Eval Images Metrics Dict (all images)/depth_a1,0.9883984923362732
+1000,Eval Images Metrics Dict (all images)/depth_a2,0.996817409992218
+1000,Eval Images Metrics Dict (all images)/depth_a3,0.9999067187309265
+1000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.02079583704471588
+1000,Eval Images Metrics Dict (all images)/depth_rmse,0.0708443820476532
+1000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.021297991275787354
+1000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0034859406296163797
+1000,Eval Images Metrics Dict (all images)/fps,4.518154621124268
+1000,Eval Images Metrics Dict (all images)/normal_mae,0.16529756784439087
+1000,Eval Images Metrics Dict (all images)/normal_mean_err,0.04316697642207146
+1000,Eval Images Metrics Dict (all images)/normal_med_err,0.02328190766274929
+1000,Eval Images Metrics Dict (all images)/normal_rsme,0.07911406457424164
+1000,Eval Images Metrics Dict (all images)/num_rays_per_sec,3314391.5
+1000,Eval Images Metrics Dict (all images)/rgb_lpips,0.3132283389568329
+1000,Eval Images Metrics Dict (all images)/rgb_psnr,18.781049728393555
+1000,Eval Images Metrics Dict (all images)/rgb_ssim,0.7640898823738098
+1000,Eval Images Metrics/depth_a1,0.9865370988845825
+1000,Eval Images Metrics/depth_a2,0.9981065392494202
+1000,Eval Images Metrics/depth_a3,1.0
+1000,Eval Images Metrics/depth_abs_rel,0.024506326764822006
+1000,Eval Images Metrics/depth_rmse,0.07784118503332138
+1000,Eval Images Metrics/depth_rmse_log,0.024740733206272125
+1000,Eval Images Metrics/depth_sq_rel,0.0040812925435602665
+1000,Eval Images Metrics/normal_mae,0.20137448608875275
+1000,Eval Images Metrics/normal_mean_err,0.05696021765470505
+1000,Eval Images Metrics/normal_med_err,0.029935359954833984
+1000,Eval Images Metrics/normal_rsme,0.0926591157913208
+1000,Eval Images Metrics/num_rays,733572.0
+1000,Eval Images Metrics/rgb_lpips,0.4827929735183716
+1000,Eval Images Metrics/rgb_psnr,18.221424102783203
+1000,Eval Images Metrics/rgb_ssim,0.6568584442138672
+1000,Eval Loss,0.2660149931907654
+1000,Eval Loss Dict/main_loss,0.2660149931907654
+1000,Eval Loss Dict/scale_reg,0.0
+1000,Eval Metrics Dict/avg_min_scale,0.00010805284546222538
+1000,Eval Metrics Dict/depth_a1,0.9871982932090759
+1000,Eval Metrics Dict/depth_a2,0.9958681464195251
+1000,Eval Metrics Dict/depth_a3,1.0
+1000,Eval Metrics Dict/depth_abs_rel,0.021917713806033134
+1000,Eval Metrics Dict/depth_rmse,0.059637848287820816
+1000,Eval Metrics Dict/depth_rmse_log,0.02273055911064148
+1000,Eval Metrics Dict/depth_sq_rel,0.002637041499838233
+1000,Eval Metrics Dict/gaussian_count,331429.0
+1000,Eval Metrics Dict/rgb_lpips,0.46913665533065796
+1000,Eval Metrics Dict/rgb_mse,0.022309035062789917
+1000,Eval Metrics Dict/rgb_psnr,16.51519203186035
+1000,Eval Metrics Dict/rgb_ssim,0.6448743343353271
+1500,Eval Images Metrics/depth_a1,0.996356189250946
+1500,Eval Images Metrics/depth_a2,0.9996142387390137
+1500,Eval Images Metrics/depth_a3,1.0
+1500,Eval Images Metrics/depth_abs_rel,0.010240315459668636
+1500,Eval Images Metrics/depth_rmse,0.04909456893801689
+1500,Eval Images Metrics/depth_rmse_log,0.010181935504078865
+1500,Eval Images Metrics/depth_sq_rel,0.00129888323135674
+1500,Eval Images Metrics/normal_mae,0.16457431018352509
+1500,Eval Images Metrics/normal_mean_err,0.03474084660410881
+1500,Eval Images Metrics/normal_med_err,0.009422659873962402
+1500,Eval Images Metrics/normal_rsme,0.08669456839561462
+1500,Eval Images Metrics/num_rays,733572.0
+1500,Eval Images Metrics/rgb_lpips,0.22034382820129395
+1500,Eval Images Metrics/rgb_psnr,19.0410099029541
+1500,Eval Images Metrics/rgb_ssim,0.8102999329566956
+1500,Eval Loss,0.18463484942913055
+1500,Eval Loss Dict/main_loss,0.18463484942913055
+1500,Eval Loss Dict/scale_reg,0.0
+1500,Eval Metrics Dict/avg_min_scale,4.278128835721873e-05
+1500,Eval Metrics Dict/depth_a1,0.9965020418167114
+1500,Eval Metrics Dict/depth_a2,0.9999945759773254
+1500,Eval Metrics Dict/depth_a3,1.0
+1500,Eval Metrics Dict/depth_abs_rel,0.009794624522328377
+1500,Eval Metrics Dict/depth_rmse,0.051984526216983795
+1500,Eval Metrics Dict/depth_rmse_log,0.009947359561920166
+1500,Eval Metrics Dict/depth_sq_rel,0.0011901510879397392
+1500,Eval Metrics Dict/gaussian_count,467932.0
+1500,Eval Metrics Dict/rgb_lpips,0.21491752564907074
+1500,Eval Metrics Dict/rgb_mse,0.011689494363963604
+1500,Eval Metrics Dict/rgb_psnr,19.32204246520996
+1500,Eval Metrics Dict/rgb_ssim,0.7797574996948242
+2000,Eval Images Metrics Dict (all images)/depth_a1,0.9893277287483215
+2000,Eval Images Metrics Dict (all images)/depth_a2,0.9971814155578613
+2000,Eval Images Metrics Dict (all images)/depth_a3,0.9997654557228088
+2000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.019382400438189507
+2000,Eval Images Metrics Dict (all images)/depth_rmse,0.06729517877101898
+2000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.019911590963602066
+2000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0032677347771823406
+2000,Eval Images Metrics Dict (all images)/fps,4.407723903656006
+2000,Eval Images Metrics Dict (all images)/normal_mae,0.16735149919986725
+2000,Eval Images Metrics Dict (all images)/normal_mean_err,0.038865651935338974
+2000,Eval Images Metrics Dict (all images)/normal_med_err,0.020017335191369057
+2000,Eval Images Metrics Dict (all images)/normal_rsme,0.0744389072060585
+2000,Eval Images Metrics Dict (all images)/num_rays_per_sec,3233382.75
+2000,Eval Images Metrics Dict (all images)/rgb_lpips,0.24050596356391907
+2000,Eval Images Metrics Dict (all images)/rgb_psnr,19.30321502685547
+2000,Eval Images Metrics Dict (all images)/rgb_ssim,0.7862327694892883
+2000,Eval Images Metrics/depth_a1,0.9954496622085571
+2000,Eval Images Metrics/depth_a2,0.9987772107124329
+2000,Eval Images Metrics/depth_a3,0.9999332427978516
+2000,Eval Images Metrics/depth_abs_rel,0.013732023537158966
+2000,Eval Images Metrics/depth_rmse,0.05571690946817398
+2000,Eval Images Metrics/depth_rmse_log,0.013785706833004951
+2000,Eval Images Metrics/depth_sq_rel,0.0018796403892338276
+2000,Eval Images Metrics/normal_mae,0.09550417214632034
+2000,Eval Images Metrics/normal_mean_err,0.03041897714138031
+2000,Eval Images Metrics/normal_med_err,0.010165572166442871
+2000,Eval Images Metrics/normal_rsme,0.06329827755689621
+2000,Eval Images Metrics/num_rays,733572.0
+2000,Eval Images Metrics/rgb_lpips,0.2137077897787094
+2000,Eval Images Metrics/rgb_psnr,21.492685317993164
+2000,Eval Images Metrics/rgb_ssim,0.8406486511230469
+2000,Eval Loss,0.2188115268945694
+2000,Eval Loss Dict/main_loss,0.2188115268945694
+2000,Eval Loss Dict/scale_reg,0.0
+2000,Eval Metrics Dict/avg_min_scale,2.4197279344662093e-05
+2000,Eval Metrics Dict/depth_a1,0.9994274973869324
+2000,Eval Metrics Dict/depth_a2,1.0
+2000,Eval Metrics Dict/depth_a3,1.0
+2000,Eval Metrics Dict/depth_abs_rel,0.025145158171653748
+2000,Eval Metrics Dict/depth_rmse,0.0633617490530014
+2000,Eval Metrics Dict/depth_rmse_log,0.025537393987178802
+2000,Eval Metrics Dict/depth_sq_rel,0.0017313770949840546
+2000,Eval Metrics Dict/gaussian_count,586395.0
+2000,Eval Metrics Dict/rgb_lpips,0.12873134016990662
+2000,Eval Metrics Dict/rgb_mse,0.022718891501426697
+2000,Eval Metrics Dict/rgb_psnr,16.436128616333008
+2000,Eval Metrics Dict/rgb_ssim,0.8300849199295044
+2500,Eval Images Metrics/depth_a1,0.9963043928146362
+2500,Eval Images Metrics/depth_a2,0.9999809265136719
+2500,Eval Images Metrics/depth_a3,1.0
+2500,Eval Images Metrics/depth_abs_rel,0.009243665263056755
+2500,Eval Images Metrics/depth_rmse,0.05276062712073326
+2500,Eval Images Metrics/depth_rmse_log,0.009429208934307098
+2500,Eval Images Metrics/depth_sq_rel,0.0012089317897334695
+2500,Eval Images Metrics/normal_mae,0.29300034046173096
+2500,Eval Images Metrics/normal_mean_err,0.02043932117521763
+2500,Eval Images Metrics/normal_med_err,0.015118181705474854
+2500,Eval Images Metrics/normal_rsme,0.04014207795262337
+2500,Eval Images Metrics/num_rays,733572.0
+2500,Eval Images Metrics/rgb_lpips,0.20316173136234283
+2500,Eval Images Metrics/rgb_psnr,19.415496826171875
+2500,Eval Images Metrics/rgb_ssim,0.7865914702415466
+2500,Eval Loss,0.1729896366596222
+2500,Eval Loss Dict/main_loss,0.1729896366596222
+2500,Eval Loss Dict/scale_reg,0.0
+2500,Eval Metrics Dict/avg_min_scale,1.543733014841564e-05
+2500,Eval Metrics Dict/depth_a1,0.9994465708732605
+2500,Eval Metrics Dict/depth_a2,1.0
+2500,Eval Metrics Dict/depth_a3,1.0
+2500,Eval Metrics Dict/depth_abs_rel,0.008701520040631294
+2500,Eval Metrics Dict/depth_rmse,0.03396795690059662
+2500,Eval Metrics Dict/depth_rmse_log,0.008740728721022606
+2500,Eval Metrics Dict/depth_sq_rel,0.0004582515393849462
+2500,Eval Metrics Dict/gaussian_count,685042.0
+2500,Eval Metrics Dict/rgb_lpips,0.15575484931468964
+2500,Eval Metrics Dict/rgb_mse,0.009610483422875404
+2500,Eval Metrics Dict/rgb_psnr,20.17254638671875
+2500,Eval Metrics Dict/rgb_ssim,0.8017140030860901
+3000,Eval Images Metrics Dict (all images)/depth_a1,0.988967776298523
+3000,Eval Images Metrics Dict (all images)/depth_a2,0.9967547059059143
+3000,Eval Images Metrics Dict (all images)/depth_a3,0.9996644258499146
+3000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.019075674936175346
+3000,Eval Images Metrics Dict (all images)/depth_rmse,0.0668565183877945
+3000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.01965956576168537
+3000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.003242736915126443
+3000,Eval Images Metrics Dict (all images)/fps,4.331728935241699
+3000,Eval Images Metrics Dict (all images)/normal_mae,0.1683642715215683
+3000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03654332458972931
+3000,Eval Images Metrics Dict (all images)/normal_med_err,0.019327253103256226
+3000,Eval Images Metrics Dict (all images)/normal_rsme,0.07087481766939163
+3000,Eval Images Metrics Dict (all images)/num_rays_per_sec,3177635.0
+3000,Eval Images Metrics Dict (all images)/rgb_lpips,0.2247001677751541
+3000,Eval Images Metrics Dict (all images)/rgb_psnr,19.875328063964844
+3000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8003334999084473
+3000,Eval Images Metrics/depth_a1,0.9815410375595093
+3000,Eval Images Metrics/depth_a2,1.0
+3000,Eval Images Metrics/depth_a3,1.0
+3000,Eval Images Metrics/depth_abs_rel,0.02036069892346859
+3000,Eval Images Metrics/depth_rmse,0.12503018975257874
+3000,Eval Images Metrics/depth_rmse_log,0.019419454038143158
+3000,Eval Images Metrics/depth_sq_rel,0.006460448727011681
+3000,Eval Images Metrics/normal_mae,0.2795102000236511
+3000,Eval Images Metrics/normal_mean_err,0.03881998360157013
+3000,Eval Images Metrics/normal_med_err,0.013950586318969727
+3000,Eval Images Metrics/normal_rsme,0.09390903264284134
+3000,Eval Images Metrics/num_rays,733572.0
+3000,Eval Images Metrics/rgb_lpips,0.34909766912460327
+3000,Eval Images Metrics/rgb_psnr,18.802167892456055
+3000,Eval Images Metrics/rgb_ssim,0.7050104141235352
+3000,Eval Loss,0.15597105026245117
+3000,Eval Loss Dict/main_loss,0.15597105026245117
+3000,Eval Loss Dict/scale_reg,0.0
+3000,Eval Metrics Dict/avg_min_scale,1.0643968380463775e-05
+3000,Eval Metrics Dict/depth_a1,0.9948703050613403
+3000,Eval Metrics Dict/depth_a2,0.9987118244171143
+3000,Eval Metrics Dict/depth_a3,0.9999645948410034
+3000,Eval Metrics Dict/depth_abs_rel,0.013060248456895351
+3000,Eval Metrics Dict/depth_rmse,0.05555201321840286
+3000,Eval Metrics Dict/depth_rmse_log,0.013119764626026154
+3000,Eval Metrics Dict/depth_sq_rel,0.0019114186288788915
+3000,Eval Metrics Dict/gaussian_count,776114.0
+3000,Eval Metrics Dict/rgb_lpips,0.20344237983226776
+3000,Eval Metrics Dict/rgb_mse,0.00744255306199193
+3000,Eval Metrics Dict/rgb_psnr,21.282779693603516
+3000,Eval Metrics Dict/rgb_ssim,0.8391537070274353
+3500,Eval Images Metrics/depth_a1,0.9999727606773376
+3500,Eval Images Metrics/depth_a2,1.0
+3500,Eval Images Metrics/depth_a3,1.0
+3500,Eval Images Metrics/depth_abs_rel,0.020946957170963287
+3500,Eval Images Metrics/depth_rmse,0.028262317180633545
+3500,Eval Images Metrics/depth_rmse_log,0.02113521657884121
+3500,Eval Images Metrics/depth_sq_rel,0.0007510059513151646
+3500,Eval Images Metrics/normal_mae,0.005418713670223951
+3500,Eval Images Metrics/normal_mean_err,0.03950619697570801
+3500,Eval Images Metrics/normal_med_err,0.022206932306289673
+3500,Eval Images Metrics/normal_rsme,0.07841720432043076
+3500,Eval Images Metrics/num_rays,733572.0
+3500,Eval Images Metrics/rgb_lpips,0.43680834770202637
+3500,Eval Images Metrics/rgb_psnr,18.67530632019043
+3500,Eval Images Metrics/rgb_ssim,0.6915940642356873
+3500,Eval Loss,0.1779104769229889
+3500,Eval Loss Dict/main_loss,0.1779104769229889
+3500,Eval Loss Dict/scale_reg,0.0
+3500,Eval Metrics Dict/avg_min_scale,9.30168607737869e-06
+3500,Eval Metrics Dict/depth_a1,0.9960412979125977
+3500,Eval Metrics Dict/depth_a2,0.9991180300712585
+3500,Eval Metrics Dict/depth_a3,1.0
+3500,Eval Metrics Dict/depth_abs_rel,0.012296960689127445
+3500,Eval Metrics Dict/depth_rmse,0.034556373953819275
+3500,Eval Metrics Dict/depth_rmse_log,0.012563908472657204
+3500,Eval Metrics Dict/depth_sq_rel,0.0008779458585195243
+3500,Eval Metrics Dict/gaussian_count,651156.0
+3500,Eval Metrics Dict/rgb_lpips,0.2643323242664337
+3500,Eval Metrics Dict/rgb_mse,0.012113419361412525
+3500,Eval Metrics Dict/rgb_psnr,19.167333602905273
+3500,Eval Metrics Dict/rgb_ssim,0.7320464849472046
+4000,Eval Images Metrics Dict (all images)/depth_a1,0.989006519317627
+4000,Eval Images Metrics Dict (all images)/depth_a2,0.9970046281814575
+4000,Eval Images Metrics Dict (all images)/depth_a3,0.9996864795684814
+4000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.018931927159428596
+4000,Eval Images Metrics Dict (all images)/depth_rmse,0.06694173067808151
+4000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.019471682608127594
+4000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0032354199793189764
+4000,Eval Images Metrics Dict (all images)/fps,4.34634256362915
+4000,Eval Images Metrics Dict (all images)/normal_mae,0.16720888018608093
+4000,Eval Images Metrics Dict (all images)/normal_mean_err,0.037814293056726456
+4000,Eval Images Metrics Dict (all images)/normal_med_err,0.019286397844552994
+4000,Eval Images Metrics Dict (all images)/normal_rsme,0.07258598506450653
+4000,Eval Images Metrics Dict (all images)/num_rays_per_sec,3188355.0
+4000,Eval Images Metrics Dict (all images)/rgb_lpips,0.22547847032546997
+4000,Eval Images Metrics Dict (all images)/rgb_psnr,20.039268493652344
+4000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8021860718727112
+4000,Eval Images Metrics/depth_a1,0.9981529116630554
+4000,Eval Images Metrics/depth_a2,1.0
+4000,Eval Images Metrics/depth_a3,1.0
+4000,Eval Images Metrics/depth_abs_rel,0.007765087299048901
+4000,Eval Images Metrics/depth_rmse,0.027865253388881683
+4000,Eval Images Metrics/depth_rmse_log,0.007765721529722214
+4000,Eval Images Metrics/depth_sq_rel,0.0005740373744629323
+4000,Eval Images Metrics/normal_mae,0.00015081495803315192
+4000,Eval Images Metrics/normal_mean_err,0.03363578021526337
+4000,Eval Images Metrics/normal_med_err,0.02441239356994629
+4000,Eval Images Metrics/normal_rsme,0.048004403710365295
+4000,Eval Images Metrics/num_rays,733572.0
+4000,Eval Images Metrics/rgb_lpips,0.09897191822528839
+4000,Eval Images Metrics/rgb_psnr,26.220548629760742
+4000,Eval Images Metrics/rgb_ssim,0.9425933957099915
+4000,Eval Loss,0.1007925271987915
+4000,Eval Loss Dict/main_loss,0.1007925271987915
+4000,Eval Loss Dict/scale_reg,0.0
+4000,Eval Metrics Dict/avg_min_scale,6.072915311960969e-06
+4000,Eval Metrics Dict/depth_a1,0.9981529116630554
+4000,Eval Metrics Dict/depth_a2,1.0
+4000,Eval Metrics Dict/depth_a3,1.0
+4000,Eval Metrics Dict/depth_abs_rel,0.007765087299048901
+4000,Eval Metrics Dict/depth_rmse,0.027865255251526833
+4000,Eval Metrics Dict/depth_rmse_log,0.007765722461044788
+4000,Eval Metrics Dict/depth_sq_rel,0.0005740373744629323
+4000,Eval Metrics Dict/gaussian_count,743829.0
+4000,Eval Metrics Dict/rgb_lpips,0.09897191822528839
+4000,Eval Metrics Dict/rgb_mse,0.002387508749961853
+4000,Eval Metrics Dict/rgb_psnr,26.220548629760742
+4000,Eval Metrics Dict/rgb_ssim,0.9425933957099915
+4500,Eval Images Metrics/depth_a1,0.9952670335769653
+4500,Eval Images Metrics/depth_a2,0.9996005892753601
+4500,Eval Images Metrics/depth_a3,1.0
+4500,Eval Images Metrics/depth_abs_rel,0.021166499704122543
+4500,Eval Images Metrics/depth_rmse,0.09054657071828842
+4500,Eval Images Metrics/depth_rmse_log,0.02138877660036087
+4500,Eval Images Metrics/depth_sq_rel,0.0033620386384427547
+4500,Eval Images Metrics/normal_mae,0.16824717819690704
+4500,Eval Images Metrics/normal_mean_err,0.03406669199466705
+4500,Eval Images Metrics/normal_med_err,0.014996469020843506
+4500,Eval Images Metrics/normal_rsme,0.06572549790143967
+4500,Eval Images Metrics/num_rays,733572.0
+4500,Eval Images Metrics/rgb_lpips,0.2107160985469818
+4500,Eval Images Metrics/rgb_psnr,21.633182525634766
+4500,Eval Images Metrics/rgb_ssim,0.7605052590370178
+4500,Eval Loss,0.14341525733470917
+4500,Eval Loss Dict/main_loss,0.14341525733470917
+4500,Eval Loss Dict/scale_reg,0.0
+4500,Eval Metrics Dict/avg_min_scale,4.329117473389488e-06
+4500,Eval Metrics Dict/depth_a1,0.9891271591186523
+4500,Eval Metrics Dict/depth_a2,0.9984896183013916
+4500,Eval Metrics Dict/depth_a3,1.0
+4500,Eval Metrics Dict/depth_abs_rel,0.014783885329961777
+4500,Eval Metrics Dict/depth_rmse,0.06957215815782547
+4500,Eval Metrics Dict/depth_rmse_log,0.015278481878340244
+4500,Eval Metrics Dict/depth_sq_rel,0.0027587253134697676
+4500,Eval Metrics Dict/gaussian_count,815457.0
+4500,Eval Metrics Dict/rgb_lpips,0.14961187541484833
+4500,Eval Metrics Dict/rgb_mse,0.0034155501052737236
+4500,Eval Metrics Dict/rgb_psnr,24.66539192199707
+4500,Eval Metrics Dict/rgb_ssim,0.8691372871398926
+5000,Eval Images Metrics Dict (all images)/depth_a1,0.9887797236442566
+5000,Eval Images Metrics Dict (all images)/depth_a2,0.996695339679718
+5000,Eval Images Metrics Dict (all images)/depth_a3,0.9994485974311829
+5000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.018963517621159554
+5000,Eval Images Metrics Dict (all images)/depth_rmse,0.06656107306480408
+5000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.019571878015995026
+5000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0032286059577018023
+5000,Eval Images Metrics Dict (all images)/fps,22.002012252807617
+5000,Eval Images Metrics Dict (all images)/normal_mae,0.16830071806907654
+5000,Eval Images Metrics Dict (all images)/normal_mean_err,0.035840075463056564
+5000,Eval Images Metrics Dict (all images)/normal_med_err,0.01873680390417576
+5000,Eval Images Metrics Dict (all images)/normal_rsme,0.06997264176607132
+5000,Eval Images Metrics Dict (all images)/num_rays_per_sec,16140059.0
+5000,Eval Images Metrics Dict (all images)/rgb_lpips,0.2164633721113205
+5000,Eval Images Metrics Dict (all images)/rgb_psnr,20.41941261291504
+5000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8129000067710876
+5000,Eval Images Metrics/depth_a1,0.9808035492897034
+5000,Eval Images Metrics/depth_a2,0.9981978535652161
+5000,Eval Images Metrics/depth_a3,1.0
+5000,Eval Images Metrics/depth_abs_rel,0.025341549888253212
+5000,Eval Images Metrics/depth_rmse,0.12351524084806442
+5000,Eval Images Metrics/depth_rmse_log,0.024909542873501778
+5000,Eval Images Metrics/depth_sq_rel,0.007196851074695587
+5000,Eval Images Metrics/normal_mae,0.07006276398897171
+5000,Eval Images Metrics/normal_mean_err,0.039643995463848114
+5000,Eval Images Metrics/normal_med_err,0.014250099658966064
+5000,Eval Images Metrics/normal_rsme,0.08292756974697113
+5000,Eval Images Metrics/num_rays,733572.0
+5000,Eval Images Metrics/rgb_lpips,0.2914630174636841
+5000,Eval Images Metrics/rgb_psnr,19.488052368164062
+5000,Eval Images Metrics/rgb_ssim,0.6496462821960449
+5000,Eval Loss,0.21278610825538635
+5000,Eval Loss Dict/main_loss,0.21278610825538635
+5000,Eval Loss Dict/scale_reg,0.0
+5000,Eval Metrics Dict/avg_min_scale,3.2422451567981625e-06
+5000,Eval Metrics Dict/depth_a1,0.9925256371498108
+5000,Eval Metrics Dict/depth_a2,0.9986422657966614
+5000,Eval Metrics Dict/depth_a3,0.9999986290931702
+5000,Eval Metrics Dict/depth_abs_rel,0.016278812661767006
+5000,Eval Metrics Dict/depth_rmse,0.06337766349315643
+5000,Eval Metrics Dict/depth_rmse_log,0.016568003222346306
+5000,Eval Metrics Dict/depth_sq_rel,0.002265078714117408
+5000,Eval Metrics Dict/gaussian_count,891316.0
+5000,Eval Metrics Dict/rgb_lpips,0.289214164018631
+5000,Eval Metrics Dict/rgb_mse,0.009067322127521038
+5000,Eval Metrics Dict/rgb_psnr,20.425209045410156
+5000,Eval Metrics Dict/rgb_ssim,0.7804850935935974
+5500,Eval Images Metrics/depth_a1,0.9871301054954529
+5500,Eval Images Metrics/depth_a2,0.9977875351905823
+5500,Eval Images Metrics/depth_a3,1.0
+5500,Eval Images Metrics/depth_abs_rel,0.025027818977832794
+5500,Eval Images Metrics/depth_rmse,0.08731141686439514
+5500,Eval Images Metrics/depth_rmse_log,0.02588099054992199
+5500,Eval Images Metrics/depth_sq_rel,0.003958554472774267
+5500,Eval Images Metrics/normal_mae,0.134508416056633
+5500,Eval Images Metrics/normal_mean_err,0.052854131907224655
+5500,Eval Images Metrics/normal_med_err,0.026850521564483643
+5500,Eval Images Metrics/normal_rsme,0.09607948362827301
+5500,Eval Images Metrics/num_rays,733572.0
+5500,Eval Images Metrics/rgb_lpips,0.2838743329048157
+5500,Eval Images Metrics/rgb_psnr,19.91971206665039
+5500,Eval Images Metrics/rgb_ssim,0.727688193321228
+5500,Eval Loss,0.10621315240859985
+5500,Eval Loss Dict/main_loss,0.10621315240859985
+5500,Eval Loss Dict/scale_reg,0.0
+5500,Eval Metrics Dict/avg_min_scale,2.418993744868203e-06
+5500,Eval Metrics Dict/depth_a1,0.9989680647850037
+5500,Eval Metrics Dict/depth_a2,1.0
+5500,Eval Metrics Dict/depth_a3,1.0
+5500,Eval Metrics Dict/depth_abs_rel,0.007581575773656368
+5500,Eval Metrics Dict/depth_rmse,0.02500591240823269
+5500,Eval Metrics Dict/depth_rmse_log,0.007641690783202648
+5500,Eval Metrics Dict/depth_sq_rel,0.00044845102820545435
+5500,Eval Metrics Dict/gaussian_count,976667.0
+5500,Eval Metrics Dict/rgb_lpips,0.15637212991714478
+5500,Eval Metrics Dict/rgb_mse,0.0028129129204899073
+5500,Eval Metrics Dict/rgb_psnr,25.50843620300293
+5500,Eval Metrics Dict/rgb_ssim,0.9309302568435669
+6000,Eval Images Metrics Dict (all images)/depth_a1,0.9890472888946533
+6000,Eval Images Metrics Dict (all images)/depth_a2,0.9966920614242554
+6000,Eval Images Metrics Dict (all images)/depth_a3,0.9993246793746948
+6000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.018695097416639328
+6000,Eval Images Metrics Dict (all images)/depth_rmse,0.06506430357694626
+6000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.019316909834742546
+6000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0031610545702278614
+6000,Eval Images Metrics Dict (all images)/fps,23.360076904296875
+6000,Eval Images Metrics Dict (all images)/normal_mae,0.16781680285930634
+6000,Eval Images Metrics Dict (all images)/normal_mean_err,0.035317301750183105
+6000,Eval Images Metrics Dict (all images)/normal_med_err,0.01804068684577942
+6000,Eval Images Metrics Dict (all images)/normal_rsme,0.06872717291116714
+6000,Eval Images Metrics Dict (all images)/num_rays_per_sec,17136296.0
+6000,Eval Images Metrics Dict (all images)/rgb_lpips,0.1992996335029602
+6000,Eval Images Metrics Dict (all images)/rgb_psnr,20.94350814819336
+6000,Eval Images Metrics Dict (all images)/rgb_ssim,0.823750913143158
+6000,Eval Images Metrics/depth_a1,0.9963957071304321
+6000,Eval Images Metrics/depth_a2,0.9999850392341614
+6000,Eval Images Metrics/depth_a3,1.0
+6000,Eval Images Metrics/depth_abs_rel,0.009345555678009987
+6000,Eval Images Metrics/depth_rmse,0.05271679162979126
+6000,Eval Images Metrics/depth_rmse_log,0.009512605145573616
+6000,Eval Images Metrics/depth_sq_rel,0.001208814443089068
+6000,Eval Images Metrics/normal_mae,0.2915259599685669
+6000,Eval Images Metrics/normal_mean_err,0.018388617783784866
+6000,Eval Images Metrics/normal_med_err,0.012919783592224121
+6000,Eval Images Metrics/normal_rsme,0.03746801242232323
+6000,Eval Images Metrics/num_rays,733572.0
+6000,Eval Images Metrics/rgb_lpips,0.1784730851650238
+6000,Eval Images Metrics/rgb_psnr,19.719818115234375
+6000,Eval Images Metrics/rgb_ssim,0.8414079546928406
+6000,Eval Loss,0.28880810737609863
+6000,Eval Loss Dict/main_loss,0.28880810737609863
+6000,Eval Loss Dict/scale_reg,0.0
+6000,Eval Metrics Dict/avg_min_scale,1.8545207467468572e-06
+6000,Eval Metrics Dict/depth_a1,0.9827938079833984
+6000,Eval Metrics Dict/depth_a2,0.996296226978302
+6000,Eval Metrics Dict/depth_a3,1.0
+6000,Eval Metrics Dict/depth_abs_rel,0.03135301545262337
+6000,Eval Metrics Dict/depth_rmse,0.10610921680927277
+6000,Eval Metrics Dict/depth_rmse_log,0.032816242426633835
+6000,Eval Metrics Dict/depth_sq_rel,0.005623748525977135
+6000,Eval Metrics Dict/gaussian_count,1026081.0
+6000,Eval Metrics Dict/rgb_lpips,0.21108685433864594
+6000,Eval Metrics Dict/rgb_mse,0.012744816951453686
+6000,Eval Metrics Dict/rgb_psnr,18.946664810180664
+6000,Eval Metrics Dict/rgb_ssim,0.8093735575675964
+6500,Eval Images Metrics/depth_a1,0.9932740330696106
+6500,Eval Images Metrics/depth_a2,0.9979838728904724
+6500,Eval Images Metrics/depth_a3,0.9998718500137329
+6500,Eval Images Metrics/depth_abs_rel,0.014841019175946712
+6500,Eval Images Metrics/depth_rmse,0.06281458586454391
+6500,Eval Images Metrics/depth_rmse_log,0.01493903435766697
+6500,Eval Images Metrics/depth_sq_rel,0.0024015442468225956
+6500,Eval Images Metrics/normal_mae,0.0961310938000679
+6500,Eval Images Metrics/normal_mean_err,0.03161778301000595
+6500,Eval Images Metrics/normal_med_err,0.012520074844360352
+6500,Eval Images Metrics/normal_rsme,0.06265600025653839
+6500,Eval Images Metrics/num_rays,733572.0
+6500,Eval Images Metrics/rgb_lpips,0.20743054151535034
+6500,Eval Images Metrics/rgb_psnr,20.09766387939453
+6500,Eval Images Metrics/rgb_ssim,0.8253845572471619
+6500,Eval Loss,0.16712960600852966
+6500,Eval Loss Dict/main_loss,0.16712960600852966
+6500,Eval Loss Dict/scale_reg,0.0
+6500,Eval Metrics Dict/avg_min_scale,1.74181695911102e-06
+6500,Eval Metrics Dict/depth_a1,0.9964597821235657
+6500,Eval Metrics Dict/depth_a2,0.9999836683273315
+6500,Eval Metrics Dict/depth_a3,1.0
+6500,Eval Metrics Dict/depth_abs_rel,0.009354833513498306
+6500,Eval Metrics Dict/depth_rmse,0.05216965079307556
+6500,Eval Metrics Dict/depth_rmse_log,0.00951965618878603
+6500,Eval Metrics Dict/depth_sq_rel,0.0011853681644424796
+6500,Eval Metrics Dict/gaussian_count,872841.0
+6500,Eval Metrics Dict/rgb_lpips,0.19510996341705322
+6500,Eval Metrics Dict/rgb_mse,0.010708115994930267
+6500,Eval Metrics Dict/rgb_psnr,19.70286750793457
+6500,Eval Metrics Dict/rgb_ssim,0.8329806327819824
+7000,Eval Images Metrics Dict (all images)/depth_a1,0.9889564514160156
+7000,Eval Images Metrics Dict (all images)/depth_a2,0.9962107539176941
+7000,Eval Images Metrics Dict (all images)/depth_a3,0.9992809891700745
+7000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.01849409192800522
+7000,Eval Images Metrics Dict (all images)/depth_rmse,0.06546607613563538
+7000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.019154326990246773
+7000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.003216288983821869
+7000,Eval Images Metrics Dict (all images)/fps,24.00467300415039
+7000,Eval Images Metrics Dict (all images)/normal_mae,0.16790567338466644
+7000,Eval Images Metrics Dict (all images)/normal_mean_err,0.036029256880283356
+7000,Eval Images Metrics Dict (all images)/normal_med_err,0.018570534884929657
+7000,Eval Images Metrics Dict (all images)/normal_rsme,0.0701799988746643
+7000,Eval Images Metrics Dict (all images)/num_rays_per_sec,17609156.0
+7000,Eval Images Metrics Dict (all images)/rgb_lpips,0.20874857902526855
+7000,Eval Images Metrics Dict (all images)/rgb_psnr,20.679468154907227
+7000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8237669467926025
+7000,Eval Images Metrics/depth_a1,0.9965893030166626
+7000,Eval Images Metrics/depth_a2,0.9995651245117188
+7000,Eval Images Metrics/depth_a3,1.0
+7000,Eval Images Metrics/depth_abs_rel,0.009140128269791603
+7000,Eval Images Metrics/depth_rmse,0.047613807022571564
+7000,Eval Images Metrics/depth_rmse_log,0.008986193686723709
+7000,Eval Images Metrics/depth_sq_rel,0.0013043495127931237
+7000,Eval Images Metrics/normal_mae,0.1643231064081192
+7000,Eval Images Metrics/normal_mean_err,0.033821284770965576
+7000,Eval Images Metrics/normal_med_err,0.011582106351852417
+7000,Eval Images Metrics/normal_rsme,0.08129734545946121
+7000,Eval Images Metrics/num_rays,733572.0
+7000,Eval Images Metrics/rgb_lpips,0.15329031646251678
+7000,Eval Images Metrics/rgb_psnr,20.432037353515625
+7000,Eval Images Metrics/rgb_ssim,0.8459236025810242
+7000,Eval Loss,0.13348834216594696
+7000,Eval Loss Dict/main_loss,0.13348834216594696
+7000,Eval Loss Dict/scale_reg,0.0
+7000,Eval Metrics Dict/avg_min_scale,1.2406305813783547e-06
+7000,Eval Metrics Dict/depth_a1,1.0
+7000,Eval Metrics Dict/depth_a2,1.0
+7000,Eval Metrics Dict/depth_a3,1.0
+7000,Eval Metrics Dict/depth_abs_rel,0.007384743541479111
+7000,Eval Metrics Dict/depth_rmse,0.020947938784956932
+7000,Eval Metrics Dict/depth_rmse_log,0.007326893042773008
+7000,Eval Metrics Dict/depth_sq_rel,0.00026813894510269165
+7000,Eval Metrics Dict/gaussian_count,942003.0
+7000,Eval Metrics Dict/rgb_lpips,0.131277933716774
+7000,Eval Metrics Dict/rgb_mse,0.00443325424566865
+7000,Eval Metrics Dict/rgb_psnr,23.532773971557617
+7000,Eval Metrics Dict/rgb_ssim,0.9396494626998901
+7500,Eval Images Metrics/depth_a1,0.9821994304656982
+7500,Eval Images Metrics/depth_a2,0.9932644963264465
+7500,Eval Images Metrics/depth_a3,0.9974194765090942
+7500,Eval Images Metrics/depth_abs_rel,0.020290125161409378
+7500,Eval Images Metrics/depth_rmse,0.09570394456386566
+7500,Eval Images Metrics/depth_rmse_log,0.01826246827840805
+7500,Eval Images Metrics/depth_sq_rel,0.007876735180616379
+7500,Eval Images Metrics/normal_mae,0.1557026356458664
+7500,Eval Images Metrics/normal_mean_err,0.05160904303193092
+7500,Eval Images Metrics/normal_med_err,0.02855062484741211
+7500,Eval Images Metrics/normal_rsme,0.08779667317867279
+7500,Eval Images Metrics/num_rays,733572.0
+7500,Eval Images Metrics/rgb_lpips,0.2699586749076843
+7500,Eval Images Metrics/rgb_psnr,19.15629005432129
+7500,Eval Images Metrics/rgb_ssim,0.7959434390068054
+7500,Eval Loss,0.1437259167432785
+7500,Eval Loss Dict/main_loss,0.1437259167432785
+7500,Eval Loss Dict/scale_reg,0.0
+7500,Eval Metrics Dict/avg_min_scale,9.783587984202313e-07
+7500,Eval Metrics Dict/depth_a1,0.9996987581253052
+7500,Eval Metrics Dict/depth_a2,1.0
+7500,Eval Metrics Dict/depth_a3,1.0
+7500,Eval Metrics Dict/depth_abs_rel,0.009297432377934456
+7500,Eval Metrics Dict/depth_rmse,0.019108673557639122
+7500,Eval Metrics Dict/depth_rmse_log,0.00932803750038147
+7500,Eval Metrics Dict/depth_sq_rel,0.00028946285601705313
+7500,Eval Metrics Dict/gaussian_count,1002660.0
+7500,Eval Metrics Dict/rgb_lpips,0.14440816640853882
+7500,Eval Metrics Dict/rgb_mse,0.004548297263681889
+7500,Eval Metrics Dict/rgb_psnr,23.421510696411133
+7500,Eval Metrics Dict/rgb_ssim,0.8551056981086731
+8000,Eval Images Metrics Dict (all images)/depth_a1,0.988757848739624
+8000,Eval Images Metrics Dict (all images)/depth_a2,0.99616539478302
+8000,Eval Images Metrics Dict (all images)/depth_a3,0.998931884765625
+8000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.018190227448940277
+8000,Eval Images Metrics Dict (all images)/depth_rmse,0.06567046791315079
+8000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.018853263929486275
+8000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0032575142104178667
+8000,Eval Images Metrics Dict (all images)/fps,22.977231979370117
+8000,Eval Images Metrics Dict (all images)/normal_mae,0.1677125096321106
+8000,Eval Images Metrics Dict (all images)/normal_mean_err,0.035594649612903595
+8000,Eval Images Metrics Dict (all images)/normal_med_err,0.01798681914806366
+8000,Eval Images Metrics Dict (all images)/normal_rsme,0.06960653513669968
+8000,Eval Images Metrics Dict (all images)/num_rays_per_sec,16855456.0
+8000,Eval Images Metrics Dict (all images)/rgb_lpips,0.2036270797252655
+8000,Eval Images Metrics Dict (all images)/rgb_psnr,20.976375579833984
+8000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8249654769897461
+8000,Eval Images Metrics/depth_a1,0.9906103610992432
+8000,Eval Images Metrics/depth_a2,0.9988698959350586
+8000,Eval Images Metrics/depth_a3,1.0
+8000,Eval Images Metrics/depth_abs_rel,0.01877223327755928
+8000,Eval Images Metrics/depth_rmse,0.0636930838227272
+8000,Eval Images Metrics/depth_rmse_log,0.01881345547735691
+8000,Eval Images Metrics/depth_sq_rel,0.002830319805070758
+8000,Eval Images Metrics/normal_mae,0.22366775572299957
+8000,Eval Images Metrics/normal_mean_err,0.04227003455162048
+8000,Eval Images Metrics/normal_med_err,0.016126036643981934
+8000,Eval Images Metrics/normal_rsme,0.07857517153024673
+8000,Eval Images Metrics/num_rays,733572.0
+8000,Eval Images Metrics/rgb_lpips,0.3398387134075165
+8000,Eval Images Metrics/rgb_psnr,19.555252075195312
+8000,Eval Images Metrics/rgb_ssim,0.6954586505889893
+8000,Eval Loss,0.13008317351341248
+8000,Eval Loss Dict/main_loss,0.13008317351341248
+8000,Eval Loss Dict/scale_reg,0.0
+8000,Eval Metrics Dict/avg_min_scale,7.41560995720647e-07
+8000,Eval Metrics Dict/depth_a1,1.0
+8000,Eval Metrics Dict/depth_a2,1.0
+8000,Eval Metrics Dict/depth_a3,1.0
+8000,Eval Metrics Dict/depth_abs_rel,0.007282777689397335
+8000,Eval Metrics Dict/depth_rmse,0.020735781639814377
+8000,Eval Metrics Dict/depth_rmse_log,0.007226297166198492
+8000,Eval Metrics Dict/depth_sq_rel,0.0002635935670696199
+8000,Eval Metrics Dict/gaussian_count,1086306.0
+8000,Eval Metrics Dict/rgb_lpips,0.14020082354545593
+8000,Eval Metrics Dict/rgb_mse,0.003928728401660919
+8000,Eval Metrics Dict/rgb_psnr,24.057479858398438
+8000,Eval Metrics Dict/rgb_ssim,0.9397921562194824
+8500,Eval Images Metrics/depth_a1,1.0
+8500,Eval Images Metrics/depth_a2,1.0
+8500,Eval Images Metrics/depth_a3,1.0
+8500,Eval Images Metrics/depth_abs_rel,0.03261120244860649
+8500,Eval Images Metrics/depth_rmse,0.018538661301136017
+8500,Eval Images Metrics/depth_rmse_log,0.03334797918796539
+8500,Eval Images Metrics/depth_sq_rel,0.0006973491399548948
+8500,Eval Images Metrics/normal_mae,0.0
+8500,Eval Images Metrics/normal_mean_err,0.035940904170274734
+8500,Eval Images Metrics/normal_med_err,0.01618283987045288
+8500,Eval Images Metrics/normal_rsme,0.05800864100456238
+8500,Eval Images Metrics/num_rays,733572.0
+8500,Eval Images Metrics/rgb_lpips,0.0532413013279438
+8500,Eval Images Metrics/rgb_psnr,28.962430953979492
+8500,Eval Images Metrics/rgb_ssim,0.9757349491119385
+8500,Eval Loss,0.17631369829177856
+8500,Eval Loss Dict/main_loss,0.17631369829177856
+8500,Eval Loss Dict/scale_reg,0.0
+8500,Eval Metrics Dict/avg_min_scale,6.085173822611978e-07
+8500,Eval Metrics Dict/depth_a1,0.9992093443870544
+8500,Eval Metrics Dict/depth_a2,1.0
+8500,Eval Metrics Dict/depth_a3,1.0
+8500,Eval Metrics Dict/depth_abs_rel,0.007073034066706896
+8500,Eval Metrics Dict/depth_rmse,0.029569610953330994
+8500,Eval Metrics Dict/depth_rmse_log,0.00714031420648098
+8500,Eval Metrics Dict/depth_sq_rel,0.0004459022602532059
+8500,Eval Metrics Dict/gaussian_count,1150698.0
+8500,Eval Metrics Dict/rgb_lpips,0.12448788434267044
+8500,Eval Metrics Dict/rgb_mse,0.024010363966226578
+8500,Eval Metrics Dict/rgb_psnr,16.196012496948242
+8500,Eval Metrics Dict/rgb_ssim,0.9188694357872009
+9000,Eval Images Metrics Dict (all images)/depth_a1,0.9888055920600891
+9000,Eval Images Metrics Dict (all images)/depth_a2,0.9962353706359863
+9000,Eval Images Metrics Dict (all images)/depth_a3,0.9987666010856628
+9000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.018335968255996704
+9000,Eval Images Metrics Dict (all images)/depth_rmse,0.06474226713180542
+9000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.01902681030333042
+9000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0032364539802074432
+9000,Eval Images Metrics Dict (all images)/fps,23.04031753540039
+9000,Eval Images Metrics Dict (all images)/normal_mae,0.1674807071685791
+9000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03526512533426285
+9000,Eval Images Metrics Dict (all images)/normal_med_err,0.018208462744951248
+9000,Eval Images Metrics Dict (all images)/normal_rsme,0.06798630952835083
+9000,Eval Images Metrics Dict (all images)/num_rays_per_sec,16901732.0
+9000,Eval Images Metrics Dict (all images)/rgb_lpips,0.19534936547279358
+9000,Eval Images Metrics Dict (all images)/rgb_psnr,21.295019149780273
+9000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8336775302886963
+9000,Eval Images Metrics/depth_a1,0.9965102672576904
+9000,Eval Images Metrics/depth_a2,0.9999809265136719
+9000,Eval Images Metrics/depth_a3,1.0
+9000,Eval Images Metrics/depth_abs_rel,0.00926035176962614
+9000,Eval Images Metrics/depth_rmse,0.05173163115978241
+9000,Eval Images Metrics/depth_rmse_log,0.00942178349941969
+9000,Eval Images Metrics/depth_sq_rel,0.0011698782909661531
+9000,Eval Images Metrics/normal_mae,0.29126933217048645
+9000,Eval Images Metrics/normal_mean_err,0.01859055832028389
+9000,Eval Images Metrics/normal_med_err,0.013368189334869385
+9000,Eval Images Metrics/normal_rsme,0.036971282213926315
+9000,Eval Images Metrics/num_rays,733572.0
+9000,Eval Images Metrics/rgb_lpips,0.17857560515403748
+9000,Eval Images Metrics/rgb_psnr,20.06313133239746
+9000,Eval Images Metrics/rgb_ssim,0.8530613780021667
+9000,Eval Loss,0.20416690409183502
+9000,Eval Loss Dict/main_loss,0.20416690409183502
+9000,Eval Loss Dict/scale_reg,0.0
+9000,Eval Metrics Dict/avg_min_scale,4.913979410048341e-07
+9000,Eval Metrics Dict/depth_a1,0.9814878702163696
+9000,Eval Metrics Dict/depth_a2,0.9925869703292847
+9000,Eval Metrics Dict/depth_a3,0.9969996213912964
+9000,Eval Metrics Dict/depth_abs_rel,0.020866740494966507
+9000,Eval Metrics Dict/depth_rmse,0.09898620843887329
+9000,Eval Metrics Dict/depth_rmse_log,0.018603190779685974
+9000,Eval Metrics Dict/depth_sq_rel,0.008522839285433292
+9000,Eval Metrics Dict/gaussian_count,1200134.0
+9000,Eval Metrics Dict/rgb_lpips,0.2500826120376587
+9000,Eval Metrics Dict/rgb_mse,0.009723078459501266
+9000,Eval Metrics Dict/rgb_psnr,20.12196159362793
+9000,Eval Metrics Dict/rgb_ssim,0.8156195878982544
+9500,Eval Images Metrics/depth_a1,0.9993347525596619
+9500,Eval Images Metrics/depth_a2,1.0
+9500,Eval Images Metrics/depth_a3,1.0
+9500,Eval Images Metrics/depth_abs_rel,0.016070270910859108
+9500,Eval Images Metrics/depth_rmse,0.040676578879356384
+9500,Eval Images Metrics/depth_rmse_log,0.01630750298500061
+9500,Eval Images Metrics/depth_sq_rel,0.0008558239205740392
+9500,Eval Images Metrics/normal_mae,0.2140643298625946
+9500,Eval Images Metrics/normal_mean_err,0.031148938462138176
+9500,Eval Images Metrics/normal_med_err,0.013737380504608154
+9500,Eval Images Metrics/normal_rsme,0.07589662075042725
+9500,Eval Images Metrics/num_rays,733572.0
+9500,Eval Images Metrics/rgb_lpips,0.23653458058834076
+9500,Eval Images Metrics/rgb_psnr,22.671239852905273
+9500,Eval Images Metrics/rgb_ssim,0.8772554993629456
+9500,Eval Loss,0.21954411268234253
+9500,Eval Loss Dict/main_loss,0.21954411268234253
+9500,Eval Loss Dict/scale_reg,0.0
+9500,Eval Metrics Dict/avg_min_scale,5.020005460210086e-07
+9500,Eval Metrics Dict/depth_a1,0.9817495942115784
+9500,Eval Metrics Dict/depth_a2,0.9936379790306091
+9500,Eval Metrics Dict/depth_a3,0.9975626468658447
+9500,Eval Metrics Dict/depth_abs_rel,0.020513460040092468
+9500,Eval Metrics Dict/depth_rmse,0.09521880000829697
+9500,Eval Metrics Dict/depth_rmse_log,0.018453622236847878
+9500,Eval Metrics Dict/depth_sq_rel,0.0077812508679926395
+9500,Eval Metrics Dict/gaussian_count,1017824.0
+9500,Eval Metrics Dict/rgb_lpips,0.27472835779190063
+9500,Eval Metrics Dict/rgb_mse,0.01170826144516468
+9500,Eval Metrics Dict/rgb_psnr,19.315074920654297
+9500,Eval Metrics Dict/rgb_ssim,0.797687292098999
+10000,Eval Images Metrics Dict (all images)/depth_a1,0.9886907935142517
+10000,Eval Images Metrics Dict (all images)/depth_a2,0.9963125586509705
+10000,Eval Images Metrics Dict (all images)/depth_a3,0.9989840388298035
+10000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.017875272780656815
+10000,Eval Images Metrics Dict (all images)/depth_rmse,0.06419000029563904
+10000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.018518567085266113
+10000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0031725598964840174
+10000,Eval Images Metrics Dict (all images)/fps,25.227294921875
+10000,Eval Images Metrics Dict (all images)/normal_mae,0.16762979328632355
+10000,Eval Images Metrics Dict (all images)/normal_mean_err,0.035003721714019775
+10000,Eval Images Metrics Dict (all images)/normal_med_err,0.017987215891480446
+10000,Eval Images Metrics Dict (all images)/normal_rsme,0.06770951300859451
+10000,Eval Images Metrics Dict (all images)/num_rays_per_sec,18506036.0
+10000,Eval Images Metrics Dict (all images)/rgb_lpips,0.1839805245399475
+10000,Eval Images Metrics Dict (all images)/rgb_psnr,21.379898071289062
+10000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8383878469467163
+10000,Eval Images Metrics/depth_a1,0.9996483325958252
+10000,Eval Images Metrics/depth_a2,1.0
+10000,Eval Images Metrics/depth_a3,1.0
+10000,Eval Images Metrics/depth_abs_rel,0.008545951917767525
+10000,Eval Images Metrics/depth_rmse,0.03229803219437599
+10000,Eval Images Metrics/depth_rmse_log,0.008530029095709324
+10000,Eval Images Metrics/depth_sq_rel,0.0004190645704511553
+10000,Eval Images Metrics/normal_mae,0.28672096133232117
+10000,Eval Images Metrics/normal_mean_err,0.026221495121717453
+10000,Eval Images Metrics/normal_med_err,0.01464754343032837
+10000,Eval Images Metrics/normal_rsme,0.05161852762103081
+10000,Eval Images Metrics/num_rays,733572.0
+10000,Eval Images Metrics/rgb_lpips,0.10464591532945633
+10000,Eval Images Metrics/rgb_psnr,23.103742599487305
+10000,Eval Images Metrics/rgb_ssim,0.8684734106063843
+10000,Eval Loss,0.08127009868621826
+10000,Eval Loss Dict/main_loss,0.08127009868621826
+10000,Eval Loss Dict/scale_reg,0.0
+10000,Eval Metrics Dict/avg_min_scale,3.738969951427862e-07
+10000,Eval Metrics Dict/depth_a1,1.0
+10000,Eval Metrics Dict/depth_a2,1.0
+10000,Eval Metrics Dict/depth_a3,1.0
+10000,Eval Metrics Dict/depth_abs_rel,0.019876498728990555
+10000,Eval Metrics Dict/depth_rmse,0.010461402125656605
+10000,Eval Metrics Dict/depth_rmse_log,0.020108522847294807
+10000,Eval Metrics Dict/depth_sq_rel,0.0002230310346931219
+10000,Eval Metrics Dict/gaussian_count,1042185.0
+10000,Eval Metrics Dict/rgb_lpips,0.030120842158794403
+10000,Eval Metrics Dict/rgb_mse,0.0014998263213783503
+10000,Eval Metrics Dict/rgb_psnr,28.23958969116211
+10000,Eval Metrics Dict/rgb_ssim,0.9798515439033508
+10500,Eval Images Metrics/depth_a1,0.9997819066047668
+10500,Eval Images Metrics/depth_a2,1.0
+10500,Eval Images Metrics/depth_a3,1.0
+10500,Eval Images Metrics/depth_abs_rel,0.008320804685354233
+10500,Eval Images Metrics/depth_rmse,0.024896515533328056
+10500,Eval Images Metrics/depth_rmse_log,0.00835461262613535
+10500,Eval Images Metrics/depth_sq_rel,0.0003465279296506196
+10500,Eval Images Metrics/normal_mae,0.277052640914917
+10500,Eval Images Metrics/normal_mean_err,0.022733982652425766
+10500,Eval Images Metrics/normal_med_err,0.01168900728225708
+10500,Eval Images Metrics/normal_rsme,0.05109451338648796
+10500,Eval Images Metrics/num_rays,733572.0
+10500,Eval Images Metrics/rgb_lpips,0.12465333193540573
+10500,Eval Images Metrics/rgb_psnr,25.29663848876953
+10500,Eval Images Metrics/rgb_ssim,0.9113789200782776
+10500,Eval Loss,0.09909684956073761
+10500,Eval Loss Dict/main_loss,0.09909684956073761
+10500,Eval Loss Dict/scale_reg,0.0
+10500,Eval Metrics Dict/avg_min_scale,3.532478842771525e-07
+10500,Eval Metrics Dict/depth_a1,0.9986995458602905
+10500,Eval Metrics Dict/depth_a2,1.0
+10500,Eval Metrics Dict/depth_a3,1.0
+10500,Eval Metrics Dict/depth_abs_rel,0.006911273114383221
+10500,Eval Metrics Dict/depth_rmse,0.025104453787207603
+10500,Eval Metrics Dict/depth_rmse_log,0.006909799762070179
+10500,Eval Metrics Dict/depth_sq_rel,0.00046188413398340344
+10500,Eval Metrics Dict/gaussian_count,1007546.0
+10500,Eval Metrics Dict/rgb_lpips,0.07735857367515564
+10500,Eval Metrics Dict/rgb_mse,0.002709250897169113
+10500,Eval Metrics Dict/rgb_psnr,25.671506881713867
+10500,Eval Metrics Dict/rgb_ssim,0.9448373317718506
+11000,Eval Images Metrics Dict (all images)/depth_a1,0.9889909029006958
+11000,Eval Images Metrics Dict (all images)/depth_a2,0.9961920976638794
+11000,Eval Images Metrics Dict (all images)/depth_a3,0.99866783618927
+11000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.017329776659607887
+11000,Eval Images Metrics Dict (all images)/depth_rmse,0.062467966228723526
+11000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.018020281568169594
+11000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0030730273574590683
+11000,Eval Images Metrics Dict (all images)/fps,23.129779815673828
+11000,Eval Images Metrics Dict (all images)/normal_mae,0.16807657480239868
+11000,Eval Images Metrics Dict (all images)/normal_mean_err,0.034671351313591
+11000,Eval Images Metrics Dict (all images)/normal_med_err,0.018281608819961548
+11000,Eval Images Metrics Dict (all images)/normal_rsme,0.06647101044654846
+11000,Eval Images Metrics Dict (all images)/num_rays_per_sec,16967358.0
+11000,Eval Images Metrics Dict (all images)/rgb_lpips,0.17385420203208923
+11000,Eval Images Metrics Dict (all images)/rgb_psnr,21.90835952758789
+11000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8464459180831909
+11000,Eval Images Metrics/depth_a1,0.9993456602096558
+11000,Eval Images Metrics/depth_a2,1.0
+11000,Eval Images Metrics/depth_a3,1.0
+11000,Eval Images Metrics/depth_abs_rel,0.006547072436660528
+11000,Eval Images Metrics/depth_rmse,0.022882843390107155
+11000,Eval Images Metrics/depth_rmse_log,0.006557574030011892
+11000,Eval Images Metrics/depth_sq_rel,0.00038091655005700886
+11000,Eval Images Metrics/normal_mae,0.0001986076676985249
+11000,Eval Images Metrics/normal_mean_err,0.03315085917711258
+11000,Eval Images Metrics/normal_med_err,0.021738290786743164
+11000,Eval Images Metrics/normal_rsme,0.04769376292824745
+11000,Eval Images Metrics/num_rays,733572.0
+11000,Eval Images Metrics/rgb_lpips,0.07154911756515503
+11000,Eval Images Metrics/rgb_psnr,26.7789306640625
+11000,Eval Images Metrics/rgb_ssim,0.9510514140129089
+11000,Eval Loss,0.1878773272037506
+11000,Eval Loss Dict/main_loss,0.1878773272037506
+11000,Eval Loss Dict/scale_reg,0.0
+11000,Eval Metrics Dict/avg_min_scale,3.2901837698773306e-07
+11000,Eval Metrics Dict/depth_a1,0.9997751116752625
+11000,Eval Metrics Dict/depth_a2,1.0
+11000,Eval Metrics Dict/depth_a3,1.0
+11000,Eval Metrics Dict/depth_abs_rel,0.028880709782242775
+11000,Eval Metrics Dict/depth_rmse,0.058799248188734055
+11000,Eval Metrics Dict/depth_rmse_log,0.029483817517757416
+11000,Eval Metrics Dict/depth_sq_rel,0.0016484964871779084
+11000,Eval Metrics Dict/gaussian_count,983137.0
+11000,Eval Metrics Dict/rgb_lpips,0.08380305767059326
+11000,Eval Metrics Dict/rgb_mse,0.01267976500093937
+11000,Eval Metrics Dict/rgb_psnr,18.968887329101562
+11000,Eval Metrics Dict/rgb_ssim,0.8799794316291809
+11500,Eval Images Metrics/depth_a1,0.9993715882301331
+11500,Eval Images Metrics/depth_a2,1.0
+11500,Eval Images Metrics/depth_a3,1.0
+11500,Eval Images Metrics/depth_abs_rel,0.006413942202925682
+11500,Eval Images Metrics/depth_rmse,0.02508065663278103
+11500,Eval Images Metrics/depth_rmse_log,0.006459936499595642
+11500,Eval Images Metrics/depth_sq_rel,0.0003228959976695478
+11500,Eval Images Metrics/normal_mae,0.34227848052978516
+11500,Eval Images Metrics/normal_mean_err,0.022855650633573532
+11500,Eval Images Metrics/normal_med_err,0.0212918221950531
+11500,Eval Images Metrics/normal_rsme,0.03129506856203079
+11500,Eval Images Metrics/num_rays,733572.0
+11500,Eval Images Metrics/rgb_lpips,0.09691797941923141
+11500,Eval Images Metrics/rgb_psnr,16.3907413482666
+11500,Eval Images Metrics/rgb_ssim,0.9295803904533386
+11500,Eval Loss,0.21287313103675842
+11500,Eval Loss Dict/main_loss,0.21287313103675842
+11500,Eval Loss Dict/scale_reg,0.0
+11500,Eval Metrics Dict/avg_min_scale,3.1372698572340596e-07
+11500,Eval Metrics Dict/depth_a1,0.9925215244293213
+11500,Eval Metrics Dict/depth_a2,0.9986872673034668
+11500,Eval Metrics Dict/depth_a3,1.0
+11500,Eval Metrics Dict/depth_abs_rel,0.016500400379300117
+11500,Eval Metrics Dict/depth_rmse,0.05675395950675011
+11500,Eval Metrics Dict/depth_rmse_log,0.016305850818753242
+11500,Eval Metrics Dict/depth_sq_rel,0.002378447214141488
+11500,Eval Metrics Dict/gaussian_count,962278.0
+11500,Eval Metrics Dict/rgb_lpips,0.30075603723526
+11500,Eval Metrics Dict/rgb_mse,0.009843997657299042
+11500,Eval Metrics Dict/rgb_psnr,20.06828498840332
+11500,Eval Metrics Dict/rgb_ssim,0.7263519763946533
+12000,Eval Images Metrics Dict (all images)/depth_a1,0.9890493750572205
+12000,Eval Images Metrics Dict (all images)/depth_a2,0.9962083101272583
+12000,Eval Images Metrics Dict (all images)/depth_a3,0.9985910058021545
+12000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.017002994194626808
+12000,Eval Images Metrics Dict (all images)/depth_rmse,0.061869967728853226
+12000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017692113295197487
+12000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0030329409055411816
+12000,Eval Images Metrics Dict (all images)/fps,24.66153907775879
+12000,Eval Images Metrics Dict (all images)/normal_mae,0.168172225356102
+12000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03512873873114586
+12000,Eval Images Metrics Dict (all images)/normal_med_err,0.018962109461426735
+12000,Eval Images Metrics Dict (all images)/normal_rsme,0.06649110466241837
+12000,Eval Images Metrics Dict (all images)/num_rays_per_sec,18091016.0
+12000,Eval Images Metrics Dict (all images)/rgb_lpips,0.17393538355827332
+12000,Eval Images Metrics Dict (all images)/rgb_psnr,21.92042350769043
+12000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8474199175834656
+12000,Eval Images Metrics/depth_a1,0.99925297498703
+12000,Eval Images Metrics/depth_a2,0.9994261264801025
+12000,Eval Images Metrics/depth_a3,1.0
+12000,Eval Images Metrics/depth_abs_rel,0.01059669442474842
+12000,Eval Images Metrics/depth_rmse,0.024746285751461983
+12000,Eval Images Metrics/depth_rmse_log,0.010799996554851532
+12000,Eval Images Metrics/depth_sq_rel,0.0004694211238529533
+12000,Eval Images Metrics/normal_mae,0.02292119711637497
+12000,Eval Images Metrics/normal_mean_err,0.02724064700305462
+12000,Eval Images Metrics/normal_med_err,0.019015967845916748
+12000,Eval Images Metrics/normal_rsme,0.04280772805213928
+12000,Eval Images Metrics/num_rays,733572.0
+12000,Eval Images Metrics/rgb_lpips,0.1743130087852478
+12000,Eval Images Metrics/rgb_psnr,25.72699737548828
+12000,Eval Images Metrics/rgb_ssim,0.9050833582878113
+12000,Eval Loss,0.3303563594818115
+12000,Eval Loss Dict/main_loss,0.3303563594818115
+12000,Eval Loss Dict/scale_reg,0.0
+12000,Eval Metrics Dict/avg_min_scale,2.9183485139583354e-07
+12000,Eval Metrics Dict/depth_a1,0.9810543656349182
+12000,Eval Metrics Dict/depth_a2,0.9993606805801392
+12000,Eval Metrics Dict/depth_a3,1.0
+12000,Eval Metrics Dict/depth_abs_rel,0.026651181280612946
+12000,Eval Metrics Dict/depth_rmse,0.17471666634082794
+12000,Eval Metrics Dict/depth_rmse_log,0.027551202103495598
+12000,Eval Metrics Dict/depth_sq_rel,0.008624240756034851
+12000,Eval Metrics Dict/gaussian_count,943187.0
+12000,Eval Metrics Dict/rgb_lpips,0.23443759977817535
+12000,Eval Metrics Dict/rgb_mse,0.009914894588291645
+12000,Eval Metrics Dict/rgb_psnr,20.03711700439453
+12000,Eval Metrics Dict/rgb_ssim,0.775757908821106
+12500,Eval Images Metrics/depth_a1,0.9968442320823669
+12500,Eval Images Metrics/depth_a2,0.9999018907546997
+12500,Eval Images Metrics/depth_a3,1.0
+12500,Eval Images Metrics/depth_abs_rel,0.02231748029589653
+12500,Eval Images Metrics/depth_rmse,0.11156619340181351
+12500,Eval Images Metrics/depth_rmse_log,0.022154051810503006
+12500,Eval Images Metrics/depth_sq_rel,0.0038723114412277937
+12500,Eval Images Metrics/normal_mae,0.3000941276550293
+12500,Eval Images Metrics/normal_mean_err,0.03968577831983566
+12500,Eval Images Metrics/normal_med_err,0.01356571912765503
+12500,Eval Images Metrics/normal_rsme,0.08263882994651794
+12500,Eval Images Metrics/num_rays,733572.0
+12500,Eval Images Metrics/rgb_lpips,0.16179212927818298
+12500,Eval Images Metrics/rgb_psnr,17.546905517578125
+12500,Eval Images Metrics/rgb_ssim,0.7863942980766296
+12500,Eval Loss,0.21137012541294098
+12500,Eval Loss Dict/main_loss,0.21137012541294098
+12500,Eval Loss Dict/scale_reg,0.0
+12500,Eval Metrics Dict/avg_min_scale,3.0246840765357774e-07
+12500,Eval Metrics Dict/depth_a1,1.0
+12500,Eval Metrics Dict/depth_a2,1.0
+12500,Eval Metrics Dict/depth_a3,1.0
+12500,Eval Metrics Dict/depth_abs_rel,0.019130516797304153
+12500,Eval Metrics Dict/depth_rmse,0.02495555952191353
+12500,Eval Metrics Dict/depth_rmse_log,0.01929965242743492
+12500,Eval Metrics Dict/depth_sq_rel,0.0006054671248421073
+12500,Eval Metrics Dict/gaussian_count,927567.0
+12500,Eval Metrics Dict/rgb_lpips,0.38674190640449524
+12500,Eval Metrics Dict/rgb_mse,0.012049118056893349
+12500,Eval Metrics Dict/rgb_psnr,19.190444946289062
+12500,Eval Metrics Dict/rgb_ssim,0.6895347833633423
+13000,Eval Images Metrics Dict (all images)/depth_a1,0.9889380931854248
+13000,Eval Images Metrics Dict (all images)/depth_a2,0.9960108399391174
+13000,Eval Images Metrics Dict (all images)/depth_a3,0.9984278678894043
+13000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.017104756087064743
+13000,Eval Images Metrics Dict (all images)/depth_rmse,0.06183332949876785
+13000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017849380150437355
+13000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0030580416787415743
+13000,Eval Images Metrics Dict (all images)/fps,25.393388748168945
+13000,Eval Images Metrics Dict (all images)/normal_mae,0.1677376925945282
+13000,Eval Images Metrics Dict (all images)/normal_mean_err,0.034804876893758774
+13000,Eval Images Metrics Dict (all images)/normal_med_err,0.0184882041066885
+13000,Eval Images Metrics Dict (all images)/normal_rsme,0.06622706353664398
+13000,Eval Images Metrics Dict (all images)/num_rays_per_sec,18627874.0
+13000,Eval Images Metrics Dict (all images)/rgb_lpips,0.1721736639738083
+13000,Eval Images Metrics Dict (all images)/rgb_psnr,22.007221221923828
+13000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8498794436454773
+13000,Eval Images Metrics/depth_a1,0.996435284614563
+13000,Eval Images Metrics/depth_a2,0.9991657137870789
+13000,Eval Images Metrics/depth_a3,1.0
+13000,Eval Images Metrics/depth_abs_rel,0.009769381023943424
+13000,Eval Images Metrics/depth_rmse,0.032453715801239014
+13000,Eval Images Metrics/depth_rmse_log,0.009971557185053825
+13000,Eval Images Metrics/depth_sq_rel,0.0007531105657108128
+13000,Eval Images Metrics/normal_mae,0.07722900062799454
+13000,Eval Images Metrics/normal_mean_err,0.020278921350836754
+13000,Eval Images Metrics/normal_med_err,0.015546917915344238
+13000,Eval Images Metrics/normal_rsme,0.03142928332090378
+13000,Eval Images Metrics/num_rays,733572.0
+13000,Eval Images Metrics/rgb_lpips,0.16224445402622223
+13000,Eval Images Metrics/rgb_psnr,21.902013778686523
+13000,Eval Images Metrics/rgb_ssim,0.8386633992195129
+13000,Eval Loss,0.20896664261817932
+13000,Eval Loss Dict/main_loss,0.20896664261817932
+13000,Eval Loss Dict/scale_reg,0.0
+13000,Eval Metrics Dict/avg_min_scale,3.129717924821307e-07
+13000,Eval Metrics Dict/depth_a1,1.0
+13000,Eval Metrics Dict/depth_a2,1.0
+13000,Eval Metrics Dict/depth_a3,1.0
+13000,Eval Metrics Dict/depth_abs_rel,0.018689945340156555
+13000,Eval Metrics Dict/depth_rmse,0.024772312492132187
+13000,Eval Metrics Dict/depth_rmse_log,0.01886642538011074
+13000,Eval Metrics Dict/depth_sq_rel,0.0005939775728620589
+13000,Eval Metrics Dict/gaussian_count,913244.0
+13000,Eval Metrics Dict/rgb_lpips,0.37708359956741333
+13000,Eval Metrics Dict/rgb_mse,0.012523949146270752
+13000,Eval Metrics Dict/rgb_psnr,19.022586822509766
+13000,Eval Metrics Dict/rgb_ssim,0.6890451312065125
+13500,Eval Images Metrics/depth_a1,0.9966192841529846
+13500,Eval Images Metrics/depth_a2,0.9998718500137329
+13500,Eval Images Metrics/depth_a3,1.0
+13500,Eval Images Metrics/depth_abs_rel,0.022110527381300926
+13500,Eval Images Metrics/depth_rmse,0.11075066030025482
+13500,Eval Images Metrics/depth_rmse_log,0.0219647828489542
+13500,Eval Images Metrics/depth_sq_rel,0.0038211073260754347
+13500,Eval Images Metrics/normal_mae,0.30001044273376465
+13500,Eval Images Metrics/normal_mean_err,0.04159275442361832
+13500,Eval Images Metrics/normal_med_err,0.014437973499298096
+13500,Eval Images Metrics/normal_rsme,0.08498449623584747
+13500,Eval Images Metrics/num_rays,733572.0
+13500,Eval Images Metrics/rgb_lpips,0.1639367938041687
+13500,Eval Images Metrics/rgb_psnr,17.503042221069336
+13500,Eval Images Metrics/rgb_ssim,0.7791105508804321
+13500,Eval Loss,0.09500966966152191
+13500,Eval Loss Dict/main_loss,0.09500966966152191
+13500,Eval Loss Dict/scale_reg,0.0
+13500,Eval Metrics Dict/avg_min_scale,2.6834678124032507e-07
+13500,Eval Metrics Dict/depth_a1,0.9994547367095947
+13500,Eval Metrics Dict/depth_a2,1.0
+13500,Eval Metrics Dict/depth_a3,1.0
+13500,Eval Metrics Dict/depth_abs_rel,0.006463972851634026
+13500,Eval Metrics Dict/depth_rmse,0.02278054691851139
+13500,Eval Metrics Dict/depth_rmse_log,0.006466842256486416
+13500,Eval Metrics Dict/depth_sq_rel,0.00037844639155082405
+13500,Eval Metrics Dict/gaussian_count,900075.0
+13500,Eval Metrics Dict/rgb_lpips,0.07879887521266937
+13500,Eval Metrics Dict/rgb_mse,0.002232170896604657
+13500,Eval Metrics Dict/rgb_psnr,26.512723922729492
+13500,Eval Metrics Dict/rgb_ssim,0.9463114738464355
+14000,Eval Images Metrics Dict (all images)/depth_a1,0.9889766573905945
+14000,Eval Images Metrics Dict (all images)/depth_a2,0.9960293769836426
+14000,Eval Images Metrics Dict (all images)/depth_a3,0.9984396696090698
+14000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.01691928505897522
+14000,Eval Images Metrics Dict (all images)/depth_rmse,0.061535075306892395
+14000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017656948417425156
+14000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0030297411140054464
+14000,Eval Images Metrics Dict (all images)/fps,27.36182403564453
+14000,Eval Images Metrics Dict (all images)/normal_mae,0.16791051626205444
+14000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03522668033838272
+14000,Eval Images Metrics Dict (all images)/normal_med_err,0.0188191719353199
+14000,Eval Images Metrics Dict (all images)/normal_rsme,0.06654320657253265
+14000,Eval Images Metrics Dict (all images)/num_rays_per_sec,20071868.0
+14000,Eval Images Metrics Dict (all images)/rgb_lpips,0.17267221212387085
+14000,Eval Images Metrics Dict (all images)/rgb_psnr,22.042558670043945
+14000,Eval Images Metrics Dict (all images)/rgb_ssim,0.849055826663971
+14000,Eval Images Metrics/depth_a1,0.9943877458572388
+14000,Eval Images Metrics/depth_a2,0.9987936019897461
+14000,Eval Images Metrics/depth_a3,1.0
+14000,Eval Images Metrics/depth_abs_rel,0.015154764987528324
+14000,Eval Images Metrics/depth_rmse,0.057888951152563095
+14000,Eval Images Metrics/depth_rmse_log,0.015203910879790783
+14000,Eval Images Metrics/depth_sq_rel,0.0020589176565408707
+14000,Eval Images Metrics/normal_mae,0.09627288579940796
+14000,Eval Images Metrics/normal_mean_err,0.02699720859527588
+14000,Eval Images Metrics/normal_med_err,0.008599042892456055
+14000,Eval Images Metrics/normal_rsme,0.056525032967329025
+14000,Eval Images Metrics/num_rays,733572.0
+14000,Eval Images Metrics/rgb_lpips,0.22160080075263977
+14000,Eval Images Metrics/rgb_psnr,21.286409378051758
+14000,Eval Images Metrics/rgb_ssim,0.8188934326171875
+14000,Eval Loss,0.14142850041389465
+14000,Eval Loss Dict/main_loss,0.14142850041389465
+14000,Eval Loss Dict/scale_reg,0.0
+14000,Eval Metrics Dict/avg_min_scale,2.313592375458029e-07
+14000,Eval Metrics Dict/depth_a1,1.0
+14000,Eval Metrics Dict/depth_a2,1.0
+14000,Eval Metrics Dict/depth_a3,1.0
+14000,Eval Metrics Dict/depth_abs_rel,0.007892669178545475
+14000,Eval Metrics Dict/depth_rmse,0.021486038342118263
+14000,Eval Metrics Dict/depth_rmse_log,0.00787407997995615
+14000,Eval Metrics Dict/depth_sq_rel,0.00029203094891272485
+14000,Eval Metrics Dict/gaussian_count,887782.0
+14000,Eval Metrics Dict/rgb_lpips,0.14711986482143402
+14000,Eval Metrics Dict/rgb_mse,0.0038236144464462996
+14000,Eval Metrics Dict/rgb_psnr,24.17525863647461
+14000,Eval Metrics Dict/rgb_ssim,0.9415218234062195
+14500,Eval Images Metrics/depth_a1,0.99671471118927
+14500,Eval Images Metrics/depth_a2,0.9999822974205017
+14500,Eval Images Metrics/depth_a3,1.0
+14500,Eval Images Metrics/depth_abs_rel,0.008436170406639576
+14500,Eval Images Metrics/depth_rmse,0.04996515065431595
+14500,Eval Images Metrics/depth_rmse_log,0.008588036522269249
+14500,Eval Images Metrics/depth_sq_rel,0.001092678401619196
+14500,Eval Images Metrics/normal_mae,0.293915718793869
+14500,Eval Images Metrics/normal_mean_err,0.0172848179936409
+14500,Eval Images Metrics/normal_med_err,0.012190639972686768
+14500,Eval Images Metrics/normal_rsme,0.03514064475893974
+14500,Eval Images Metrics/num_rays,733572.0
+14500,Eval Images Metrics/rgb_lpips,0.17289742827415466
+14500,Eval Images Metrics/rgb_psnr,20.862668991088867
+14500,Eval Images Metrics/rgb_ssim,0.876307487487793
+14500,Eval Loss,0.20189747214317322
+14500,Eval Loss Dict/main_loss,0.20189747214317322
+14500,Eval Loss Dict/scale_reg,0.0
+14500,Eval Metrics Dict/avg_min_scale,1.961645352821506e-07
+14500,Eval Metrics Dict/depth_a1,0.9947149157524109
+14500,Eval Metrics Dict/depth_a2,0.9988372325897217
+14500,Eval Metrics Dict/depth_a3,0.9999972581863403
+14500,Eval Metrics Dict/depth_abs_rel,0.015295328572392464
+14500,Eval Metrics Dict/depth_rmse,0.05469132214784622
+14500,Eval Metrics Dict/depth_rmse_log,0.015534697100520134
+14500,Eval Metrics Dict/depth_sq_rel,0.0017349598929286003
+14500,Eval Metrics Dict/gaussian_count,876847.0
+14500,Eval Metrics Dict/rgb_lpips,0.2542750835418701
+14500,Eval Metrics Dict/rgb_mse,0.00839745718985796
+14500,Eval Metrics Dict/rgb_psnr,20.758520126342773
+14500,Eval Metrics Dict/rgb_ssim,0.7926438450813293
+15000,Eval Images Metrics Dict (all images)/depth_a1,0.9890680313110352
+15000,Eval Images Metrics Dict (all images)/depth_a2,0.9959728121757507
+15000,Eval Images Metrics Dict (all images)/depth_a3,0.9983971118927002
+15000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016762787476181984
+15000,Eval Images Metrics Dict (all images)/depth_rmse,0.061142921447753906
+15000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017516907304525375
+15000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.002997889183461666
+15000,Eval Images Metrics Dict (all images)/fps,23.801061630249023
+15000,Eval Images Metrics Dict (all images)/normal_mae,0.1679038554430008
+15000,Eval Images Metrics Dict (all images)/normal_mean_err,0.035087019205093384
+15000,Eval Images Metrics Dict (all images)/normal_med_err,0.018641414120793343
+15000,Eval Images Metrics Dict (all images)/normal_rsme,0.06636498868465424
+15000,Eval Images Metrics Dict (all images)/num_rays_per_sec,17459792.0
+15000,Eval Images Metrics Dict (all images)/rgb_lpips,0.17198707163333893
+15000,Eval Images Metrics Dict (all images)/rgb_psnr,22.12188148498535
+15000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8510071635246277
+15000,Eval Images Metrics/depth_a1,0.9963371157646179
+15000,Eval Images Metrics/depth_a2,0.9996809959411621
+15000,Eval Images Metrics/depth_a3,1.0
+15000,Eval Images Metrics/depth_abs_rel,0.009822270832955837
+15000,Eval Images Metrics/depth_rmse,0.028929125517606735
+15000,Eval Images Metrics/depth_rmse_log,0.009671438485383987
+15000,Eval Images Metrics/depth_sq_rel,0.0008103296277113259
+15000,Eval Images Metrics/normal_mae,0.26233261823654175
+15000,Eval Images Metrics/normal_mean_err,0.023526247590780258
+15000,Eval Images Metrics/normal_med_err,0.014971315860748291
+15000,Eval Images Metrics/normal_rsme,0.043261121958494186
+15000,Eval Images Metrics/num_rays,733572.0
+15000,Eval Images Metrics/rgb_lpips,0.14749488234519958
+15000,Eval Images Metrics/rgb_psnr,21.32746124267578
+15000,Eval Images Metrics/rgb_ssim,0.8445636034011841
+15000,Eval Loss,0.31646502017974854
+15000,Eval Loss Dict/main_loss,0.31646502017974854
+15000,Eval Loss Dict/scale_reg,0.0
+15000,Eval Metrics Dict/avg_min_scale,1.769953001939939e-07
+15000,Eval Metrics Dict/depth_a1,0.9967378973960876
+15000,Eval Metrics Dict/depth_a2,0.9998664259910583
+15000,Eval Metrics Dict/depth_a3,1.0
+15000,Eval Metrics Dict/depth_abs_rel,0.021796416491270065
+15000,Eval Metrics Dict/depth_rmse,0.10945388674736023
+15000,Eval Metrics Dict/depth_rmse_log,0.021665504202246666
+15000,Eval Metrics Dict/depth_sq_rel,0.0037399933207780123
+15000,Eval Metrics Dict/gaussian_count,867109.0
+15000,Eval Metrics Dict/rgb_lpips,0.1671312153339386
+15000,Eval Metrics Dict/rgb_mse,0.0169823057949543
+15000,Eval Metrics Dict/rgb_psnr,17.700031280517578
+15000,Eval Metrics Dict/rgb_ssim,0.7842300534248352
+15500,Eval Images Metrics/depth_a1,0.9998500347137451
+15500,Eval Images Metrics/depth_a2,1.0
+15500,Eval Images Metrics/depth_a3,1.0
+15500,Eval Images Metrics/depth_abs_rel,0.02673773095011711
+15500,Eval Images Metrics/depth_rmse,0.05591128394007683
+15500,Eval Images Metrics/depth_rmse_log,0.02725857123732567
+15500,Eval Images Metrics/depth_sq_rel,0.0014599876012653112
+15500,Eval Images Metrics/normal_mae,0.10856247693300247
+15500,Eval Images Metrics/normal_mean_err,0.020117895677685738
+15500,Eval Images Metrics/normal_med_err,0.007535755634307861
+15500,Eval Images Metrics/normal_rsme,0.04875040799379349
+15500,Eval Images Metrics/num_rays,733572.0
+15500,Eval Images Metrics/rgb_lpips,0.0797203853726387
+15500,Eval Images Metrics/rgb_psnr,19.77471160888672
+15500,Eval Images Metrics/rgb_ssim,0.8839465975761414
+15500,Eval Loss,0.21433651447296143
+15500,Eval Loss Dict/main_loss,0.21433651447296143
+15500,Eval Loss Dict/scale_reg,0.0
+15500,Eval Metrics Dict/avg_min_scale,1.4882490972922824e-07
+15500,Eval Metrics Dict/depth_a1,1.0
+15500,Eval Metrics Dict/depth_a2,1.0
+15500,Eval Metrics Dict/depth_a3,1.0
+15500,Eval Metrics Dict/depth_abs_rel,0.018380628898739815
+15500,Eval Metrics Dict/depth_rmse,0.024477487429976463
+15500,Eval Metrics Dict/depth_rmse_log,0.0185621976852417
+15500,Eval Metrics Dict/depth_sq_rel,0.0005770126008428633
+15500,Eval Metrics Dict/gaussian_count,857829.0
+15500,Eval Metrics Dict/rgb_lpips,0.38367170095443726
+15500,Eval Metrics Dict/rgb_mse,0.013743634335696697
+15500,Eval Metrics Dict/rgb_psnr,18.618982315063477
+15500,Eval Metrics Dict/rgb_ssim,0.6838397979736328
+16000,Eval Images Metrics Dict (all images)/depth_a1,0.9890500903129578
+16000,Eval Images Metrics Dict (all images)/depth_a2,0.995949923992157
+16000,Eval Images Metrics Dict (all images)/depth_a3,0.9983981847763062
+16000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016666563227772713
+16000,Eval Images Metrics Dict (all images)/depth_rmse,0.06100986897945404
+16000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.01741006039083004
+16000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0029957538936287165
+16000,Eval Images Metrics Dict (all images)/fps,24.050487518310547
+16000,Eval Images Metrics Dict (all images)/normal_mae,0.16801534593105316
+16000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03492797911167145
+16000,Eval Images Metrics Dict (all images)/normal_med_err,0.01830107904970646
+16000,Eval Images Metrics Dict (all images)/normal_rsme,0.06630807369947433
+16000,Eval Images Metrics Dict (all images)/num_rays_per_sec,17642762.0
+16000,Eval Images Metrics Dict (all images)/rgb_lpips,0.1715364158153534
+16000,Eval Images Metrics Dict (all images)/rgb_psnr,22.033458709716797
+16000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8505505323410034
+16000,Eval Images Metrics/depth_a1,0.996705174446106
+16000,Eval Images Metrics/depth_a2,0.9999822974205017
+16000,Eval Images Metrics/depth_a3,1.0
+16000,Eval Images Metrics/depth_abs_rel,0.008215502835810184
+16000,Eval Images Metrics/depth_rmse,0.04986367002129555
+16000,Eval Images Metrics/depth_rmse_log,0.008370520547032356
+16000,Eval Images Metrics/depth_sq_rel,0.0010864704381674528
+16000,Eval Images Metrics/normal_mae,0.2932855486869812
+16000,Eval Images Metrics/normal_mean_err,0.017432095482945442
+16000,Eval Images Metrics/normal_med_err,0.012547135353088379
+16000,Eval Images Metrics/normal_rsme,0.03509258106350899
+16000,Eval Images Metrics/num_rays,733572.0
+16000,Eval Images Metrics/rgb_lpips,0.166618213057518
+16000,Eval Images Metrics/rgb_psnr,20.14763069152832
+16000,Eval Images Metrics/rgb_ssim,0.8776425719261169
+16000,Eval Loss,0.2048850953578949
+16000,Eval Loss Dict/main_loss,0.2048850953578949
+16000,Eval Loss Dict/scale_reg,0.0
+16000,Eval Metrics Dict/avg_min_scale,1.4664759362403856e-07
+16000,Eval Metrics Dict/depth_a1,0.9823930263519287
+16000,Eval Metrics Dict/depth_a2,0.9990075826644897
+16000,Eval Metrics Dict/depth_a3,1.0
+16000,Eval Metrics Dict/depth_abs_rel,0.02179797552525997
+16000,Eval Metrics Dict/depth_rmse,0.11482115089893341
+16000,Eval Metrics Dict/depth_rmse_log,0.021075954660773277
+16000,Eval Metrics Dict/depth_sq_rel,0.006251578684896231
+16000,Eval Metrics Dict/gaussian_count,849412.0
+16000,Eval Metrics Dict/rgb_lpips,0.17957521975040436
+16000,Eval Metrics Dict/rgb_mse,0.004701252095401287
+16000,Eval Metrics Dict/rgb_psnr,23.277862548828125
+16000,Eval Metrics Dict/rgb_ssim,0.7848541140556335
+16500,Eval Images Metrics/depth_a1,1.0
+16500,Eval Images Metrics/depth_a2,1.0
+16500,Eval Images Metrics/depth_a3,1.0
+16500,Eval Images Metrics/depth_abs_rel,0.018323341384530067
+16500,Eval Images Metrics/depth_rmse,0.023973476141691208
+16500,Eval Images Metrics/depth_rmse_log,0.018473362550139427
+16500,Eval Images Metrics/depth_sq_rel,0.0005595757975243032
+16500,Eval Images Metrics/normal_mae,0.0062575070187449455
+16500,Eval Images Metrics/normal_mean_err,0.041568901389837265
+16500,Eval Images Metrics/normal_med_err,0.027630388736724854
+16500,Eval Images Metrics/normal_rsme,0.08310649544000626
+16500,Eval Images Metrics/num_rays,733572.0
+16500,Eval Images Metrics/rgb_lpips,0.38426104187965393
+16500,Eval Images Metrics/rgb_psnr,18.836139678955078
+16500,Eval Images Metrics/rgb_ssim,0.6800938248634338
+16500,Eval Loss,0.10705558955669403
+16500,Eval Loss Dict/main_loss,0.10705558955669403
+16500,Eval Loss Dict/scale_reg,0.0
+16500,Eval Metrics Dict/avg_min_scale,1.4913945278749452e-07
+16500,Eval Metrics Dict/depth_a1,0.9997232556343079
+16500,Eval Metrics Dict/depth_a2,1.0
+16500,Eval Metrics Dict/depth_a3,1.0
+16500,Eval Metrics Dict/depth_abs_rel,0.007617619354277849
+16500,Eval Metrics Dict/depth_rmse,0.017723510041832924
+16500,Eval Metrics Dict/depth_rmse_log,0.007628160994499922
+16500,Eval Metrics Dict/depth_sq_rel,0.0002424419071758166
+16500,Eval Metrics Dict/gaussian_count,841402.0
+16500,Eval Metrics Dict/rgb_lpips,0.08490947633981705
+16500,Eval Metrics Dict/rgb_mse,0.0022197796497493982
+16500,Eval Metrics Dict/rgb_psnr,26.53689956665039
+16500,Eval Metrics Dict/rgb_ssim,0.9215903282165527
+17000,Eval Images Metrics Dict (all images)/depth_a1,0.988928496837616
+17000,Eval Images Metrics Dict (all images)/depth_a2,0.9958992004394531
+17000,Eval Images Metrics Dict (all images)/depth_a3,0.998314619064331
+17000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016834232956171036
+17000,Eval Images Metrics Dict (all images)/depth_rmse,0.06112057343125343
+17000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017613334581255913
+17000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.003018216695636511
+17000,Eval Images Metrics Dict (all images)/fps,25.026226043701172
+17000,Eval Images Metrics Dict (all images)/normal_mae,0.16759483516216278
+17000,Eval Images Metrics Dict (all images)/normal_mean_err,0.035185806453228
+17000,Eval Images Metrics Dict (all images)/normal_med_err,0.018867027014493942
+17000,Eval Images Metrics Dict (all images)/normal_rsme,0.06632477045059204
+17000,Eval Images Metrics Dict (all images)/num_rays_per_sec,18358540.0
+17000,Eval Images Metrics Dict (all images)/rgb_lpips,0.17061005532741547
+17000,Eval Images Metrics Dict (all images)/rgb_psnr,22.151918411254883
+17000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8524295687675476
+17000,Eval Images Metrics/depth_a1,0.999750554561615
+17000,Eval Images Metrics/depth_a2,1.0
+17000,Eval Images Metrics/depth_a3,1.0
+17000,Eval Images Metrics/depth_abs_rel,0.00807870738208294
+17000,Eval Images Metrics/depth_rmse,0.03819284960627556
+17000,Eval Images Metrics/depth_rmse_log,0.008109690621495247
+17000,Eval Images Metrics/depth_sq_rel,0.0004938373458571732
+17000,Eval Images Metrics/normal_mae,0.2985064387321472
+17000,Eval Images Metrics/normal_mean_err,0.02244040183722973
+17000,Eval Images Metrics/normal_med_err,0.009400695562362671
+17000,Eval Images Metrics/normal_rsme,0.05794220045208931
+17000,Eval Images Metrics/num_rays,733572.0
+17000,Eval Images Metrics/rgb_lpips,0.08702446520328522
+17000,Eval Images Metrics/rgb_psnr,25.05811309814453
+17000,Eval Images Metrics/rgb_ssim,0.8694852590560913
+17000,Eval Loss,0.1487613469362259
+17000,Eval Loss Dict/main_loss,0.1487613469362259
+17000,Eval Loss Dict/scale_reg,0.0
+17000,Eval Metrics Dict/avg_min_scale,1.430783811429137e-07
+17000,Eval Metrics Dict/depth_a1,1.0
+17000,Eval Metrics Dict/depth_a2,1.0
+17000,Eval Metrics Dict/depth_a3,1.0
+17000,Eval Metrics Dict/depth_abs_rel,0.00647521298378706
+17000,Eval Metrics Dict/depth_rmse,0.01313295029103756
+17000,Eval Metrics Dict/depth_rmse_log,0.0064849513582885265
+17000,Eval Metrics Dict/depth_sq_rel,0.0001298241113545373
+17000,Eval Metrics Dict/gaussian_count,834495.0
+17000,Eval Metrics Dict/rgb_lpips,0.22600872814655304
+17000,Eval Metrics Dict/rgb_mse,0.009512385353446007
+17000,Eval Metrics Dict/rgb_psnr,20.217103958129883
+17000,Eval Metrics Dict/rgb_ssim,0.9231701493263245
+17500,Eval Images Metrics/depth_a1,0.9812124967575073
+17500,Eval Images Metrics/depth_a2,0.9987636208534241
+17500,Eval Images Metrics/depth_a3,1.0
+17500,Eval Images Metrics/depth_abs_rel,0.02518455497920513
+17500,Eval Images Metrics/depth_rmse,0.17149023711681366
+17500,Eval Images Metrics/depth_rmse_log,0.026203131303191185
+17500,Eval Images Metrics/depth_sq_rel,0.008217721246182919
+17500,Eval Images Metrics/normal_mae,0.338193416595459
+17500,Eval Images Metrics/normal_mean_err,0.04443306848406792
+17500,Eval Images Metrics/normal_med_err,0.013526856899261475
+17500,Eval Images Metrics/normal_rsme,0.09473033994436264
+17500,Eval Images Metrics/num_rays,733572.0
+17500,Eval Images Metrics/rgb_lpips,0.22744809091091156
+17500,Eval Images Metrics/rgb_psnr,20.451427459716797
+17500,Eval Images Metrics/rgb_ssim,0.7849274277687073
+17500,Eval Loss,0.3106013834476471
+17500,Eval Loss Dict/main_loss,0.3106013834476471
+17500,Eval Loss Dict/scale_reg,0.0
+17500,Eval Metrics Dict/avg_min_scale,1.3349438177101547e-07
+17500,Eval Metrics Dict/depth_a1,0.9967092871665955
+17500,Eval Metrics Dict/depth_a2,0.9998582601547241
+17500,Eval Metrics Dict/depth_a3,1.0
+17500,Eval Metrics Dict/depth_abs_rel,0.020792046561837196
+17500,Eval Metrics Dict/depth_rmse,0.10722045600414276
+17500,Eval Metrics Dict/depth_rmse_log,0.020697470754384995
+17500,Eval Metrics Dict/depth_sq_rel,0.0035904485266655684
+17500,Eval Metrics Dict/gaussian_count,827882.0
+17500,Eval Metrics Dict/rgb_lpips,0.16851767897605896
+17500,Eval Metrics Dict/rgb_mse,0.016694294288754463
+17500,Eval Metrics Dict/rgb_psnr,17.774316787719727
+17500,Eval Metrics Dict/rgb_ssim,0.7845227122306824
+18000,Eval Images Metrics Dict (all images)/depth_a1,0.9889345765113831
+18000,Eval Images Metrics Dict (all images)/depth_a2,0.9957685470581055
+18000,Eval Images Metrics Dict (all images)/depth_a3,0.998262345790863
+18000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016740158200263977
+18000,Eval Images Metrics Dict (all images)/depth_rmse,0.06106783449649811
+18000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017521604895591736
+18000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.003030319232493639
+18000,Eval Images Metrics Dict (all images)/fps,21.766965866088867
+18000,Eval Images Metrics Dict (all images)/normal_mae,0.16769133508205414
+18000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03527560830116272
+18000,Eval Images Metrics Dict (all images)/normal_med_err,0.018666906282305717
+18000,Eval Images Metrics Dict (all images)/normal_rsme,0.06658501923084259
+18000,Eval Images Metrics Dict (all images)/num_rays_per_sec,15967636.0
+18000,Eval Images Metrics Dict (all images)/rgb_lpips,0.17011596262454987
+18000,Eval Images Metrics Dict (all images)/rgb_psnr,22.1297607421875
+18000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8515035510063171
+18000,Eval Images Metrics/depth_a1,1.0
+18000,Eval Images Metrics/depth_a2,1.0
+18000,Eval Images Metrics/depth_a3,1.0
+18000,Eval Images Metrics/depth_abs_rel,0.013084279373288155
+18000,Eval Images Metrics/depth_rmse,0.028928428888320923
+18000,Eval Images Metrics/depth_rmse_log,0.01323426328599453
+18000,Eval Images Metrics/depth_sq_rel,0.0004938882193528116
+18000,Eval Images Metrics/normal_mae,0.000560123473405838
+18000,Eval Images Metrics/normal_mean_err,0.05028872936964035
+18000,Eval Images Metrics/normal_med_err,0.029819756746292114
+18000,Eval Images Metrics/normal_rsme,0.0816221758723259
+18000,Eval Images Metrics/num_rays,733572.0
+18000,Eval Images Metrics/rgb_lpips,0.3500863313674927
+18000,Eval Images Metrics/rgb_psnr,13.96204948425293
+18000,Eval Images Metrics/rgb_ssim,0.8126757740974426
+18000,Eval Loss,0.12777745723724365
+18000,Eval Loss Dict/main_loss,0.12777745723724365
+18000,Eval Loss Dict/scale_reg,0.0
+18000,Eval Metrics Dict/avg_min_scale,1.3631441220240959e-07
+18000,Eval Metrics Dict/depth_a1,0.9996537566184998
+18000,Eval Metrics Dict/depth_a2,1.0
+18000,Eval Metrics Dict/depth_a3,1.0
+18000,Eval Metrics Dict/depth_abs_rel,0.011365327052772045
+18000,Eval Metrics Dict/depth_rmse,0.03158638998866081
+18000,Eval Metrics Dict/depth_rmse_log,0.011495128273963928
+18000,Eval Metrics Dict/depth_sq_rel,0.0005005453713238239
+18000,Eval Metrics Dict/gaussian_count,821798.0
+18000,Eval Metrics Dict/rgb_lpips,0.14184120297431946
+18000,Eval Metrics Dict/rgb_mse,0.0035756740253418684
+18000,Eval Metrics Dict/rgb_psnr,24.466419219970703
+18000,Eval Metrics Dict/rgb_ssim,0.9012452960014343
+18500,Eval Images Metrics/depth_a1,0.9963657259941101
+18500,Eval Images Metrics/depth_a2,0.9996047019958496
+18500,Eval Images Metrics/depth_a3,1.0
+18500,Eval Images Metrics/depth_abs_rel,0.009652195498347282
+18500,Eval Images Metrics/depth_rmse,0.029272781684994698
+18500,Eval Images Metrics/depth_rmse_log,0.00954778864979744
+18500,Eval Images Metrics/depth_sq_rel,0.0007963366224430501
+18500,Eval Images Metrics/normal_mae,0.261627197265625
+18500,Eval Images Metrics/normal_mean_err,0.02287423051893711
+18500,Eval Images Metrics/normal_med_err,0.014634579420089722
+18500,Eval Images Metrics/normal_rsme,0.041571952402591705
+18500,Eval Images Metrics/num_rays,733572.0
+18500,Eval Images Metrics/rgb_lpips,0.13714297115802765
+18500,Eval Images Metrics/rgb_psnr,21.168392181396484
+18500,Eval Images Metrics/rgb_ssim,0.8511736392974854
+18500,Eval Loss,0.16915525496006012
+18500,Eval Loss Dict/main_loss,0.16915525496006012
+18500,Eval Loss Dict/scale_reg,0.0
+18500,Eval Metrics Dict/avg_min_scale,1.0952273044040339e-07
+18500,Eval Metrics Dict/depth_a1,0.9946140646934509
+18500,Eval Metrics Dict/depth_a2,0.9988808035850525
+18500,Eval Metrics Dict/depth_a3,1.0
+18500,Eval Metrics Dict/depth_abs_rel,0.015068660490214825
+18500,Eval Metrics Dict/depth_rmse,0.05707572028040886
+18500,Eval Metrics Dict/depth_rmse_log,0.015106260776519775
+18500,Eval Metrics Dict/depth_sq_rel,0.002007929375395179
+18500,Eval Metrics Dict/gaussian_count,815766.0
+18500,Eval Metrics Dict/rgb_lpips,0.2234281450510025
+18500,Eval Metrics Dict/rgb_mse,0.007240477483719587
+18500,Eval Metrics Dict/rgb_psnr,21.402326583862305
+18500,Eval Metrics Dict/rgb_ssim,0.8176137804985046
+19000,Eval Images Metrics Dict (all images)/depth_a1,0.9891101717948914
+19000,Eval Images Metrics Dict (all images)/depth_a2,0.9958915710449219
+19000,Eval Images Metrics Dict (all images)/depth_a3,0.9983220100402832
+19000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016826899722218513
+19000,Eval Images Metrics Dict (all images)/depth_rmse,0.060812387615442276
+19000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017597133293747902
+19000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.002981222467496991
+19000,Eval Images Metrics Dict (all images)/fps,23.69272232055664
+19000,Eval Images Metrics Dict (all images)/normal_mae,0.1676129698753357
+19000,Eval Images Metrics Dict (all images)/normal_mean_err,0.035453006625175476
+19000,Eval Images Metrics Dict (all images)/normal_med_err,0.018864482641220093
+19000,Eval Images Metrics Dict (all images)/normal_rsme,0.06659473478794098
+19000,Eval Images Metrics Dict (all images)/num_rays_per_sec,17380320.0
+19000,Eval Images Metrics Dict (all images)/rgb_lpips,0.17012931406497955
+19000,Eval Images Metrics Dict (all images)/rgb_psnr,22.16936492919922
+19000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8523126244544983
+19000,Eval Images Metrics/depth_a1,0.8198022842407227
+19000,Eval Images Metrics/depth_a2,0.8916330337524414
+19000,Eval Images Metrics/depth_a3,0.9479437470436096
+19000,Eval Images Metrics/depth_abs_rel,0.08603764325380325
+19000,Eval Images Metrics/depth_rmse,0.1475374549627304
+19000,Eval Images Metrics/depth_rmse_log,0.10920502990484238
+19000,Eval Images Metrics/depth_sq_rel,0.02517765760421753
+19000,Eval Images Metrics/normal_mae,0.07285909354686737
+19000,Eval Images Metrics/normal_mean_err,0.06798893213272095
+19000,Eval Images Metrics/normal_med_err,0.023638248443603516
+19000,Eval Images Metrics/normal_rsme,0.12830911576747894
+19000,Eval Images Metrics/num_rays,733572.0
+19000,Eval Images Metrics/rgb_lpips,0.1859492063522339
+19000,Eval Images Metrics/rgb_psnr,17.842437744140625
+19000,Eval Images Metrics/rgb_ssim,0.8162068128585815
+19000,Eval Loss,0.12366051226854324
+19000,Eval Loss Dict/main_loss,0.12366051226854324
+19000,Eval Loss Dict/scale_reg,0.0
+19000,Eval Metrics Dict/avg_min_scale,1.1115258047311727e-07
+19000,Eval Metrics Dict/depth_a1,0.9997532963752747
+19000,Eval Metrics Dict/depth_a2,1.0
+19000,Eval Metrics Dict/depth_a3,1.0
+19000,Eval Metrics Dict/depth_abs_rel,0.008017528802156448
+19000,Eval Metrics Dict/depth_rmse,0.03801323100924492
+19000,Eval Metrics Dict/depth_rmse_log,0.0080470135435462
+19000,Eval Metrics Dict/depth_sq_rel,0.0004889643751084805
+19000,Eval Metrics Dict/gaussian_count,810773.0
+19000,Eval Metrics Dict/rgb_lpips,0.08357412368059158
+19000,Eval Metrics Dict/rgb_mse,0.0029564090073108673
+19000,Eval Metrics Dict/rgb_psnr,25.292354583740234
+19000,Eval Metrics Dict/rgb_ssim,0.8740456700325012
+19500,Eval Images Metrics/depth_a1,0.9999223351478577
+19500,Eval Images Metrics/depth_a2,1.0
+19500,Eval Images Metrics/depth_a3,1.0
+19500,Eval Images Metrics/depth_abs_rel,0.007610163651406765
+19500,Eval Images Metrics/depth_rmse,0.021749520674347878
+19500,Eval Images Metrics/depth_rmse_log,0.007641470525413752
+19500,Eval Images Metrics/depth_sq_rel,0.00026992865605279803
+19500,Eval Images Metrics/normal_mae,0.27929234504699707
+19500,Eval Images Metrics/normal_mean_err,0.01897253468632698
+19500,Eval Images Metrics/normal_med_err,0.009096145629882812
+19500,Eval Images Metrics/normal_rsme,0.04627557098865509
+19500,Eval Images Metrics/num_rays,733572.0
+19500,Eval Images Metrics/rgb_lpips,0.12134154140949249
+19500,Eval Images Metrics/rgb_psnr,25.537309646606445
+19500,Eval Images Metrics/rgb_ssim,0.9160151481628418
+19500,Eval Loss,0.14661747217178345
+19500,Eval Loss Dict/main_loss,0.14661747217178345
+19500,Eval Loss Dict/scale_reg,0.0
+19500,Eval Metrics Dict/avg_min_scale,9.483865426318516e-08
+19500,Eval Metrics Dict/depth_a1,1.0
+19500,Eval Metrics Dict/depth_a2,1.0
+19500,Eval Metrics Dict/depth_a3,1.0
+19500,Eval Metrics Dict/depth_abs_rel,0.008163494057953358
+19500,Eval Metrics Dict/depth_rmse,0.021785875782370567
+19500,Eval Metrics Dict/depth_rmse_log,0.008150622248649597
+19500,Eval Metrics Dict/depth_sq_rel,0.0003012842789757997
+19500,Eval Metrics Dict/gaussian_count,805650.0
+19500,Eval Metrics Dict/rgb_lpips,0.14735382795333862
+19500,Eval Metrics Dict/rgb_mse,0.003604818833991885
+19500,Eval Metrics Dict/rgb_psnr,24.43116569519043
+19500,Eval Metrics Dict/rgb_ssim,0.9429400563240051
+20000,Eval Images Metrics Dict (all images)/depth_a1,0.9890382885932922
+20000,Eval Images Metrics Dict (all images)/depth_a2,0.9955800175666809
+20000,Eval Images Metrics Dict (all images)/depth_a3,0.9981784224510193
+20000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016895361244678497
+20000,Eval Images Metrics Dict (all images)/depth_rmse,0.06100879982113838
+20000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017696896567940712
+20000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0030313623137772083
+20000,Eval Images Metrics Dict (all images)/fps,26.958498001098633
+20000,Eval Images Metrics Dict (all images)/normal_mae,0.1675226390361786
+20000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03528660163283348
+20000,Eval Images Metrics Dict (all images)/normal_med_err,0.018533704802393913
+20000,Eval Images Metrics Dict (all images)/normal_rsme,0.06653301417827606
+20000,Eval Images Metrics Dict (all images)/num_rays_per_sec,19776000.0
+20000,Eval Images Metrics Dict (all images)/rgb_lpips,0.16950246691703796
+20000,Eval Images Metrics Dict (all images)/rgb_psnr,22.208681106567383
+20000,Eval Images Metrics Dict (all images)/rgb_ssim,0.85230952501297
+20000,Eval Images Metrics/depth_a1,0.99626624584198
+20000,Eval Images Metrics/depth_a2,0.9997737407684326
+20000,Eval Images Metrics/depth_a3,1.0
+20000,Eval Images Metrics/depth_abs_rel,0.018048182129859924
+20000,Eval Images Metrics/depth_rmse,0.0829208716750145
+20000,Eval Images Metrics/depth_rmse_log,0.018173983320593834
+20000,Eval Images Metrics/depth_sq_rel,0.002778855385258794
+20000,Eval Images Metrics/normal_mae,0.1645420640707016
+20000,Eval Images Metrics/normal_mean_err,0.030745210126042366
+20000,Eval Images Metrics/normal_med_err,0.014297008514404297
+20000,Eval Images Metrics/normal_rsme,0.0584094375371933
+20000,Eval Images Metrics/num_rays,733572.0
+20000,Eval Images Metrics/rgb_lpips,0.13166609406471252
+20000,Eval Images Metrics/rgb_psnr,25.15721893310547
+20000,Eval Images Metrics/rgb_ssim,0.8518015742301941
+20000,Eval Loss,0.12990283966064453
+20000,Eval Loss Dict/main_loss,0.12990283966064453
+20000,Eval Loss Dict/scale_reg,0.0
+20000,Eval Metrics Dict/avg_min_scale,9.343372653347615e-08
+20000,Eval Metrics Dict/depth_a1,0.9891176223754883
+20000,Eval Metrics Dict/depth_a2,0.9984991550445557
+20000,Eval Metrics Dict/depth_a3,1.0
+20000,Eval Metrics Dict/depth_abs_rel,0.015831489115953445
+20000,Eval Metrics Dict/depth_rmse,0.07035867124795914
+20000,Eval Metrics Dict/depth_rmse_log,0.016310136765241623
+20000,Eval Metrics Dict/depth_sq_rel,0.002824896015226841
+20000,Eval Metrics Dict/gaussian_count,801103.0
+20000,Eval Metrics Dict/rgb_lpips,0.11646877974271774
+20000,Eval Metrics Dict/rgb_mse,0.001984686590731144
+20000,Eval Metrics Dict/rgb_psnr,27.02307891845703
+20000,Eval Metrics Dict/rgb_ssim,0.8876358270645142
+20500,Eval Images Metrics/depth_a1,0.9963111877441406
+20500,Eval Images Metrics/depth_a2,0.9993075132369995
+20500,Eval Images Metrics/depth_a3,1.0
+20500,Eval Images Metrics/depth_abs_rel,0.009410280734300613
+20500,Eval Images Metrics/depth_rmse,0.05028681457042694
+20500,Eval Images Metrics/depth_rmse_log,0.009180733002722263
+20500,Eval Images Metrics/depth_sq_rel,0.001500536105595529
+20500,Eval Images Metrics/normal_mae,0.1635219007730484
+20500,Eval Images Metrics/normal_mean_err,0.033449795097112656
+20500,Eval Images Metrics/normal_med_err,0.010119259357452393
+20500,Eval Images Metrics/normal_rsme,0.08145826309919357
+20500,Eval Images Metrics/num_rays,733572.0
+20500,Eval Images Metrics/rgb_lpips,0.11890620738267899
+20500,Eval Images Metrics/rgb_psnr,21.524566650390625
+20500,Eval Images Metrics/rgb_ssim,0.8423093557357788
+20500,Eval Loss,0.12217288464307785
+20500,Eval Loss Dict/main_loss,0.12217288464307785
+20500,Eval Loss Dict/scale_reg,0.0
+20500,Eval Metrics Dict/avg_min_scale,8.911769810993064e-08
+20500,Eval Metrics Dict/depth_a1,0.9997382760047913
+20500,Eval Metrics Dict/depth_a2,1.0
+20500,Eval Metrics Dict/depth_a3,1.0
+20500,Eval Metrics Dict/depth_abs_rel,0.0077781700529158115
+20500,Eval Metrics Dict/depth_rmse,0.03829498216509819
+20500,Eval Metrics Dict/depth_rmse_log,0.007812559604644775
+20500,Eval Metrics Dict/depth_sq_rel,0.0004919971688650548
+20500,Eval Metrics Dict/gaussian_count,796501.0
+20500,Eval Metrics Dict/rgb_lpips,0.08203261345624924
+20500,Eval Metrics Dict/rgb_mse,0.0028353186789900064
+20500,Eval Metrics Dict/rgb_psnr,25.473979949951172
+20500,Eval Metrics Dict/rgb_ssim,0.8770575523376465
+21000,Eval Images Metrics Dict (all images)/depth_a1,0.9889691472053528
+21000,Eval Images Metrics Dict (all images)/depth_a2,0.9957250952720642
+21000,Eval Images Metrics Dict (all images)/depth_a3,0.9981642961502075
+21000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016839390620589256
+21000,Eval Images Metrics Dict (all images)/depth_rmse,0.060948312282562256
+21000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017640601843595505
+21000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.003027218161150813
+21000,Eval Images Metrics Dict (all images)/fps,28.61695098876953
+21000,Eval Images Metrics Dict (all images)/normal_mae,0.16762234270572662
+21000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03558751195669174
+21000,Eval Images Metrics Dict (all images)/normal_med_err,0.019119471311569214
+21000,Eval Images Metrics Dict (all images)/normal_rsme,0.06649316102266312
+21000,Eval Images Metrics Dict (all images)/num_rays_per_sec,20992594.0
+21000,Eval Images Metrics Dict (all images)/rgb_lpips,0.1702962964773178
+21000,Eval Images Metrics Dict (all images)/rgb_psnr,22.144655227661133
+21000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8519561886787415
+21000,Eval Images Metrics/depth_a1,0.996654748916626
+21000,Eval Images Metrics/depth_a2,0.9998623132705688
+21000,Eval Images Metrics/depth_a3,1.0
+21000,Eval Images Metrics/depth_abs_rel,0.020465824753046036
+21000,Eval Images Metrics/depth_rmse,0.10624609887599945
+21000,Eval Images Metrics/depth_rmse_log,0.02039599046111107
+21000,Eval Images Metrics/depth_sq_rel,0.0035274135880172253
+21000,Eval Images Metrics/normal_mae,0.29827356338500977
+21000,Eval Images Metrics/normal_mean_err,0.04455167055130005
+21000,Eval Images Metrics/normal_med_err,0.014705181121826172
+21000,Eval Images Metrics/normal_rsme,0.0897199809551239
+21000,Eval Images Metrics/num_rays,733572.0
+21000,Eval Images Metrics/rgb_lpips,0.16922423243522644
+21000,Eval Images Metrics/rgb_psnr,17.759963989257812
+21000,Eval Images Metrics/rgb_ssim,0.7858511805534363
+21000,Eval Loss,0.24684277176856995
+21000,Eval Loss Dict/main_loss,0.24684277176856995
+21000,Eval Loss Dict/scale_reg,0.0
+21000,Eval Metrics Dict/avg_min_scale,8.800971329492313e-08
+21000,Eval Metrics Dict/depth_a1,0.9848699569702148
+21000,Eval Metrics Dict/depth_a2,0.9970569014549255
+21000,Eval Metrics Dict/depth_a3,1.0
+21000,Eval Metrics Dict/depth_abs_rel,0.02559056133031845
+21000,Eval Metrics Dict/depth_rmse,0.09569352120161057
+21000,Eval Metrics Dict/depth_rmse_log,0.026721905916929245
+21000,Eval Metrics Dict/depth_sq_rel,0.004634026903659105
+21000,Eval Metrics Dict/gaussian_count,792579.0
+21000,Eval Metrics Dict/rgb_lpips,0.19984637200832367
+21000,Eval Metrics Dict/rgb_mse,0.01141789834946394
+21000,Eval Metrics Dict/rgb_psnr,19.42413902282715
+21000,Eval Metrics Dict/rgb_ssim,0.8160415887832642
+21500,Eval Images Metrics/depth_a1,0.9792958498001099
+21500,Eval Images Metrics/depth_a2,0.996296226978302
+21500,Eval Images Metrics/depth_a3,1.0
+21500,Eval Images Metrics/depth_abs_rel,0.027779359370470047
+21500,Eval Images Metrics/depth_rmse,0.1677902489900589
+21500,Eval Images Metrics/depth_rmse_log,0.028692007064819336
+21500,Eval Images Metrics/depth_sq_rel,0.008990238420665264
+21500,Eval Images Metrics/normal_mae,0.31207314133644104
+21500,Eval Images Metrics/normal_mean_err,0.042344819754362106
+21500,Eval Images Metrics/normal_med_err,0.015117526054382324
+21500,Eval Images Metrics/normal_rsme,0.09401247650384903
+21500,Eval Images Metrics/num_rays,733572.0
+21500,Eval Images Metrics/rgb_lpips,0.20689427852630615
+21500,Eval Images Metrics/rgb_psnr,22.037700653076172
+21500,Eval Images Metrics/rgb_ssim,0.8094186782836914
+21500,Eval Loss,0.1419961005449295
+21500,Eval Loss Dict/main_loss,0.1419961005449295
+21500,Eval Loss Dict/scale_reg,0.0
+21500,Eval Metrics Dict/avg_min_scale,8.212180091504706e-08
+21500,Eval Metrics Dict/depth_a1,0.9905312657356262
+21500,Eval Metrics Dict/depth_a2,0.9974276423454285
+21500,Eval Metrics Dict/depth_a3,0.999641478061676
+21500,Eval Metrics Dict/depth_abs_rel,0.012431408278644085
+21500,Eval Metrics Dict/depth_rmse,0.07197351008653641
+21500,Eval Metrics Dict/depth_rmse_log,0.012701037339866161
+21500,Eval Metrics Dict/depth_sq_rel,0.0028270413167774677
+21500,Eval Metrics Dict/gaussian_count,788770.0
+21500,Eval Metrics Dict/rgb_lpips,0.12087719142436981
+21500,Eval Metrics Dict/rgb_mse,0.0029184038285166025
+21500,Eval Metrics Dict/rgb_psnr,25.34854507446289
+21500,Eval Metrics Dict/rgb_ssim,0.8927903771400452
+22000,Eval Images Metrics Dict (all images)/depth_a1,0.9889196753501892
+22000,Eval Images Metrics Dict (all images)/depth_a2,0.9954507946968079
+22000,Eval Images Metrics Dict (all images)/depth_a3,0.9980184435844421
+22000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.01682998798787594
+22000,Eval Images Metrics Dict (all images)/depth_rmse,0.06100285425782204
+22000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.01766667515039444
+22000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.003061865922063589
+22000,Eval Images Metrics Dict (all images)/fps,24.5642032623291
+22000,Eval Images Metrics Dict (all images)/normal_mae,0.1677197813987732
+22000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03529713302850723
+22000,Eval Images Metrics Dict (all images)/normal_med_err,0.018497679382562637
+22000,Eval Images Metrics Dict (all images)/normal_rsme,0.06647125631570816
+22000,Eval Images Metrics Dict (all images)/num_rays_per_sec,18019612.0
+22000,Eval Images Metrics Dict (all images)/rgb_lpips,0.1686227172613144
+22000,Eval Images Metrics Dict (all images)/rgb_psnr,22.213525772094727
+22000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8525828719139099
+22000,Eval Images Metrics/depth_a1,0.9823957681655884
+22000,Eval Images Metrics/depth_a2,0.999113917350769
+22000,Eval Images Metrics/depth_a3,1.0
+22000,Eval Images Metrics/depth_abs_rel,0.02302921935915947
+22000,Eval Images Metrics/depth_rmse,0.11580310016870499
+22000,Eval Images Metrics/depth_rmse_log,0.022312244400382042
+22000,Eval Images Metrics/depth_sq_rel,0.006330881267786026
+22000,Eval Images Metrics/normal_mae,0.07068121433258057
+22000,Eval Images Metrics/normal_mean_err,0.032551154494285583
+22000,Eval Images Metrics/normal_med_err,0.013278961181640625
+22000,Eval Images Metrics/normal_rsme,0.06538007408380508
+22000,Eval Images Metrics/num_rays,733572.0
+22000,Eval Images Metrics/rgb_lpips,0.16896170377731323
+22000,Eval Images Metrics/rgb_psnr,22.61874771118164
+22000,Eval Images Metrics/rgb_ssim,0.7850971817970276
+22000,Eval Loss,0.12717416882514954
+22000,Eval Loss Dict/main_loss,0.12717416882514954
+22000,Eval Loss Dict/scale_reg,0.0
+22000,Eval Metrics Dict/avg_min_scale,5.600031371955083e-08
+22000,Eval Metrics Dict/depth_a1,0.9997546672821045
+22000,Eval Metrics Dict/depth_a2,1.0
+22000,Eval Metrics Dict/depth_a3,1.0
+22000,Eval Metrics Dict/depth_abs_rel,0.008058737963438034
+22000,Eval Metrics Dict/depth_rmse,0.038149457424879074
+22000,Eval Metrics Dict/depth_rmse_log,0.008090182207524776
+22000,Eval Metrics Dict/depth_sq_rel,0.0004925121902488172
+22000,Eval Metrics Dict/gaussian_count,785071.0
+22000,Eval Metrics Dict/rgb_lpips,0.08619489520788193
+22000,Eval Metrics Dict/rgb_mse,0.0031226244755089283
+22000,Eval Metrics Dict/rgb_psnr,25.05480194091797
+22000,Eval Metrics Dict/rgb_ssim,0.8706857562065125
+22500,Eval Images Metrics/depth_a1,0.9814210534095764
+22500,Eval Images Metrics/depth_a2,0.9924752116203308
+22500,Eval Images Metrics/depth_a3,0.9971196055412292
+22500,Eval Images Metrics/depth_abs_rel,0.021645991131663322
+22500,Eval Images Metrics/depth_rmse,0.09900853782892227
+22500,Eval Images Metrics/depth_rmse_log,0.019319461658596992
+22500,Eval Images Metrics/depth_sq_rel,0.008566906675696373
+22500,Eval Images Metrics/normal_mae,0.1575234830379486
+22500,Eval Images Metrics/normal_mean_err,0.04717952758073807
+22500,Eval Images Metrics/normal_med_err,0.024602115154266357
+22500,Eval Images Metrics/normal_rsme,0.08285074681043625
+22500,Eval Images Metrics/num_rays,733572.0
+22500,Eval Images Metrics/rgb_lpips,0.241587296128273
+22500,Eval Images Metrics/rgb_psnr,20.41795539855957
+22500,Eval Images Metrics/rgb_ssim,0.8156595230102539
+22500,Eval Loss,0.12585441768169403
+22500,Eval Loss Dict/main_loss,0.12585441768169403
+22500,Eval Loss Dict/scale_reg,0.0
+22500,Eval Metrics Dict/avg_min_scale,5.736903574415919e-08
+22500,Eval Metrics Dict/depth_a1,0.9964597821235657
+22500,Eval Metrics Dict/depth_a2,0.9996483325958252
+22500,Eval Metrics Dict/depth_a3,1.0
+22500,Eval Metrics Dict/depth_abs_rel,0.009264043532311916
+22500,Eval Metrics Dict/depth_rmse,0.028603434562683105
+22500,Eval Metrics Dict/depth_rmse_log,0.00912464689463377
+22500,Eval Metrics Dict/depth_sq_rel,0.0007789256051182747
+22500,Eval Metrics Dict/gaussian_count,781696.0
+22500,Eval Metrics Dict/rgb_lpips,0.12736232578754425
+22500,Eval Metrics Dict/rgb_mse,0.0070817312225699425
+22500,Eval Metrics Dict/rgb_psnr,21.49860382080078
+22500,Eval Metrics Dict/rgb_ssim,0.8605632185935974
+23000,Eval Images Metrics Dict (all images)/depth_a1,0.9889535903930664
+23000,Eval Images Metrics Dict (all images)/depth_a2,0.9955313801765442
+23000,Eval Images Metrics Dict (all images)/depth_a3,0.9980884790420532
+23000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016715914011001587
+23000,Eval Images Metrics Dict (all images)/depth_rmse,0.06091640144586563
+23000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017531204968690872
+23000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.003036813111975789
+23000,Eval Images Metrics Dict (all images)/fps,25.111120223999023
+23000,Eval Images Metrics Dict (all images)/normal_mae,0.1681065857410431
+23000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03569323942065239
+23000,Eval Images Metrics Dict (all images)/normal_med_err,0.01907234825193882
+23000,Eval Images Metrics Dict (all images)/normal_rsme,0.0666891485452652
+23000,Eval Images Metrics Dict (all images)/num_rays_per_sec,18420814.0
+23000,Eval Images Metrics Dict (all images)/rgb_lpips,0.16966551542282104
+23000,Eval Images Metrics Dict (all images)/rgb_psnr,22.21242332458496
+23000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8519718050956726
+23000,Eval Images Metrics/depth_a1,1.0
+23000,Eval Images Metrics/depth_a2,1.0
+23000,Eval Images Metrics/depth_a3,1.0
+23000,Eval Images Metrics/depth_abs_rel,0.018326811492443085
+23000,Eval Images Metrics/depth_rmse,0.023815158754587173
+23000,Eval Images Metrics/depth_rmse_log,0.0184857789427042
+23000,Eval Images Metrics/depth_sq_rel,0.0005490283365361392
+23000,Eval Images Metrics/normal_mae,0.006413061637431383
+23000,Eval Images Metrics/normal_mean_err,0.04214049503207207
+23000,Eval Images Metrics/normal_med_err,0.026749342679977417
+23000,Eval Images Metrics/normal_rsme,0.08559982478618622
+23000,Eval Images Metrics/num_rays,733572.0
+23000,Eval Images Metrics/rgb_lpips,0.3802522122859955
+23000,Eval Images Metrics/rgb_psnr,18.426532745361328
+23000,Eval Images Metrics/rgb_ssim,0.6778214573860168
+23000,Eval Loss,0.17307725548744202
+23000,Eval Loss Dict/main_loss,0.17307725548744202
+23000,Eval Loss Dict/scale_reg,0.0
+23000,Eval Metrics Dict/avg_min_scale,5.799659774652355e-08
+23000,Eval Metrics Dict/depth_a1,0.9996033310890198
+23000,Eval Metrics Dict/depth_a2,1.0
+23000,Eval Metrics Dict/depth_a3,1.0
+23000,Eval Metrics Dict/depth_abs_rel,0.0063268509693443775
+23000,Eval Metrics Dict/depth_rmse,0.022638102993369102
+23000,Eval Metrics Dict/depth_rmse_log,0.006377795711159706
+23000,Eval Metrics Dict/depth_sq_rel,0.0002733425353653729
+23000,Eval Metrics Dict/gaussian_count,778484.0
+23000,Eval Metrics Dict/rgb_lpips,0.09542953222990036
+23000,Eval Metrics Dict/rgb_mse,0.024887777864933014
+23000,Eval Metrics Dict/rgb_psnr,16.040138244628906
+23000,Eval Metrics Dict/rgb_ssim,0.9262284636497498
+23500,Eval Images Metrics/depth_a1,0.9992448091506958
+23500,Eval Images Metrics/depth_a2,0.9994533658027649
+23500,Eval Images Metrics/depth_a3,1.0
+23500,Eval Images Metrics/depth_abs_rel,0.010382074862718582
+23500,Eval Images Metrics/depth_rmse,0.024286266416311264
+23500,Eval Images Metrics/depth_rmse_log,0.010575812309980392
+23500,Eval Images Metrics/depth_sq_rel,0.00044794712448492646
+23500,Eval Images Metrics/normal_mae,0.023153653368353844
+23500,Eval Images Metrics/normal_mean_err,0.028841378167271614
+23500,Eval Images Metrics/normal_med_err,0.020665526390075684
+23500,Eval Images Metrics/normal_rsme,0.04368454962968826
+23500,Eval Images Metrics/num_rays,733572.0
+23500,Eval Images Metrics/rgb_lpips,0.17144523561000824
+23500,Eval Images Metrics/rgb_psnr,25.88682746887207
+23500,Eval Images Metrics/rgb_ssim,0.9021509885787964
+23500,Eval Loss,0.1289055347442627
+23500,Eval Loss Dict/main_loss,0.1289055347442627
+23500,Eval Loss Dict/scale_reg,0.0
+23500,Eval Metrics Dict/avg_min_scale,5.453012619227593e-08
+23500,Eval Metrics Dict/depth_a1,0.9967201948165894
+23500,Eval Metrics Dict/depth_a2,0.9997137188911438
+23500,Eval Metrics Dict/depth_a3,1.0
+23500,Eval Metrics Dict/depth_abs_rel,0.009301693178713322
+23500,Eval Metrics Dict/depth_rmse,0.02808443270623684
+23500,Eval Metrics Dict/depth_rmse_log,0.009213637560606003
+23500,Eval Metrics Dict/depth_sq_rel,0.0007323944009840488
+23500,Eval Metrics Dict/gaussian_count,775528.0
+23500,Eval Metrics Dict/rgb_lpips,0.12948787212371826
+23500,Eval Metrics Dict/rgb_mse,0.007382442709058523
+23500,Eval Metrics Dict/rgb_psnr,21.3179988861084
+23500,Eval Metrics Dict/rgb_ssim,0.8547559976577759
+24000,Eval Images Metrics Dict (all images)/depth_a1,0.9890716075897217
+24000,Eval Images Metrics Dict (all images)/depth_a2,0.9954100847244263
+24000,Eval Images Metrics Dict (all images)/depth_a3,0.9979814291000366
+24000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.017002170905470848
+24000,Eval Images Metrics Dict (all images)/depth_rmse,0.06093113496899605
+24000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017859140411019325
+24000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0030517831910401583
+24000,Eval Images Metrics Dict (all images)/fps,21.24820327758789
+24000,Eval Images Metrics Dict (all images)/normal_mae,0.1673426479101181
+24000,Eval Images Metrics Dict (all images)/normal_mean_err,0.035518333315849304
+24000,Eval Images Metrics Dict (all images)/normal_med_err,0.018940314650535583
+24000,Eval Images Metrics Dict (all images)/normal_rsme,0.06654252856969833
+24000,Eval Images Metrics Dict (all images)/num_rays_per_sec,15587087.0
+24000,Eval Images Metrics Dict (all images)/rgb_lpips,0.16861532628536224
+24000,Eval Images Metrics Dict (all images)/rgb_psnr,22.249582290649414
+24000,Eval Images Metrics Dict (all images)/rgb_ssim,0.852688193321228
+24000,Eval Images Metrics/depth_a1,0.9815287590026855
+24000,Eval Images Metrics/depth_a2,0.9925365447998047
+24000,Eval Images Metrics/depth_a3,0.9971877336502075
+24000,Eval Images Metrics/depth_abs_rel,0.02143928036093712
+24000,Eval Images Metrics/depth_rmse,0.09842376410961151
+24000,Eval Images Metrics/depth_rmse_log,0.01914769969880581
+24000,Eval Images Metrics/depth_sq_rel,0.008451706729829311
+24000,Eval Images Metrics/normal_mae,0.1578322798013687
+24000,Eval Images Metrics/normal_mean_err,0.047006625682115555
+24000,Eval Images Metrics/normal_med_err,0.025561213493347168
+24000,Eval Images Metrics/normal_rsme,0.08193475008010864
+24000,Eval Images Metrics/num_rays,733572.0
+24000,Eval Images Metrics/rgb_lpips,0.2417384386062622
+24000,Eval Images Metrics/rgb_psnr,20.350488662719727
+24000,Eval Images Metrics/rgb_ssim,0.8140532970428467
+24000,Eval Loss,0.21101729571819305
+24000,Eval Loss Dict/main_loss,0.21101729571819305
+24000,Eval Loss Dict/scale_reg,0.0
+24000,Eval Metrics Dict/avg_min_scale,5.6190302188952046e-08
+24000,Eval Metrics Dict/depth_a1,0.9854288697242737
+24000,Eval Metrics Dict/depth_a2,1.0
+24000,Eval Metrics Dict/depth_a3,1.0
+24000,Eval Metrics Dict/depth_abs_rel,0.017949972301721573
+24000,Eval Metrics Dict/depth_rmse,0.11096804589033127
+24000,Eval Metrics Dict/depth_rmse_log,0.017219526693224907
+24000,Eval Metrics Dict/depth_sq_rel,0.005122187547385693
+24000,Eval Metrics Dict/gaussian_count,772597.0
+24000,Eval Metrics Dict/rgb_lpips,0.22286413609981537
+24000,Eval Metrics Dict/rgb_mse,0.007346720900386572
+24000,Eval Metrics Dict/rgb_psnr,21.33906364440918
+24000,Eval Metrics Dict/rgb_ssim,0.799528181552887
+24500,Eval Images Metrics/depth_a1,0.9997014999389648
+24500,Eval Images Metrics/depth_a2,1.0
+24500,Eval Images Metrics/depth_a3,1.0
+24500,Eval Images Metrics/depth_abs_rel,0.007758671883493662
+24500,Eval Images Metrics/depth_rmse,0.029297228902578354
+24500,Eval Images Metrics/depth_rmse_log,0.007753015495836735
+24500,Eval Images Metrics/depth_sq_rel,0.0003457276907283813
+24500,Eval Images Metrics/normal_mae,0.28471216559410095
+24500,Eval Images Metrics/normal_mean_err,0.022976668551564217
+24500,Eval Images Metrics/normal_med_err,0.011457324028015137
+24500,Eval Images Metrics/normal_rsme,0.048497263342142105
+24500,Eval Images Metrics/num_rays,733572.0
+24500,Eval Images Metrics/rgb_lpips,0.09186386317014694
+24500,Eval Images Metrics/rgb_psnr,26.148578643798828
+24500,Eval Images Metrics/rgb_ssim,0.9052006602287292
+24500,Eval Loss,0.15417733788490295
+24500,Eval Loss Dict/main_loss,0.15417733788490295
+24500,Eval Loss Dict/scale_reg,0.0
+24500,Eval Metrics Dict/avg_min_scale,5.7633251060451585e-08
+24500,Eval Metrics Dict/depth_a1,1.0
+24500,Eval Metrics Dict/depth_a2,1.0
+24500,Eval Metrics Dict/depth_a3,1.0
+24500,Eval Metrics Dict/depth_abs_rel,0.008869023993611336
+24500,Eval Metrics Dict/depth_rmse,0.023134013637900352
+24500,Eval Metrics Dict/depth_rmse_log,0.008870153687894344
+24500,Eval Metrics Dict/depth_sq_rel,0.0003424972528591752
+24500,Eval Metrics Dict/gaussian_count,769858.0
+24500,Eval Metrics Dict/rgb_lpips,0.15708912909030914
+24500,Eval Metrics Dict/rgb_mse,0.004154530819505453
+24500,Eval Metrics Dict/rgb_psnr,23.81477928161621
+24500,Eval Metrics Dict/rgb_ssim,0.9388452768325806
+25000,Eval Images Metrics Dict (all images)/depth_a1,0.989088237285614
+25000,Eval Images Metrics Dict (all images)/depth_a2,0.995570182800293
+25000,Eval Images Metrics Dict (all images)/depth_a3,0.9981603622436523
+25000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.0168624185025692
+25000,Eval Images Metrics Dict (all images)/depth_rmse,0.06093853339552879
+25000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017667043954133987
+25000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.003028314560651779
+25000,Eval Images Metrics Dict (all images)/fps,21.877771377563477
+25000,Eval Images Metrics Dict (all images)/normal_mae,0.16798342764377594
+25000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03578003868460655
+25000,Eval Images Metrics Dict (all images)/normal_med_err,0.019237596541643143
+25000,Eval Images Metrics Dict (all images)/normal_rsme,0.06661393493413925
+25000,Eval Images Metrics Dict (all images)/num_rays_per_sec,16048921.0
+25000,Eval Images Metrics Dict (all images)/rgb_lpips,0.17091874778270721
+25000,Eval Images Metrics Dict (all images)/rgb_psnr,22.110944747924805
+25000,Eval Images Metrics Dict (all images)/rgb_ssim,0.850840151309967
+25000,Eval Images Metrics/depth_a1,0.9949411749839783
+25000,Eval Images Metrics/depth_a2,0.9992856979370117
+25000,Eval Images Metrics/depth_a3,1.0
+25000,Eval Images Metrics/depth_abs_rel,0.015217037871479988
+25000,Eval Images Metrics/depth_rmse,0.05626387149095535
+25000,Eval Images Metrics/depth_rmse_log,0.015224781818687916
+25000,Eval Images Metrics/depth_sq_rel,0.001944136107340455
+25000,Eval Images Metrics/normal_mae,0.0969054102897644
+25000,Eval Images Metrics/normal_mean_err,0.028676800429821014
+25000,Eval Images Metrics/normal_med_err,0.011113405227661133
+25000,Eval Images Metrics/normal_rsme,0.05728970468044281
+25000,Eval Images Metrics/num_rays,733572.0
+25000,Eval Images Metrics/rgb_lpips,0.2289501428604126
+25000,Eval Images Metrics/rgb_psnr,21.25355339050293
+25000,Eval Images Metrics/rgb_ssim,0.8146919012069702
+25000,Eval Loss,0.22962109744548798
+25000,Eval Loss Dict/main_loss,0.22962109744548798
+25000,Eval Loss Dict/scale_reg,0.0
+25000,Eval Metrics Dict/avg_min_scale,5.8608907949064815e-08
+25000,Eval Metrics Dict/depth_a1,0.9900609850883484
+25000,Eval Metrics Dict/depth_a2,0.9990103244781494
+25000,Eval Metrics Dict/depth_a3,1.0
+25000,Eval Metrics Dict/depth_abs_rel,0.021986883133649826
+25000,Eval Metrics Dict/depth_rmse,0.07569661736488342
+25000,Eval Metrics Dict/depth_rmse_log,0.02247903309762478
+25000,Eval Metrics Dict/depth_sq_rel,0.0030210341792553663
+25000,Eval Metrics Dict/gaussian_count,767025.0
+25000,Eval Metrics Dict/rgb_lpips,0.19888544082641602
+25000,Eval Metrics Dict/rgb_mse,0.006937844213098288
+25000,Eval Metrics Dict/rgb_psnr,21.587753295898438
+25000,Eval Metrics Dict/rgb_ssim,0.7787787914276123
+25500,Eval Images Metrics/depth_a1,0.9992557168006897
+25500,Eval Images Metrics/depth_a2,0.9994465708732605
+25500,Eval Images Metrics/depth_a3,1.0
+25500,Eval Images Metrics/depth_abs_rel,0.01053108274936676
+25500,Eval Images Metrics/depth_rmse,0.024519549682736397
+25500,Eval Images Metrics/depth_rmse_log,0.010729090310633183
+25500,Eval Images Metrics/depth_sq_rel,0.0004569274024106562
+25500,Eval Images Metrics/normal_mae,0.0226228516548872
+25500,Eval Images Metrics/normal_mean_err,0.028737585991621017
+25500,Eval Images Metrics/normal_med_err,0.02001023292541504
+25500,Eval Images Metrics/normal_rsme,0.04381432756781578
+25500,Eval Images Metrics/num_rays,733572.0
+25500,Eval Images Metrics/rgb_lpips,0.17543968558311462
+25500,Eval Images Metrics/rgb_psnr,25.680953979492188
+25500,Eval Images Metrics/rgb_ssim,0.9019032120704651
+25500,Eval Loss,0.15400677919387817
+25500,Eval Loss Dict/main_loss,0.15400677919387817
+25500,Eval Loss Dict/scale_reg,0.0
+25500,Eval Metrics Dict/avg_min_scale,5.0604942458676305e-08
+25500,Eval Metrics Dict/depth_a1,0.9963153004646301
+25500,Eval Metrics Dict/depth_a2,0.9993061423301697
+25500,Eval Metrics Dict/depth_a3,1.0
+25500,Eval Metrics Dict/depth_abs_rel,0.009094484150409698
+25500,Eval Metrics Dict/depth_rmse,0.050114989280700684
+25500,Eval Metrics Dict/depth_rmse_log,0.008873848244547844
+25500,Eval Metrics Dict/depth_sq_rel,0.0014888204168528318
+25500,Eval Metrics Dict/gaussian_count,764676.0
+25500,Eval Metrics Dict/rgb_lpips,0.11757130920886993
+25500,Eval Metrics Dict/rgb_mse,0.006531005725264549
+25500,Eval Metrics Dict/rgb_psnr,21.85019874572754
+25500,Eval Metrics Dict/rgb_ssim,0.8412348031997681
+26000,Eval Images Metrics Dict (all images)/depth_a1,0.9889665246009827
+26000,Eval Images Metrics Dict (all images)/depth_a2,0.9952878355979919
+26000,Eval Images Metrics Dict (all images)/depth_a3,0.9979708194732666
+26000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016867905855178833
+26000,Eval Images Metrics Dict (all images)/depth_rmse,0.060946110635995865
+26000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017730742692947388
+26000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0030662387143820524
+26000,Eval Images Metrics Dict (all images)/fps,25.091821670532227
+26000,Eval Images Metrics Dict (all images)/normal_mae,0.16784325242042542
+26000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03551572561264038
+26000,Eval Images Metrics Dict (all images)/normal_med_err,0.01892605982720852
+26000,Eval Images Metrics Dict (all images)/normal_rsme,0.06647340208292007
+26000,Eval Images Metrics Dict (all images)/num_rays_per_sec,18406658.0
+26000,Eval Images Metrics Dict (all images)/rgb_lpips,0.16885098814964294
+26000,Eval Images Metrics Dict (all images)/rgb_psnr,22.191232681274414
+26000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8525171279907227
+26000,Eval Images Metrics/depth_a1,0.9962907433509827
+26000,Eval Images Metrics/depth_a2,0.9992884397506714
+26000,Eval Images Metrics/depth_a3,1.0
+26000,Eval Images Metrics/depth_abs_rel,0.008969023823738098
+26000,Eval Images Metrics/depth_rmse,0.05022858455777168
+26000,Eval Images Metrics/depth_rmse_log,0.008746757172048092
+26000,Eval Images Metrics/depth_sq_rel,0.0014976555248722434
+26000,Eval Images Metrics/normal_mae,0.16310040652751923
+26000,Eval Images Metrics/normal_mean_err,0.03409356251358986
+26000,Eval Images Metrics/normal_med_err,0.01064610481262207
+26000,Eval Images Metrics/normal_rsme,0.08173800259828568
+26000,Eval Images Metrics/num_rays,733572.0
+26000,Eval Images Metrics/rgb_lpips,0.11762139201164246
+26000,Eval Images Metrics/rgb_psnr,21.80927848815918
+26000,Eval Images Metrics/rgb_ssim,0.8404431939125061
+26000,Eval Loss,0.15360674262046814
+26000,Eval Loss Dict/main_loss,0.15360674262046814
+26000,Eval Loss Dict/scale_reg,0.0
+26000,Eval Metrics Dict/avg_min_scale,5.162077343356941e-08
+26000,Eval Metrics Dict/depth_a1,1.0
+26000,Eval Metrics Dict/depth_a2,1.0
+26000,Eval Metrics Dict/depth_a3,1.0
+26000,Eval Metrics Dict/depth_abs_rel,0.008414401672780514
+26000,Eval Metrics Dict/depth_rmse,0.02222772128880024
+26000,Eval Metrics Dict/depth_rmse_log,0.008401930332183838
+26000,Eval Metrics Dict/depth_sq_rel,0.00031313521321862936
+26000,Eval Metrics Dict/gaussian_count,762221.0
+26000,Eval Metrics Dict/rgb_lpips,0.14844897389411926
+26000,Eval Metrics Dict/rgb_mse,0.0042757028713822365
+26000,Eval Metrics Dict/rgb_psnr,23.689924240112305
+26000,Eval Metrics Dict/rgb_ssim,0.9412991404533386
+26500,Eval Images Metrics/depth_a1,0.9996537566184998
+26500,Eval Images Metrics/depth_a2,1.0
+26500,Eval Images Metrics/depth_a3,1.0
+26500,Eval Images Metrics/depth_abs_rel,0.011649790219962597
+26500,Eval Images Metrics/depth_rmse,0.03174357861280441
+26500,Eval Images Metrics/depth_rmse_log,0.011784696020185947
+26500,Eval Images Metrics/depth_sq_rel,0.0005108866607770324
+26500,Eval Images Metrics/normal_mae,0.20403149724006653
+26500,Eval Images Metrics/normal_mean_err,0.020545529201626778
+26500,Eval Images Metrics/normal_med_err,0.009700238704681396
+26500,Eval Images Metrics/normal_rsme,0.05222669243812561
+26500,Eval Images Metrics/num_rays,733572.0
+26500,Eval Images Metrics/rgb_lpips,0.15280883014202118
+26500,Eval Images Metrics/rgb_psnr,24.446945190429688
+26500,Eval Images Metrics/rgb_ssim,0.8964375853538513
+26500,Eval Loss,0.12358056008815765
+26500,Eval Loss Dict/main_loss,0.12358056008815765
+26500,Eval Loss Dict/scale_reg,0.0
+26500,Eval Metrics Dict/avg_min_scale,5.2171102993270324e-08
+26500,Eval Metrics Dict/depth_a1,0.9997519254684448
+26500,Eval Metrics Dict/depth_a2,1.0
+26500,Eval Metrics Dict/depth_a3,1.0
+26500,Eval Metrics Dict/depth_abs_rel,0.00795822124928236
+26500,Eval Metrics Dict/depth_rmse,0.03786196559667587
+26500,Eval Metrics Dict/depth_rmse_log,0.007987091317772865
+26500,Eval Metrics Dict/depth_sq_rel,0.00048591988161206245
+26500,Eval Metrics Dict/gaussian_count,759995.0
+26500,Eval Metrics Dict/rgb_lpips,0.08295993506908417
+26500,Eval Metrics Dict/rgb_mse,0.0029395001474767923
+26500,Eval Metrics Dict/rgb_psnr,25.317264556884766
+26500,Eval Metrics Dict/rgb_ssim,0.8758838176727295
+27000,Eval Images Metrics Dict (all images)/depth_a1,0.9889513850212097
+27000,Eval Images Metrics Dict (all images)/depth_a2,0.9953727722167969
+27000,Eval Images Metrics Dict (all images)/depth_a3,0.9980493187904358
+27000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016727527603507042
+27000,Eval Images Metrics Dict (all images)/depth_rmse,0.06081389635801315
+27000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017566770315170288
+27000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.003049414372071624
+27000,Eval Images Metrics Dict (all images)/fps,26.471145629882812
+27000,Eval Images Metrics Dict (all images)/normal_mae,0.16798622906208038
+27000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03567008674144745
+27000,Eval Images Metrics Dict (all images)/normal_med_err,0.019106317311525345
+27000,Eval Images Metrics Dict (all images)/normal_rsme,0.06657040864229202
+27000,Eval Images Metrics Dict (all images)/num_rays_per_sec,19418492.0
+27000,Eval Images Metrics Dict (all images)/rgb_lpips,0.1712915301322937
+27000,Eval Images Metrics Dict (all images)/rgb_psnr,22.173171997070312
+27000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8512098789215088
+27000,Eval Images Metrics/depth_a1,0.9998037219047546
+27000,Eval Images Metrics/depth_a2,1.0
+27000,Eval Images Metrics/depth_a3,1.0
+27000,Eval Images Metrics/depth_abs_rel,0.007682516239583492
+27000,Eval Images Metrics/depth_rmse,0.017605528235435486
+27000,Eval Images Metrics/depth_rmse_log,0.007697795517742634
+27000,Eval Images Metrics/depth_sq_rel,0.0002389506989857182
+27000,Eval Images Metrics/normal_mae,0.15816451609134674
+27000,Eval Images Metrics/normal_mean_err,0.03935854882001877
+27000,Eval Images Metrics/normal_med_err,0.027289003133773804
+27000,Eval Images Metrics/normal_rsme,0.058491919189691544
+27000,Eval Images Metrics/num_rays,733572.0
+27000,Eval Images Metrics/rgb_lpips,0.08288069069385529
+27000,Eval Images Metrics/rgb_psnr,25.662691116333008
+27000,Eval Images Metrics/rgb_ssim,0.9224792122840881
+27000,Eval Loss,0.15495915710926056
+27000,Eval Loss Dict/main_loss,0.15495915710926056
+27000,Eval Loss Dict/scale_reg,0.0
+27000,Eval Metrics Dict/avg_min_scale,5.2728580612892983e-08
+27000,Eval Metrics Dict/depth_a1,1.0
+27000,Eval Metrics Dict/depth_a2,1.0
+27000,Eval Metrics Dict/depth_a3,1.0
+27000,Eval Metrics Dict/depth_abs_rel,0.008433856070041656
+27000,Eval Metrics Dict/depth_rmse,0.022237563505768776
+27000,Eval Metrics Dict/depth_rmse_log,0.008426709100604057
+27000,Eval Metrics Dict/depth_sq_rel,0.0003097400476690382
+27000,Eval Metrics Dict/gaussian_count,757643.0
+27000,Eval Metrics Dict/rgb_lpips,0.15753024816513062
+27000,Eval Metrics Dict/rgb_mse,0.004311905708163977
+27000,Eval Metrics Dict/rgb_psnr,23.65330696105957
+27000,Eval Metrics Dict/rgb_ssim,0.9382960200309753
+27500,Eval Images Metrics/depth_a1,0.9966724514961243
+27500,Eval Images Metrics/depth_a2,0.9992243647575378
+27500,Eval Images Metrics/depth_a3,1.0
+27500,Eval Images Metrics/depth_abs_rel,0.009112044237554073
+27500,Eval Images Metrics/depth_rmse,0.0315794013440609
+27500,Eval Images Metrics/depth_rmse_log,0.009305211715400219
+27500,Eval Images Metrics/depth_sq_rel,0.000703939120285213
+27500,Eval Images Metrics/normal_mae,0.07766443490982056
+27500,Eval Images Metrics/normal_mean_err,0.021990995854139328
+27500,Eval Images Metrics/normal_med_err,0.017580091953277588
+27500,Eval Images Metrics/normal_rsme,0.03253934159874916
+27500,Eval Images Metrics/num_rays,733572.0
+27500,Eval Images Metrics/rgb_lpips,0.144608736038208
+27500,Eval Images Metrics/rgb_psnr,22.603715896606445
+27500,Eval Images Metrics/rgb_ssim,0.8590031266212463
+27500,Eval Loss,0.17949175834655762
+27500,Eval Loss Dict/main_loss,0.17949175834655762
+27500,Eval Loss Dict/scale_reg,0.0
+27500,Eval Metrics Dict/avg_min_scale,5.3614105155475045e-08
+27500,Eval Metrics Dict/depth_a1,0.9999209642410278
+27500,Eval Metrics Dict/depth_a2,1.0
+27500,Eval Metrics Dict/depth_a3,1.0
+27500,Eval Metrics Dict/depth_abs_rel,0.03188762441277504
+27500,Eval Metrics Dict/depth_rmse,0.05670001357793808
+27500,Eval Metrics Dict/depth_rmse_log,0.03260565921664238
+27500,Eval Metrics Dict/depth_sq_rel,0.001659272937104106
+27500,Eval Metrics Dict/gaussian_count,755664.0
+27500,Eval Metrics Dict/rgb_lpips,0.0734068900346756
+27500,Eval Metrics Dict/rgb_mse,0.008132174611091614
+27500,Eval Metrics Dict/rgb_psnr,20.897932052612305
+27500,Eval Metrics Dict/rgb_ssim,0.8915497064590454
+28000,Eval Images Metrics Dict (all images)/depth_a1,0.9891373515129089
+28000,Eval Images Metrics Dict (all images)/depth_a2,0.995401918888092
+28000,Eval Images Metrics Dict (all images)/depth_a3,0.9980348348617554
+28000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.017042934894561768
+28000,Eval Images Metrics Dict (all images)/depth_rmse,0.06083536148071289
+28000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.017893465235829353
+28000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0030359637457877398
+28000,Eval Images Metrics Dict (all images)/fps,20.75465965270996
+28000,Eval Images Metrics Dict (all images)/normal_mae,0.1678169220685959
+28000,Eval Images Metrics Dict (all images)/normal_mean_err,0.035626668483018875
+28000,Eval Images Metrics Dict (all images)/normal_med_err,0.019001100212335587
+28000,Eval Images Metrics Dict (all images)/normal_rsme,0.06649301946163177
+28000,Eval Images Metrics Dict (all images)/num_rays_per_sec,15225037.0
+28000,Eval Images Metrics Dict (all images)/rgb_lpips,0.1703903079032898
+28000,Eval Images Metrics Dict (all images)/rgb_psnr,22.176422119140625
+28000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8523553013801575
+28000,Eval Images Metrics/depth_a1,0.9905980825424194
+28000,Eval Images Metrics/depth_a2,0.9974508285522461
+28000,Eval Images Metrics/depth_a3,0.9996496438980103
+28000,Eval Images Metrics/depth_abs_rel,0.01241641491651535
+28000,Eval Images Metrics/depth_rmse,0.07171273231506348
+28000,Eval Images Metrics/depth_rmse_log,0.012685354799032211
+28000,Eval Images Metrics/depth_sq_rel,0.0028096369933336973
+28000,Eval Images Metrics/normal_mae,0.06801493465900421
+28000,Eval Images Metrics/normal_mean_err,0.03018626943230629
+28000,Eval Images Metrics/normal_med_err,0.01119491457939148
+28000,Eval Images Metrics/normal_rsme,0.06762697547674179
+28000,Eval Images Metrics/num_rays,733572.0
+28000,Eval Images Metrics/rgb_lpips,0.11563901603221893
+28000,Eval Images Metrics/rgb_psnr,25.56316375732422
+28000,Eval Images Metrics/rgb_ssim,0.8966013789176941
+28000,Eval Loss,0.1281539350748062
+28000,Eval Loss Dict/main_loss,0.1281539350748062
+28000,Eval Loss Dict/scale_reg,0.0
+28000,Eval Metrics Dict/avg_min_scale,5.574666417373919e-08
+28000,Eval Metrics Dict/depth_a1,0.9965633749961853
+28000,Eval Metrics Dict/depth_a2,0.9997341632843018
+28000,Eval Metrics Dict/depth_a3,1.0
+28000,Eval Metrics Dict/depth_abs_rel,0.009196617640554905
+28000,Eval Metrics Dict/depth_rmse,0.02819971926510334
+28000,Eval Metrics Dict/depth_rmse_log,0.009071467444300652
+28000,Eval Metrics Dict/depth_sq_rel,0.0007549492875114083
+28000,Eval Metrics Dict/gaussian_count,753666.0
+28000,Eval Metrics Dict/rgb_lpips,0.12819236516952515
+28000,Eval Metrics Dict/rgb_mse,0.007289804983884096
+28000,Eval Metrics Dict/rgb_psnr,21.372838973999023
+28000,Eval Metrics Dict/rgb_ssim,0.8555465340614319
+28500,Eval Images Metrics/depth_a1,0.9997041821479797
+28500,Eval Images Metrics/depth_a2,1.0
+28500,Eval Images Metrics/depth_a3,1.0
+28500,Eval Images Metrics/depth_abs_rel,0.00764806754887104
+28500,Eval Images Metrics/depth_rmse,0.017928944900631905
+28500,Eval Images Metrics/depth_rmse_log,0.007657206617295742
+28500,Eval Images Metrics/depth_sq_rel,0.00025079119950532913
+28500,Eval Images Metrics/normal_mae,0.15867111086845398
+28500,Eval Images Metrics/normal_mean_err,0.03753647208213806
+28500,Eval Images Metrics/normal_med_err,0.02472585439682007
+28500,Eval Images Metrics/normal_rsme,0.05748731270432472
+28500,Eval Images Metrics/num_rays,733572.0
+28500,Eval Images Metrics/rgb_lpips,0.0728432834148407
+28500,Eval Images Metrics/rgb_psnr,28.263460159301758
+28500,Eval Images Metrics/rgb_ssim,0.9336467385292053
+28500,Eval Loss,0.20081156492233276
+28500,Eval Loss Dict/main_loss,0.20081156492233276
+28500,Eval Loss Dict/scale_reg,0.0
+28500,Eval Metrics Dict/avg_min_scale,5.6792327285393185e-08
+28500,Eval Metrics Dict/depth_a1,0.9815110564231873
+28500,Eval Metrics Dict/depth_a2,0.992584228515625
+28500,Eval Metrics Dict/depth_a3,0.9971495866775513
+28500,Eval Metrics Dict/depth_abs_rel,0.021544910967350006
+28500,Eval Metrics Dict/depth_rmse,0.09857296943664551
+28500,Eval Metrics Dict/depth_rmse_log,0.019251907244324684
+28500,Eval Metrics Dict/depth_sq_rel,0.008479209616780281
+28500,Eval Metrics Dict/gaussian_count,751694.0
+28500,Eval Metrics Dict/rgb_lpips,0.24325498938560486
+28500,Eval Metrics Dict/rgb_mse,0.00913634430617094
+28500,Eval Metrics Dict/rgb_psnr,20.392274856567383
+28500,Eval Metrics Dict/rgb_ssim,0.8132556676864624
+29000,Eval Images Metrics Dict (all images)/depth_a1,0.9891129732131958
+29000,Eval Images Metrics Dict (all images)/depth_a2,0.9954105615615845
+29000,Eval Images Metrics Dict (all images)/depth_a3,0.9979734420776367
+29000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016920721158385277
+29000,Eval Images Metrics Dict (all images)/depth_rmse,0.06082139536738396
+29000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.01777028851211071
+29000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0030444373842328787
+29000,Eval Images Metrics Dict (all images)/fps,22.337507247924805
+29000,Eval Images Metrics Dict (all images)/normal_mae,0.1678023338317871
+29000,Eval Images Metrics Dict (all images)/normal_mean_err,0.03563955798745155
+29000,Eval Images Metrics Dict (all images)/normal_med_err,0.01883455365896225
+29000,Eval Images Metrics Dict (all images)/normal_rsme,0.066574826836586
+29000,Eval Images Metrics Dict (all images)/num_rays_per_sec,16386172.0
+29000,Eval Images Metrics Dict (all images)/rgb_lpips,0.17106127738952637
+29000,Eval Images Metrics Dict (all images)/rgb_psnr,22.120840072631836
+29000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8510968089103699
+29000,Eval Images Metrics/depth_a1,0.9997055530548096
+29000,Eval Images Metrics/depth_a2,1.0
+29000,Eval Images Metrics/depth_a3,1.0
+29000,Eval Images Metrics/depth_abs_rel,0.007704010233283043
+29000,Eval Images Metrics/depth_rmse,0.0290579441934824
+29000,Eval Images Metrics/depth_rmse_log,0.007700091227889061
+29000,Eval Images Metrics/depth_sq_rel,0.0003399117849767208
+29000,Eval Images Metrics/normal_mae,0.2847428023815155
+29000,Eval Images Metrics/normal_mean_err,0.02292231097817421
+29000,Eval Images Metrics/normal_med_err,0.011444091796875
+29000,Eval Images Metrics/normal_rsme,0.04846876487135887
+29000,Eval Images Metrics/num_rays,733572.0
+29000,Eval Images Metrics/rgb_lpips,0.09073632955551147
+29000,Eval Images Metrics/rgb_psnr,25.84165382385254
+29000,Eval Images Metrics/rgb_ssim,0.9058094620704651
+29000,Eval Loss,0.24393899738788605
+29000,Eval Loss Dict/main_loss,0.24393899738788605
+29000,Eval Loss Dict/scale_reg,0.0
+29000,Eval Metrics Dict/avg_min_scale,5.762976584833268e-08
+29000,Eval Metrics Dict/depth_a1,0.9852598309516907
+29000,Eval Metrics Dict/depth_a2,0.9971073269844055
+29000,Eval Metrics Dict/depth_a3,1.0
+29000,Eval Metrics Dict/depth_abs_rel,0.02478804811835289
+29000,Eval Metrics Dict/depth_rmse,0.09403078258037567
+29000,Eval Metrics Dict/depth_rmse_log,0.025878919288516045
+29000,Eval Metrics Dict/depth_sq_rel,0.004491371102631092
+29000,Eval Metrics Dict/gaussian_count,749718.0
+29000,Eval Metrics Dict/rgb_lpips,0.21023616194725037
+29000,Eval Metrics Dict/rgb_mse,0.011465421877801418
+29000,Eval Metrics Dict/rgb_psnr,19.406099319458008
+29000,Eval Metrics Dict/rgb_ssim,0.8091397881507874
+29500,Eval Images Metrics/depth_a1,0.8153364658355713
+29500,Eval Images Metrics/depth_a2,0.8781278729438782
+29500,Eval Images Metrics/depth_a3,0.9386195540428162
+29500,Eval Images Metrics/depth_abs_rel,0.08995898067951202
+29500,Eval Images Metrics/depth_rmse,0.1545770913362503
+29500,Eval Images Metrics/depth_rmse_log,0.11525681614875793
+29500,Eval Images Metrics/depth_sq_rel,0.027349991723895073
+29500,Eval Images Metrics/normal_mae,0.07303666323423386
+29500,Eval Images Metrics/normal_mean_err,0.07264699786901474
+29500,Eval Images Metrics/normal_med_err,0.02333429455757141
+29500,Eval Images Metrics/normal_rsme,0.13955700397491455
+29500,Eval Images Metrics/num_rays,733572.0
+29500,Eval Images Metrics/rgb_lpips,0.19699043035507202
+29500,Eval Images Metrics/rgb_psnr,17.85660743713379
+29500,Eval Images Metrics/rgb_ssim,0.8151326775550842
+29500,Eval Loss,0.1258939653635025
+29500,Eval Loss Dict/main_loss,0.1258939653635025
+29500,Eval Loss Dict/scale_reg,0.0
+29500,Eval Metrics Dict/avg_min_scale,5.865399188564879e-08
+29500,Eval Metrics Dict/depth_a1,0.9966438412666321
+29500,Eval Metrics Dict/depth_a2,0.9992243647575378
+29500,Eval Metrics Dict/depth_a3,1.0
+29500,Eval Metrics Dict/depth_abs_rel,0.009087120182812214
+29500,Eval Metrics Dict/depth_rmse,0.031655654311180115
+29500,Eval Metrics Dict/depth_rmse_log,0.009282814338803291
+29500,Eval Metrics Dict/depth_sq_rel,0.000706937164068222
+29500,Eval Metrics Dict/gaussian_count,747978.0
+29500,Eval Metrics Dict/rgb_lpips,0.14303900301456451
+29500,Eval Metrics Dict/rgb_mse,0.005582352168858051
+29500,Eval Metrics Dict/rgb_psnr,22.531827926635742
+29500,Eval Metrics Dict/rgb_ssim,0.8587422966957092
+30000,Eval Images Metrics Dict (all images)/depth_a1,0.9889901876449585
+30000,Eval Images Metrics Dict (all images)/depth_a2,0.9953908920288086
+30000,Eval Images Metrics Dict (all images)/depth_a3,0.9979925155639648
+30000,Eval Images Metrics Dict (all images)/depth_abs_rel,0.016729572787880898
+30000,Eval Images Metrics Dict (all images)/depth_rmse,0.060781531035900116
+30000,Eval Images Metrics Dict (all images)/depth_rmse_log,0.01758671924471855
+30000,Eval Images Metrics Dict (all images)/depth_sq_rel,0.0030419095419347286
+30000,Eval Images Metrics Dict (all images)/fps,23.243555068969727
+30000,Eval Images Metrics Dict (all images)/normal_mae,0.16784603893756866
+30000,Eval Images Metrics Dict (all images)/normal_mean_err,0.035451680421829224
+30000,Eval Images Metrics Dict (all images)/normal_med_err,0.018776359036564827
+30000,Eval Images Metrics Dict (all images)/normal_rsme,0.06631122529506683
+30000,Eval Images Metrics Dict (all images)/num_rays_per_sec,17050820.0
+30000,Eval Images Metrics Dict (all images)/rgb_lpips,0.17002537846565247
+30000,Eval Images Metrics Dict (all images)/rgb_psnr,22.177961349487305
+30000,Eval Images Metrics Dict (all images)/rgb_ssim,0.8525999784469604
+30000,Eval Images Metrics/depth_a1,0.981524646282196
+30000,Eval Images Metrics/depth_a2,0.9925228953361511
+30000,Eval Images Metrics/depth_a3,0.9972041249275208
+30000,Eval Images Metrics/depth_abs_rel,0.021497083827853203
+30000,Eval Images Metrics/depth_rmse,0.09846001118421555
+30000,Eval Images Metrics/depth_rmse_log,0.019229711964726448
+30000,Eval Images Metrics/depth_sq_rel,0.008454890921711922
+30000,Eval Images Metrics/normal_mae,0.15744206309318542
+30000,Eval Images Metrics/normal_mean_err,0.04657578840851784
+30000,Eval Images Metrics/normal_med_err,0.024387598037719727
+30000,Eval Images Metrics/normal_rsme,0.08226311951875687
+30000,Eval Images Metrics/num_rays,733572.0
+30000,Eval Images Metrics/rgb_lpips,0.2442495971918106
+30000,Eval Images Metrics/rgb_psnr,20.294429779052734
+30000,Eval Images Metrics/rgb_ssim,0.8132421970367432
+30000,Eval Loss,0.15557238459587097
+30000,Eval Loss Dict/main_loss,0.15557238459587097
+30000,Eval Loss Dict/scale_reg,0.0
+30000,Eval Metrics Dict/avg_min_scale,6.021917187126746e-08
+30000,Eval Metrics Dict/depth_a1,0.9963684678077698
+30000,Eval Metrics Dict/depth_a2,0.9993225336074829
+30000,Eval Metrics Dict/depth_a3,1.0
+30000,Eval Metrics Dict/depth_abs_rel,0.008943258784711361
+30000,Eval Metrics Dict/depth_rmse,0.04966571554541588
+30000,Eval Metrics Dict/depth_rmse_log,0.008726867847144604
+30000,Eval Metrics Dict/depth_sq_rel,0.0014615892432630062
+30000,Eval Metrics Dict/gaussian_count,746247.0
+30000,Eval Metrics Dict/rgb_lpips,0.11878585815429688
+30000,Eval Metrics Dict/rgb_mse,0.006419675424695015
+30000,Eval Metrics Dict/rgb_psnr,21.924867630004883
+30000,Eval Metrics Dict/rgb_ssim,0.8391081690788269

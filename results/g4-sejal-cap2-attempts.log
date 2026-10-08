@@ -1,0 +1,4 @@
+train_room_lite: attempt 1 from step 0 (2026-10-08T12:14:26Z)
+train_room_lite: attempt 1 exit 1, checkpoints 0 -> 10000
+train_room_lite: attempt 2 from step 10000 (2026-10-08T12:58:21Z)
+train_room_lite: attempt 2 exit 0, checkpoints 10000 -> 30000
