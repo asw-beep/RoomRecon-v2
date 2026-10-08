@@ -67,6 +67,20 @@ def test_floor_ignores_floaters_below():
     assert abs(scene.floor_height(y, camera_y=np.array([1.4, 1.5]))) < 0.05
 
 
+def test_floor_is_below_denser_furniture_tops():
+    # sejal-cap2: two beds held more of the mesh than the floor (2026-10-08)
+    rng = np.random.default_rng(2)
+    y = np.r_[rng.normal(0.0, 0.03, 3000), rng.normal(0.5, 0.02, 5000), rng.uniform(0, 1.3, 2000)]
+    assert abs(scene.floor_height(y, camera_y=np.array([1.4, 1.5]))) < 0.03
+
+
+def test_floor_is_the_bottom_of_flat_wall_heights():
+    # vr_room: below the cameras the mesh is mostly walls, nearly flat in height; the densest
+    # 2 cm bin was 13 cm above the floor (2026-10-08)
+    y = np.random.default_rng(3).uniform(0, 1.3, 30000)
+    assert abs(scene.floor_height(y, camera_y=np.array([1.4, 1.5]))) < 0.06
+
+
 # splat-transform v3.9.0, measured on the PC 2026-10-03: `-r 30,40,50` on a PLY with points at
 # the unit axes, written back to PLY. Rows = where (1,0,0), (0,1,0), (0,0,1) went, PLY frame.
 MEASURED_ROWS_30_40_50 = [[0.49240386486053467, 0.5868240594863892, 0.6427876353263855],

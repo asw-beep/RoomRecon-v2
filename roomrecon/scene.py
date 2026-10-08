@@ -58,12 +58,20 @@ def rotation_to_y_up(up: np.ndarray) -> np.ndarray:
     return np.eye(3) + vx + vx @ vx / (1.0 + c)
 
 
-def floor_height(vertex_y: np.ndarray, camera_y: np.ndarray, bins: int = 200) -> float:
+def floor_height(vertex_y: np.ndarray, camera_y: np.ndarray, bin_size: float = 0.02,
+                 share: float = 0.3) -> float:
+    """Centre of the lowest histogram peak below the cameras with at least `share` of the
+    tallest one. Not simply the tallest: furniture tops can hold more of the mesh than the floor
+    (sejal-cap2's beds), and where walls dominate the heights are nearly flat and the tallest bin
+    is noise (vr_room: 13 cm above the floor). Sparse floaters under the floor stay below
+    `share`. bin_size is in the poses' units (metres for phone captures)."""
     below = vertex_y[vertex_y < camera_y.min()]
     if below.size == 0:
         raise ValueError("no geometry below the cameras; cannot find the floor")
-    hist, edges = np.histogram(below, bins=bins)
-    i = int(np.argmax(hist))
+    hist, edges = np.histogram(below, bins=max(1, int(np.ceil(np.ptp(below) / bin_size))))
+    padded = np.r_[-1, hist, -1]
+    peak = (hist >= padded[:-2]) & (hist >= padded[2:]) & (hist >= share * hist.max())
+    i = int(np.argmax(peak))
     return float((edges[i] + edges[i + 1]) / 2)
 
 
