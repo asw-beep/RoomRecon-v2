@@ -63,6 +63,15 @@ Searched 2026-10-08 (web + arXiv). The idea "show where more coverage is needed"
 | Pix4D quality report | Post-capture overlap map (images per pixel; red/yellow low, green ≥ 5) | Aerial photogrammetry; 2D |
 | Polycam, Scaniverse (live meshing), Luma (capture rings for objects) | Live feedback on geometry holes / object paths | Geometry holes only; Polycam accepted cap3's broken tracking |
 | Next-best-view methods for 3DGS (e.g. AGILE-GS, GO-PRE, SA-ResGS, 2026) | Uncertainty-driven view selection | Robots, after training |
+| Yasunaga, Saito, Mori (Keio / Stuttgart), *User-in-the-Loop View Sampling with Error Peaking Visualization*, arXiv 2506.21009 (2025) | Live on an iPhone 15 Pro (AR, LiDAR depth): highlights in red where a quick single-view reconstruction disagrees with the live camera, so the user captures there; better 3DGS than uniform/random sampling with the same number of views | Live, small scenes (0.15 m capture area); predicted errors from a quick proxy model, not coverage; no tracking-health check |
+| Chang, Choi, Yeum, *3D Reconstruction by Looking: Instantaneous Blind Spot Detector for Indoor SLAM through Mixed Reality* (LiMRSF), arXiv 2411.12514 (2024) | Indoor LiDAR SLAM: shows the point cloud as a hologram over the real room in an MR headset, so the user sees blind spots, drift and double walls while scanning | Live, needs an MR headset + LiDAR rig; human inspection, no coverage measure, not for splats |
+| NeRF Director (arXiv 2406.08839, 2024) | Revisits view selection for NeRF training with coverage-based sampling | Choosing among already-captured views |
+| IndoorGS (CVPR 2025), PlanarGS (2025), DN-Splatter (2024) | Textureless indoor surfaces (white walls) are a known failure of photometric 3DGS; fixed with geometric / planar / depth priors | Training-side fixes, not capture feedback |
+
+Second search (2026-10-08, deeper): **the idea of capture-coverage feedback is established**,
+including for indoor scanning (LiMRSF) and for 3DGS capture (Zhang et al., Yasunaga et al.). No
+pre-training check for exported phone room captures was found; practitioners inspect data by
+hand or rely on COLMAP failing.
 
 No tool was found that checks an exported phone room capture for tracking breaks before
 training (ARKit pose jumps are a known issue; Polycam re-optimises poses but exported cap3 with
