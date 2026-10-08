@@ -39,7 +39,10 @@ PY -m roomrecon.runrecord start "$OUT/run.json" --run-id "$RUN" --room "$ROOM" -
    --dn-splatter-commit "$(git -C "$DNS" rev-parse HEAD)" --free-mib "$FREE" \
    --machine "GPU machine A100-PCIE-40GB MIG 7g.40gb (shared)"
 
-PY -m roomrecon.gpu --sample "$OUT/vram.csv" --interval 10 & SAMPLER=$!
+# the env's python directly, so $! is the sampler itself: killing a backgrounded `PY` (pixi run)
+# left the python child sampling forever, and on Kaggle it held the notebook cell open (2026-10-08)
+"$DNS/.pixi/envs/default/bin/python" -m roomrecon.gpu --sample "$OUT/vram.csv" --interval 10 \
+  </dev/null >>"$OUT/sampler.log" 2>&1 & SAMPLER=$!
 ( cd "$DNS" && "$PIXI" run "${CMD[@]}" ) 2>&1 | tee -a "$OUT/train.log"
 CODE=${PIPESTATUS[0]}
 kill "$SAMPLER" 2>/dev/null

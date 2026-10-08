@@ -52,4 +52,6 @@ cp "$OUT"/run.json "$OUT"/attempts.log "$OUT"/eval_curve.csv "$OUT"/vram.csv "$C
 LAST="$(ls "$(dirname "$CONFIG")"/nerfstudio_models/step-*.ckpt 2>/dev/null | sort | tail -1)"
 [ -n "$LAST" ] && cp "$LAST" "$OUTW/"
 ls -la "$OUTW"
+# anything still holding the output pipe keeps the notebook cell open until Kaggle's 12 h limit
+pkill -f 'roomrecon.gpu --sample' 2>/dev/null
 exit "$TRAIN_EXIT"
