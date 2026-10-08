@@ -30,16 +30,31 @@ def backproject(depth_m: np.ndarray, K: np.ndarray, c2w: np.ndarray, stride: int
     return cam @ c2w[:3, :3].T + c2w[:3, 3]
 
 
+def voxel_merge(points: np.ndarray, cams: np.ndarray, voxel: float):
+    """(centroid, mean camera position) per occupied voxel. One int64 key per point and
+    bincount sums: numpy 1.26's unique(axis=0) and add.at took minutes on 10M points."""
+    k = np.floor(points / voxel).astype(np.int64)
+    k -= k.min(axis=0)
+    dims = k.max(axis=0) + 1
+    key = (k[:, 0] * dims[1] + k[:, 1]) * dims[2] + k[:, 2]
+    _, inv = np.unique(key, return_inverse=True)
+    inv = inv.reshape(-1)
+    counts = np.bincount(inv)
+    centres = np.stack([np.bincount(inv, points[:, i]) for i in range(3)], axis=1) / counts[:, None]
+    cam_mean = np.stack([np.bincount(inv, cams[:, i]) for i in range(3)], axis=1) / counts[:, None]
+    return centres, cam_mean
+
+
 def _normals(points: np.ndarray, toward: np.ndarray, k: int = 16, chunk: int = 200_000) -> np.ndarray:
     """Smallest-variance direction of the k nearest neighbours, flipped to face `toward`."""
     k = min(k, len(points))
-    _, idx = cKDTree(points).query(points, k=k)
+    _, idx = cKDTree(points).query(points, k=k, workers=-1)
     idx = idx.reshape(len(points), k)
     out = np.empty_like(points)
     for s in range(0, len(points), chunk):
         nb = points[idx[s:s + chunk]]
         nb = nb - nb.mean(axis=1, keepdims=True)
-        _, vecs = np.linalg.eigh(np.einsum("nki,nkj->nij", nb, nb))
+        _, vecs = np.linalg.eigh(np.matmul(nb.transpose(0, 2, 1), nb))
         out[s:s + chunk] = vecs[:, :, 0]
     flip = np.einsum("ni,ni->n", out, toward - points) < 0
     out[flip] *= -1
@@ -57,13 +72,5 @@ def build_surface(cap: Capture, voxel: float = 0.03, stride: int = 4) -> Surface
     if not pts or sum(len(p) for p in pts) == 0:
         return Surface(np.zeros((0, 3)), np.zeros((0, 3)), voxel)
     p, c = np.concatenate(pts).astype(np.float64), np.concatenate(cams).astype(np.float64)
-    keys = np.floor(p / voxel).astype(np.int64)
-    _, inv, counts = np.unique(keys, axis=0, return_inverse=True, return_counts=True)
-    inv = inv.reshape(-1)
-    sums = np.zeros((len(counts), 3))
-    cam_sums = np.zeros((len(counts), 3))
-    np.add.at(sums, inv, p)
-    np.add.at(cam_sums, inv, c)
-    centres = sums / counts[:, None]
-    cam_mean = cam_sums / counts[:, None]
+    centres, cam_mean = voxel_merge(p, c, voxel)
     return Surface(points=centres, normals=_normals(centres, cam_mean), voxel=voxel)

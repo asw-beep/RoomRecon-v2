@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 
 from roomrecon.capcheck.capture import load_capture
-from roomrecon.capcheck.surface import backproject, build_surface
+from roomrecon.capcheck.surface import backproject, build_surface, voxel_merge
 from tests.synthroom import make_room
 
 SIZE = (4.0, 2.5, 3.0)
@@ -43,6 +43,22 @@ def test_normals_face_into_the_room(surface):
     assert wall.sum() > 50
     assert np.all(n[wall, 0] > 0.9)
     assert np.allclose(np.linalg.norm(n, axis=1), 1, atol=1e-5)
+
+
+def test_voxel_merge_matches_per_voxel_means():
+    rng = np.random.default_rng(1)
+    p = rng.uniform(-1, 1, (5000, 3))
+    c = rng.uniform(-1, 1, (5000, 3))
+    centres, cam_mean = voxel_merge(p, c, 0.25)
+    keys = np.floor(p / 0.25).astype(int)
+    expect = {}
+    for k, pi, ci in zip(map(tuple, keys), p, c):
+        expect.setdefault(k, []).append((pi, ci))
+    assert len(centres) == len(expect)
+    got = {tuple(np.floor(x / 0.25).astype(int)): (x, y) for x, y in zip(centres, cam_mean)}
+    for k, rows in expect.items():
+        pp, cc = np.array([r[0] for r in rows]), np.array([r[1] for r in rows])
+        assert np.allclose(got[k][0], pp.mean(0)) and np.allclose(got[k][1], cc.mean(0))
 
 
 def test_voxel_merge_one_point_per_voxel(surface):

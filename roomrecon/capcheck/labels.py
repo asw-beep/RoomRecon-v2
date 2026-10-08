@@ -6,9 +6,8 @@ or views from fewer than 3 of 64 direction bins. The texture threshold is calibr
 vr_room and tested unchanged on sejal-cap2 (spec §4.4, §7).
 """
 import numpy as np
-from scipy.sparse import coo_matrix
-from scipy.sparse.csgraph import connected_components
-from scipy.spatial import ConvexHull, Delaunay, cKDTree
+from scipy import ndimage
+from scipy.spatial import ConvexHull, Delaunay
 
 from roomrecon.capcheck.tracking import Tracking
 
@@ -43,15 +42,18 @@ def regions(points: np.ndarray, labels: np.ndarray, mean_view_dir: np.ndarray, f
     if len(sel) == 0:
         return []
     p = points[sel]
-    pairs = cKDTree(p).query_pairs(link, output_type="ndarray")
-    graph = coo_matrix((np.ones(len(pairs)), (pairs[:, 0], pairs[:, 1])), shape=(len(p), len(p)))
-    _, comp = connected_components(graph, directed=False)
+    # `link`-sized cells, 26-connected: a pairwise graph of points within `link` had tens of
+    # millions of edges in cluttered real rooms and took minutes with scipy 1.13
+    cells = np.floor((p - p.min(axis=0)) / link).astype(int)
+    grid = np.zeros(cells.max(axis=0) + 1, bool)
+    grid[tuple(cells.T)] = True
+    lab, _ = ndimage.label(grid, structure=np.ones((3, 3, 3), bool))
+    comp = lab[tuple(cells.T)]
+    big = np.flatnonzero(np.bincount(comp) * voxel ** 2 >= min_area)
     out = []
-    for c in np.unique(comp):
+    for c in big[big > 0]:
         m = comp == c
         area = float(m.sum() * voxel ** 2)
-        if area < min_area:
-            continue
         q = p[m]
         out.append({"n_points": int(m.sum()), "area_m2": area, "centre": q.mean(0).tolist(),
                     "y_range": [float(q[:, 1].min() - floor_y), float(q[:, 1].max() - floor_y)],

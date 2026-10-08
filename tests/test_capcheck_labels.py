@@ -66,3 +66,11 @@ def test_verdict_rules():
     assert verdict(track(jumps=[{"frame": "frame_00002"}]), []) == "BROKEN TRACKING"
     assert verdict(track(), reg) == "RECAPTURE THESE AREAS"
     assert verdict(track(), []) == "OK"
+
+
+def test_regions_far_apart_stay_separate():
+    g = np.arange(20) * 0.03
+    patch = np.stack(np.meshgrid(g, [1.0], g), -1).reshape(-1, 3)
+    pts = np.vstack([patch, patch + [1.2, 0, 0]])                          # 0.6 m gap
+    regs = regions(pts, np.full(len(pts), UNDER, np.uint8), np.zeros_like(pts), floor_y=0.0)
+    assert [r["n_points"] for r in regs] == [400, 400]
