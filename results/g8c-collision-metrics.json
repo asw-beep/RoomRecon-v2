@@ -20,6 +20,7 @@
     "S": "E:\\roomrecon-scenes\\collision-study\\S\\room.collision.glb",
     "M": "E:\\roomrecon-scenes\\collision-study\\M\\room.collision.glb",
     "L": "E:\\roomrecon-scenes\\collision-study\\L\\room.collision.glb",
+    "P": "E:\\roomrecon-scenes\\collision-study\\P\\room.collision.glb",
     "GT": "E:\\roomrecon-scenes\\collision-study\\GT\\room.collision.glb"
   },
   "sources": {
@@ -46,6 +47,14 @@
       "offset_median_cm": 5.0,
       "offset_p95_cm": 41.231056256176615,
       "walkable_m2": 11.447500000000003
+    },
+    "P": {
+      "iou": 0.7943737441393168,
+      "phantom_m2": 0.22000000000000008,
+      "missed_pct": 1.8157058556513845,
+      "offset_median_cm": 0.0,
+      "offset_p95_cm": 10.0,
+      "walkable_m2": 6.8850000000000025
     },
     "GT": {
       "iou": 1.0,

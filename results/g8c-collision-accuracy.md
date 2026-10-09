@@ -33,6 +33,7 @@ free cells 4-connected to the demo's spawn; GT = the scan's collision through th
 | S — splat (default) | 0.577 | 0.00 m² | 17.8 % | 0 / 20 cm | 11.3 m² |
 | **M — DN-Splatter mesh** | **0.809** | 0.04 m² | **1.7 %** | 0 / **10 cm** | 7.6 m² |
 | L — phone LiDAR | 0.059 | 4.27 m² | 47.0 % | 5 / 41 cm | 11.4 m² |
+| P — Polycam's own mesh (existing app) | 0.794 | 0.22 m² | 1.8 % | 0 / 10 cm | 6.9 m² |
 | GT — laser scan | 1 | 0 | 0 | 0 / 0 | 6.5 m² |
 
 Pre-agreed criteria, M vs S: **P1 PASS** (0.809 ≥ 0.577 + 0.02), **P2 FAIL** (phantom 0.04 m²
@@ -57,3 +58,15 @@ pipeline is the reference; 5 cm cells make the median offset coarse; the walk te
 Walking both versions freely, the user felt no difference between S and M
 (`walk-recordings.md`). The measured gap is therefore not a noticeable everyday difference in a free
 walk; it is where the collision is wrong at furniture and some wall stretches.
+
+## Added 2026-10-09: Polycam's own mesh as a fifth source (P)
+
+MuSHRoom ships Polycam's reconstruction of the same `vr_room` capture (`polycam_mesh/textured.obj`,
+97k vertices) in Polycam's own frame. It was aligned to the laser scan (model frame) by ICP from all
+24 axis orientations (best: 75.5 % of points within 5 cm, inlier RMSE 2.0 cm, median 2.0 cm;
+`g8c-polycam-align.json`) — a best-case alignment for Polycam, since our sources use the capture's
+own poses. Sampled at ~1 cm (149.5 m², 1.50 M points) and built with the same pipeline (splat-transform
+v3.10.1 fetched by npx for this one source; v3.10.0 for the others). S, M and L numbers reproduced
+exactly in the five-source rerun. Result: Polycam's mesh makes walk collision as good as DN-Splatter's
+mesh (IoU 0.794 vs 0.809, missed walls 1.8 % vs 1.7 %) with more phantom obstacles (0.22 vs 0.04 m²);
+both are far better than the splat-derived default.
