@@ -6,7 +6,7 @@ requires-python = ">=3.10"
 dependencies = ["numpy"]
 
 [tool.setuptools]
-packages = ["roomrecon", "roomrecon.capcheck"]
+packages = ["roomrecon", "roomrecon.capcheck", "roomrecon.repair"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
