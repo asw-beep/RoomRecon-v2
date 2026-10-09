@@ -97,6 +97,17 @@ health from the phone's per-frame tracking data, validated against the trained s
 errors on held-out frames, and shown as a walkable 3D map. Modest but honest; the report must
 cite the works above and say what is reused.
 
+### Prior work for the collision-accuracy result (searched 2026-10-09)
+
+| Prior work | What it does | Difference from ours |
+|---|---|---|
+| Chen, Wang et al., *The Neverwhere Visual Parkour Benchmark Suite*, arXiv 2609.16443 (2026); docs at neverwhere.readthedocs.io | 60+ 3DGS reconstructions of indoor/outdoor scenes as closed-loop legged-robot benchmarks (MuJoCo); docs cover Polycam scanning and aligning collision geometry to the splats | Pairs splats with separate collision geometry for robot simulation; no measurement found of collision accuracy against a laser scan |
+| LucidSim (*Learning Visual Parkour from Generated Images*, arXiv 2411.00083) | Collision mesh from a Polycam scan as the terrain, the splat render only as the robot's vision | Same "mesh for collision, splat for looks" practice; not measured against ground truth |
+| PlayCanvas splat-transform collision docs; SuperSplat walk mode | Collision built from the splat's Gaussians (voxels, exterior fill, carve) | The default we measure; no published accuracy numbers |
+| Splat-Nav (arXiv 2403.02751), NavGSim (arXiv 2603.15186) | Robot navigation / simulation in Gaussian-splat maps | Robot planning maps, not walk collision vs a laser scan |
+
+**Ours (claim narrowly):** a controlled comparison, inside the SuperSplat walk pipeline, of collision built from the splat vs from DN-Splatter's mesh vs from raw phone LiDAR, against a laser scan of the same room. Not new: building collision from a splat, or using a mesh for collision with splat visuals (robotics already does). Also from ChatGPT's critique (2026-10-09): state the confound that M/L/GT were turned into 2 cm splats while S uses the real Gaussians; one room only; photometric error measures appearance, not geometry (relevant to the capture check's texture result).
+
 ## 6. Still to do for the report
 
 - Walk recordings (G2, G4) and room-2 FPS.
