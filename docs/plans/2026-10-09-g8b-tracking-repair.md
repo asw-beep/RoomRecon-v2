@@ -72,7 +72,7 @@
   - `test_names(reference: list[str]) -> list[str]` — positions 0, 8, 16, … of `reference`.
   - `write_variants(src_root: Path, out: Path, reference, accepted: dict[str, np.ndarray], dropped) -> dict[str, Path]` — `accepted` maps each frame name of an accepted piece to its 4×4 `T`; reads `src_root/transforms.json`; writes `out/raw/`, `out/drop/`, `out/repaired/`, each with `transforms.json` (the source document with `frames` filtered to the variant, repaired poses `T · c2w` for accepted frames, `ply_file_path` removed, `train_filenames`/`test_filenames` = the frames' `file_path` strings) and links `images`, `depth`, `normals_from_pretrain` (if present in the source) to the source directories (`os.symlink(..., target_is_directory=True)`; on `OSError` copy the directory). `raw` = all source frames; `drop` = reference; `repaired` = reference + accepted. Returns the three folder paths.
 
-- [ ] **Step 1: Write the failing tests** (synthetic Polycam room: 30 cameras on a loop, meta `tracking_segment` 1 for frames 1–22, 2 for 23–24, 3 for 25–30?? — no: use 40 frames: segment 1 for frames 1–24, 2 for 25–26, 3 for 27–40, so pieces are 24 / 2 / 14; `min_frames=10` in the tests):
+- [ ] **Step 1: Write the failing tests** (synthetic Polycam room, 40 cameras on a loop around the room; meta `tracking_segment` 1 for frames 1–24, 2 for 25–26, 3 for 27–40, so the pieces are 24 / 2 / 14 frames; `min_frames=10` in the tests):
   - `test_split_pieces_reference_candidates_dropped`: reference = frames 1–24, one candidate = frames 27–40, dropped = frames 25–26.
   - `test_test_names_every_8th_of_reference`: `["frame_00001", "frame_00009", "frame_00017"]`.
   - `test_write_variants_share_test_split_and_correct_poses`: with a known `T` for the candidate piece: all three `transforms.json` have the same `test_filenames`; `drop` has 24 frames, `repaired` 38, `raw` 40; a repaired frame's pose equals `T · c2w` (atol 1e-9); a reference frame's pose is unchanged; `train_filenames` ∪ `test_filenames` = the variant's frames; `ply_file_path` absent.
@@ -113,9 +113,9 @@
 ### Task 4: Repair cap3 and measure C1, C3 (GPU machine, CPU only)
 
 - [ ] **Step 1:** Fast-forward `main` to this branch, `git push gpu main`.
-- [ ] **Step 2:** On the GPU machine in tmux: `bash scripts/repair_room.sh ~/roomrecon/datasets/own/sejal-cap3/processed ~/roomrecon/datasets/own/sejal-cap3/variants`. Expected: reference frames 125–491 (367), one accepted piece frames 1–117, 7 dropped; variants raw 491 / drop 367 / repaired 484, each with `iphone_pointcloud. py`'s `iphone_pointcloud.ply`.
+- [ ] **Step 2:** On the GPU machine in tmux: `bash scripts/repair_room.sh ~/roomrecon/datasets/own/sejal-cap3/processed ~/roomrecon/datasets/own/sejal-cap3/variants`. Expected: reference frames 125–491 (367), one accepted piece frames 1–117, 7 dropped; variants raw 491 / drop 367 / repaired 484, each with its own `iphone_pointcloud.ply`.
 - [ ] **Step 3:** Copy `repair.json` to `results/g8b-repair.json`; record C1 (before → after) and C3 with PASS/FAIL in `docs/report-notes.md`. If the piece is rejected, stop and report to the user (the repair failed on real data; fallback discussion).
-- [ ] **Step 4:** Visual check on the PC: the capture check's `coverage.ply` is not needed; instead write the two piece clouds (reference grey, piece before red / after green) as a small 3DGS PLY with `capcheck.outputs.write_splat_ply` into `E:\roomrecon-scenes\repair\cap3\` and look at them in the viewer.
+- [ ] **Step 4:** Visual check on the PC: write the reference cloud (grey) with the piece before (red) and after (green) repair as one small 3DGS PLY with `capcheck.outputs.write_splat_ply` (alignment frame from `scene_cli.build_scene` of the reference cameras and cloud) into `E:\roomrecon-scenes\repair\cap3\` and look at them in the viewer.
 - [ ] **Step 5:** Commit `exp: cap3 tracking repair - C1 and C3`.
 
 ---
