@@ -26,6 +26,10 @@ Shown on one web room (MuSHRoom `vr_room`) and one own room (`sejal-cap2`).
 | 2026-10-07 | Own room: Sejal's iPhone 13 Pro, Polycam raw export; capture 2 of 3 used | cap1: 32 frames, too sparse; cap3: three tracking segments with ~2 m pose jumps (even in Polycam's corrected poses); cap2: 257 frames, one segment, full coverage | — |
 | 2026-10-07 | Kaggle T4 as a fallback GPU when the A100 is full | The co-tenant held almost all 40 GB that night | Two Kaggle sessions were lost (12 h limit, no output); training went back to the A100 |
 | 2026-10-08 | Novelty (G8): an after-capture check, run on the laptop before any training, that shows which regions of the room need more coverage and whether the phone's tracking broke (combining "capture doctor" and "trust map") | Grounded in our own failures (cap1 too sparse, cap3 broken tracking that Polycam accepted); needs no GPU; visible in the demo; measurable on our rooms. For the course evaluation | A live on-phone version needs our own iOS app: future work. Output: a walkable 3D coverage map in the same viewer + a top-down heatmap + a text report |
+| 2026-10-08 | Sharpened G8 claim: the check says *why* a region will be poor (under-covered / textureless / broken tracking) and so whether more capture helps | Prior work only says "capture more here"; cap2's worst areas are plain walls that more views may not fix | Spec `docs/spec/2026-10-08-g8-capture-check-design.md`; pass/fail criteria fixed before any validation run |
+| 2026-10-08 | Coverage measure reused from COVER (angular coverage), computed before training on the phone's LiDAR surface; under-covered = < 5 views (Pix4D's rule) or < 3 of 64 direction bins, fixed in advance; only the texture threshold is tuned, on `vr_room`, and tested unchanged on `sejal-cap2` | Avoids inventing a measure and avoids tuning to the result | — |
+| 2026-10-09 | Heavy runs on the GPU machine only; the laptop runs tests and views results (user's rule) | — | Check runs on the GPU machine's CPUs in the existing env; nothing installed |
+| 2026-10-09 | Polycam's `blur_score` is reported but not used for labels | Looked at cap2's extreme frames: the lowest scores (51-57) are sharp photos of plain walls, the highest (245-270) the patterned mattress, so the score mixes blur with plain surfaces | — |
 
 ## 3. Results
 
@@ -50,6 +54,8 @@ are smeary (`results/g4-renders/`).
 | Training crashed once at step ~10.4k (`CUDA illegal memory access`, card nearly full) | Auto-resume from the 10k checkpoint; lost ~400 steps | `results/g4-sejal-cap2.md` |
 | Own capture: Polycam saved frames sideways, so "up" was not found | Up from camera −X when +Y disagrees | `e3fe046` |
 | Own capture: bed tops taken as the floor, room scaled 1.68× | Floor = lowest dense level; scale now 1.04 as expected for metric poses. Checked on `vr_room` against the laser scan: old rule 13 cm too high, new rule within ~1.5 cm. The released `vr_room` demo still uses the old rule (kept unchanged on purpose: eye height ~13 cm high) | `c955a69`, `results/g4-sejal-cap2.md` |
+| Capture check far too slow on the GPU machine at first (cap2: 1178 s for 257 frames) | Profiled: numpy 1.26's `unique(axis=0)`/`add.at` (4M points: 240 s vs 9 s on the PC's numpy 2.4), 96 BLAS threads on tiny 3×3 problems (normals 16 s → 0.2 s with one thread), a pairwise neighbour graph for regions; replaced with one-key voxel merge, single-thread BLAS, grid-cell regions | `d1b7e55` |
+| Checking our own conventions on real data before trusting the check | Processed poses equal Polycam's keyframe poses (0.000 mm, all three captures); depth from one frame lands within 0.9-1.8 cm (median) of the next frames' own LiDAR depth (cap1-3, `vr_room`) | ledger, Task 7 |
 
 ## 5. Novelty: prior work and what is ours
 
