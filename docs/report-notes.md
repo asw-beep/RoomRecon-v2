@@ -30,6 +30,7 @@ Shown on one web room (MuSHRoom `vr_room`) and one own room (`sejal-cap2`).
 | 2026-10-08 | Coverage measure reused from COVER (angular coverage), computed before training on the phone's LiDAR surface; under-covered = < 5 views (Pix4D's rule) or < 3 of 64 direction bins, fixed in advance; only the texture threshold is tuned, on `vr_room`, and tested unchanged on `sejal-cap2` | Avoids inventing a measure and avoids tuning to the result | — |
 | 2026-10-09 | Heavy runs on the GPU machine only; the laptop runs tests and views results (user's rule) | — | Check runs on the GPU machine's CPUs in the existing env; nothing installed |
 | 2026-10-09 | Polycam's `blur_score` is reported but not used for labels | Looked at cap2's extreme frames: the lowest scores (51-57) are sharp photos of plain walls, the highest (245-270) the patterned mattress, so the score mixes blur with plain surfaces | — |
+| 2026-10-09 | G8 capture check put on hold; search for a new novelty with a likely positive result; fall back to the capture check if that fails | Its pre-agreed test failed: coverage did not predict held-out error (AUC 0.49-0.54), textureless areas had *lower* error; the tracking check worked (cap3 caught, others passed). Results kept below | Capture check stays on branch `g8-capture-check`, outputs in `E:\roomrecon-scenes\capcheck\` |
 
 ## 3. Results
 
@@ -39,6 +40,7 @@ Shown on one web room (MuSHRoom `vr_room`) and one own room (`sejal-cap2`).
 | G2 `vr_room` walkable | 908k Gaussians; spawn inside at eye height, walls stop you, collision matches; ~55 FPS | PC (RTX 3050 Laptop, browser) | `results/g2-export.md`, `g2-walk-test.md` |
 | G3 quality | DN-Splatter vs plain splats: PSNR 26.32 vs 26.84 (within), 23.50 vs 23.24 (other capture); mesh accuracy 1.76 vs 5.85 cm against the laser scan; F-score @5 cm 0.926 vs 0.638 | GPU machine | `results/g3-vr_room-results.md` |
 | G4 own room | `sejal-cap2`: 99 min, one crash resumed automatically; 22.18 dB / SSIM 0.853 / LPIPS 0.170 on 33 held-out frames; depth RMSE 6.1 cm; 746k Gaussians; walk-tested as good | GPU machine; walk test on the PC | `results/g4-sejal-cap2.md` |
+| G8 capture check (on hold) | Verdicts as predicted: cap3 BROKEN TRACKING, cap1/cap2/`vr_room` RECAPTURE (not broken). Pre-agreed test on held-out frames (vr_room calibrates, cap2 tests; tau_tex 0.0046): mean patch error OK / under-covered / textureless = 0.0326 / 0.0358 / 0.0159 (vr_room), 0.056 / 0.063 / 0.034 (cap2), intervals overlap → criterion 1 FAIL; texture adds 0.046 AUC over coverage (< 0.05) → criterion 2 FAIL; AUC coverage 0.53-0.54. Exploratory (not pre-agreed) 1-SSIM: texture predicts bad patches with AUC 0.73-0.82 (more detail → more error), coverage 0.49-0.50. Run time 18-52 s per room on the PC; 14-33 min on the memory-starved GPU machine | PC (validation, check runs); GPU machine (first check runs) | ledger; `E:\roomrecon-scenes\capcheck\validation\` |
 
 Qualitative: furniture, curtains and doors render sharply; plain white walls, ceiling and floor
 are smeary (`results/g4-renders/`).

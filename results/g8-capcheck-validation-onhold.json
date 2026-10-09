@@ -1,0 +1,102 @@
+{
+  "tau_tex": 0.004551943372935056,
+  "bad_share": 0.2,
+  "patch_px": 16,
+  "match_radius_m": 0.03,
+  "rooms": {
+    "vr_room": {
+      "test_frames": 42,
+      "patches": 115907
+    },
+    "cap2": {
+      "test_frames": 33,
+      "patches": 91631
+    }
+  },
+  "error_by_label": {
+    "vr_room": {
+      "ok": {
+        "patches": 103509,
+        "frames": 42,
+        "mean_error": 0.03257480479348037,
+        "ci95": [
+          0.029451682384312804,
+          0.03585776609130733
+        ]
+      },
+      "under-covered": {
+        "patches": 11391,
+        "frames": 42,
+        "mean_error": 0.035824159742256584,
+        "ci95": [
+          0.03299442656903625,
+          0.03917402867856803
+        ]
+      },
+      "textureless": {
+        "patches": 1007,
+        "frames": 23,
+        "mean_error": 0.01586401316661866,
+        "ci95": [
+          0.010007949562533666,
+          0.022197395469846205
+        ]
+      },
+      "broken tracking": {
+        "patches": 0
+      }
+    },
+    "cap2": {
+      "ok": {
+        "patches": 66532,
+        "frames": 33,
+        "mean_error": 0.05603519333788659,
+        "ci95": [
+          0.048631327050304776,
+          0.06490119269348159
+        ]
+      },
+      "under-covered": {
+        "patches": 23894,
+        "frames": 32,
+        "mean_error": 0.06291406614396401,
+        "ci95": [
+          0.053347315962248086,
+          0.07374416000327712
+        ]
+      },
+      "textureless": {
+        "patches": 1205,
+        "frames": 23,
+        "mean_error": 0.03427293545419652,
+        "ci95": [
+          0.020374478338296302,
+          0.057443845551680354
+        ]
+      },
+      "broken tracking": {
+        "patches": 0
+      }
+    }
+  },
+  "auc": {
+    "fit vr_room -> eval cap2": {
+      "coverage": 0.5251890784478074,
+      "texture": 0.5712692273467054,
+      "both": 0.5714212112675018
+    },
+    "fit cap2 -> eval vr_room": {
+      "coverage": 0.5411184961677694,
+      "texture": 0.6487544884665329,
+      "both": 0.6160084749328691
+    }
+  },
+  "criteria": {
+    "1_under_and_textureless_above_ok_in_test_room": false,
+    "2_texture_adds_auc": {
+      "gain": 0.046232132819694405,
+      "margin": 0.05,
+      "pass": false
+    }
+  }
+}
