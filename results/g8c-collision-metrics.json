@@ -1,0 +1,73 @@
+{
+  "floor_y": -1.4826820588883138,
+  "scale": 1.0377933010116045,
+  "cell_m": 0.05,
+  "slab_m": [
+    0.2,
+    1.8
+  ],
+  "grid": {
+    "lo": [
+      -0.25552503640034807,
+      -4.9080935651999384
+    ],
+    "shape": [
+      135,
+      149
+    ]
+  },
+  "glbs": {
+    "S": "E:\\roomrecon-scenes\\collision-study\\S\\room.collision.glb",
+    "M": "E:\\roomrecon-scenes\\collision-study\\M\\room.collision.glb",
+    "L": "E:\\roomrecon-scenes\\collision-study\\L\\room.collision.glb",
+    "GT": "E:\\roomrecon-scenes\\collision-study\\GT\\room.collision.glb"
+  },
+  "sources": {
+    "S": {
+      "iou": 0.5766164747564216,
+      "phantom_m2": 0.0,
+      "missed_pct": 17.771221062187927,
+      "offset_median_cm": 0.0,
+      "offset_p95_cm": 20.0,
+      "walkable_m2": 11.290000000000004
+    },
+    "M": {
+      "iou": 0.8086062941554271,
+      "phantom_m2": 0.03500000000000001,
+      "missed_pct": 1.6568315932818882,
+      "offset_median_cm": 0.0,
+      "offset_p95_cm": 10.0,
+      "walkable_m2": 7.570000000000003
+    },
+    "L": {
+      "iou": 0.05943952802359882,
+      "phantom_m2": 4.267500000000002,
+      "missed_pct": 47.026781661370855,
+      "offset_median_cm": 5.0,
+      "offset_p95_cm": 41.231056256176615,
+      "walkable_m2": 11.447500000000003
+    },
+    "GT": {
+      "iou": 1.0,
+      "phantom_m2": 0.0,
+      "missed_pct": 0.0,
+      "offset_median_cm": 0.0,
+      "offset_p95_cm": 0.0,
+      "walkable_m2": 6.5100000000000025
+    }
+  },
+  "criteria": {
+    "M_vs_S": {
+      "P1": true,
+      "P2": false,
+      "P3": true,
+      "P4": true
+    },
+    "L_vs_S": {
+      "P1": false,
+      "P2": false,
+      "P3": false,
+      "P4": false
+    }
+  }
+}
