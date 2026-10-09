@@ -16,8 +16,9 @@ class Surface:
 
 
 def backproject(depth_m: np.ndarray, K: np.ndarray, c2w: np.ndarray, stride: int = 4,
-                mask: np.ndarray | None = None, min_d=0.1, max_d=5.0) -> np.ndarray:
-    """World points of every `stride`-th pixel with a usable depth, in row-major pixel order.
+                mask: np.ndarray | None = None, min_d=0.1, max_d=5.0, return_pixels=False):
+    """World points of every `stride`-th pixel with a usable depth, in row-major pixel order
+    (with `return_pixels`, also their (v, u) pixel coordinates).
     OpenGL camera: x right, y up, looking down -z; depth is z-depth in metres."""
     vs, us = np.arange(0, depth_m.shape[0], stride), np.arange(0, depth_m.shape[1], stride)
     v, u = np.meshgrid(vs, us, indexing="ij")
@@ -27,7 +28,8 @@ def backproject(depth_m: np.ndarray, K: np.ndarray, c2w: np.ndarray, stride: int
         ok &= mask[np.ix_(vs, us)]
     u, v, d = u[ok], v[ok], d[ok]
     cam = np.stack([(u - K[0, 2]) * d / K[0, 0], -(v - K[1, 2]) * d / K[1, 1], -d], axis=1)
-    return cam @ c2w[:3, :3].T + c2w[:3, 3]
+    world = cam @ c2w[:3, :3].T + c2w[:3, 3]
+    return (world, v, u) if return_pixels else world
 
 
 def voxel_merge(points: np.ndarray, cams: np.ndarray, voxel: float):
