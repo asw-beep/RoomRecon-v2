@@ -9,9 +9,10 @@
 # <room_dir> = .../room_datasets/<room> (gt_mesh.ply, icp_iphone.json, iphone/long_capture/).
 # The mesh must be in the iPhone capture's frame, like DN-Splatter's own meshes.
 # Libraries are pinned to the GPU machine's DN-Splatter env (open3d 0.18.0, trimesh 4.3.1,
-# pyrender 0.1.45, PyOpenGL 3.1.0, numpy 1.26.4, scipy 1.13.0, tyro 0.8.3) in a venv on top of
-# Kaggle's torch. If EGL does not work on Kaggle, it renders with OSMesa (software) instead and
-# says so in out/env.txt. Needs: Kaggle CLI signed in, KAGGLE_USERNAME.
+# pyrender 0.1.45, PyOpenGL 3.1.0, numpy 1.26.4, scipy 1.13.0, tyro 0.8.3, torch 2.2.2) in a
+# Python 3.10 env built with uv. If EGL does not work on Kaggle, it renders with OSMesa (software)
+# instead and says so in out/env.txt. Needs: Kaggle CLI signed in, KAGGLE_USERNAME.
+# SKIP_UPLOAD=1 reuses the uploaded dataset (same name).
 set -euo pipefail
 KG="$HOME/.pixi/bin/kaggle"
 DNS="$HOME/roomrecon/tools/dn-splatter"
@@ -52,7 +53,7 @@ push)
   git -C "$DNS" diff --quiet HEAD -- dn_splatter/eval/eval_mesh_mushroom_vis_cull.py \
     || { echo "the eval script differs from DN-Splatter's commit; refusing" >&2; exit 1; }
   md5sum "$ST/data/pred/mesh.ply" > "$ST/data/pred/mesh.md5"
-  meta "$ST/data" "$SLUG"; upload "$ST/data" "$SLUG"
+  meta "$ST/data" "$SLUG"; [ -n "${SKIP_UPLOAD:-}" ] || upload "$ST/data" "$SLUG"
   python3 - "$ST/kernel" "$U" "$SLUG" "$KSLUG" <<'EOF'
 import json, sys
 d, user, slug, kslug = sys.argv[1:]
@@ -63,12 +64,13 @@ IN=$(dirname "$(find /kaggle/input -name eval_mesh_mushroom_vis_cull.py | head -
 GT=$(dirname "$(find "$IN" -name gt_mesh.ply | head -1)")
 OUT=/kaggle/working/out; mkdir -p "$OUT"
 cp "$IN/DN_SPLATTER_COMMIT" "$IN/pred/mesh.md5" "$OUT/" 2>/dev/null || true
-python3 -m venv --system-site-packages /tmp/ev
+# Kaggle's own Python (3.13 in 2026-10) has no wheels for these pins: build a Python 3.10 env
+# with uv, matching the GPU machine's DN-Splatter env
+pip install -q uv
+uv venv -q -p 3.10 /tmp/ev
 P=/tmp/ev/bin/python
-$P -m pip install -q numpy==1.26.4 scipy==1.13.0 trimesh==4.3.1 pyrender==0.1.45 PyOpenGL==3.1.0 tyro==0.8.3 \
-  opencv-python-headless==4.8.0.76 2>&1 | tail -3
-# open3d 0.18.0 as on the GPU machine; 0.19.0 only if this Python has no 0.18 wheel (env.txt records it)
-$P -m pip install -q open3d==0.18.0 2>&1 | tail -3 || $P -m pip install -q open3d==0.19.0 2>&1 | tail -3
+uv pip install -q -p $P numpy==1.26.4 scipy==1.13.0 open3d==0.18.0 trimesh==4.3.1 pyrender==0.1.45 \
+  PyOpenGL==3.1.0 tyro==0.8.3 opencv-python-headless==4.8.0.76 matplotlib==3.8.4 Pillow==10.3.0 tqdm torch==2.2.2
 probe() {  # probe <platform>: can pyrender render a depth map offscreen?
   PYOPENGL_PLATFORM=$1 timeout 120 $P -c "
 import numpy as np, trimesh, pyrender
