@@ -24,6 +24,16 @@ def look_at(pos, target):
     return pos, np.degrees(np.arctan2(-d[0], -d[2])), np.degrees(np.arcsin(d[1]))
 
 
+def loop_cams(n=40, centre=(2.0, 1.4, 1.5), radius=(1.2, 0.8), pitches=(-20, 0, 20)):
+    """Cameras walking an ellipse around the room centre, each facing outward to the walls."""
+    out = []
+    for i in range(n):
+        a = 2 * np.pi * i / n
+        pos = np.asarray(centre, float) + [radius[0] * np.cos(a), 0, radius[1] * np.sin(a)]
+        out.append((pos, np.degrees(np.arctan2(-np.cos(a), -np.sin(a))), pitches[i % len(pitches)]))
+    return out
+
+
 def _slab(o, d, lo, hi):
     """Entry distance of rays o + t d into the box [lo, hi] (inf where missed)."""
     with np.errstate(divide="ignore", invalid="ignore"):
