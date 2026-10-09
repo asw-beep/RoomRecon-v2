@@ -1,0 +1,367 @@
+% =====================================================================
+% RoomRecon report - references
+%
+% Checked 2026-10-09 against arXiv metadata (export.arxiv.org API, see
+% verify_refs.py / ref_lookup.json) and, for venues, the publisher or
+% proceedings page. Entries copied from the v1 paper's bibliography
+% (Project/Paper/Formal/mybibfile.bib) were verified when that file was
+% written. Venues not confirmed are cited as arXiv preprints.
+% =====================================================================
+
+% ---------------- Foundations (before 2024) --------------------------
+
+@inproceedings{mildenhall2020nerf,
+  title={{NeRF}: Representing Scenes as Neural Radiance Fields for View Synthesis},
+  author={Mildenhall, Ben and Srinivasan, Pratul P. and Tancik, Matthew and Barron, Jonathan T. and Ramamoorthi, Ravi and Ng, Ren},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  year={2020}
+}
+
+@article{kerbl3dgs,
+  title={{3D} {Gaussian} Splatting for Real-Time Radiance Field Rendering},
+  author={Kerbl, Bernhard and Kopanas, Georgios and Leimk{\"u}hler, Thomas and Drettakis, George},
+  journal={ACM Transactions on Graphics},
+  volume={42},
+  number={4},
+  year={2023}
+}
+
+@inproceedings{tancik2023nerfstudio,
+  title={Nerfstudio: A Modular Framework for Neural Radiance Field Development},
+  author={Tancik, Matthew and Weber, Ethan and Ng, Evonne and Li, Ruilong and Yi, Brent and Kerr, Justin and Wang, Terrance and Kristoffersen, Alexander and Austin, Jake and Salahi, Kamyar and Ahuja, Abhik and McAllister, David and Kanazawa, Angjoo},
+  booktitle={ACM SIGGRAPH 2023 Conference Proceedings},
+  pages={1--12},
+  year={2023},
+  doi={10.1145/3588432.3591516}
+}
+
+@inproceedings{schoenberger2016colmap,
+  title={Structure-from-Motion Revisited},
+  author={Sch{\"o}nberger, Johannes L. and Frahm, Jan-Michael},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages={4104--4113},
+  year={2016}
+}
+
+@inproceedings{ren2024mushroom,
+  title={{MuSHRoom}: Multi-Sensor Hybrid Room Dataset for Joint {3D} Reconstruction and Novel View Synthesis},
+  author={Ren, Xuqian and Wang, Wenjia and Cai, Dingding and Tuominen, Tuuli and Kannala, Juho and Rahtu, Esa},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  pages={4508--4517},
+  year={2024}
+}
+
+@inproceedings{baruch2021arkitscenes,
+  title={{ARKitScenes}: A Diverse Real-World Dataset for {3D} Indoor Scene Understanding Using Mobile {RGB-D} Data},
+  author={Baruch, Gilad and Chen, Zhuoyuan and Dehghan, Afshin and Dimry, Tal and Feigin, Yuri and Fu, Peter and Gebauer, Thomas and Joffe, Brandon and Kurz, Daniel and Schwartz, Arik and Shulman, Elad},
+  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 1)},
+  year={2021}
+}
+
+@inproceedings{eftekhar2021omnidata,
+  title={Omnidata: A Scalable Pipeline for Making Multi-Task Mid-Level Vision Datasets from {3D} Scans},
+  author={Eftekhar, Ainaz and Sax, Alexander and Bachmann, Roman and Malik, Jitendra and Zamir, Amir},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  year={2021}
+}
+
+@article{zhou2018open3d,
+  title={{Open3D}: A Modern Library for {3D} Data Processing},
+  author={Zhou, Qian-Yi and Park, Jaesik and Koltun, Vladlen},
+  journal={arXiv preprint arXiv:1801.09847},
+  year={2018}
+}
+
+@inproceedings{kopanas2023placement,
+  title={Improving {NeRF} Quality by Progressive Camera Placement for Free-Viewpoint Navigation},
+  author={Kopanas, Georgios and Drettakis, George},
+  booktitle={Vision, Modeling, and Visualization (VMV)},
+  publisher={The Eurographics Association},
+  pages={11--20},
+  year={2023},
+  doi={10.2312/vmv.20231222}
+}
+
+% ---------------- Gaussian splatting for rooms (2024 onward) ----------
+
+@inproceedings{turkulainen2025dnsplatter,
+  title={{DN-Splatter}: Depth and Normal Priors for {Gaussian} Splatting and Meshing},
+  author={Turkulainen, Matias and Ren, Xuqian and Melekhov, Iaroslav and Seiskari, Otto and Rahtu, Esa and Kannala, Juho},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year={2025}
+}
+
+@article{ye2025gsplat,
+  title={gsplat: An Open-Source Library for {Gaussian} Splatting},
+  author={Ye, Vickie and Li, Ruilong and Kerr, Justin and Turkulainen, Matias and Yi, Brent and Pan, Zhuoyang and Seiskari, Otto and Ye, Jianbo and Hu, Jeffrey and Tancik, Matthew and Kanazawa, Angjoo},
+  journal={Journal of Machine Learning Research},
+  volume={26},
+  number={34},
+  pages={1--17},
+  year={2025}
+}
+
+@inproceedings{huang2024twodgs,
+  title={{2D} {Gaussian} Splatting for Geometrically Accurate Radiance Fields},
+  author={Huang, Binbin and Yu, Zehao and Chen, Anpei and Geiger, Andreas and Gao, Shenghua},
+  booktitle={ACM SIGGRAPH 2024 Conference Papers},
+  year={2024},
+  doi={10.1145/3641519.3657428}
+}
+
+@inproceedings{ren2025agsmesh,
+  title={{AGS-Mesh}: Adaptive {Gaussian} Splatting and Meshing with Geometric Priors for Indoor Room Reconstruction Using Smartphones},
+  author={Ren, Xuqian and Turkulainen, Matias and Wang, Jiepeng and Seiskari, Otto and Melekhov, Iaroslav and Kannala, Juho and Rahtu, Esa},
+  booktitle={Proceedings of the International Conference on 3D Vision (3DV)},
+  year={2025}
+}
+
+@inproceedings{ruan2025indoorgs,
+  title={{IndoorGS}: Geometric Cues Guided {Gaussian} Splatting for Indoor Scene Reconstruction},
+  author={Ruan, Cong and Wang, Yuesong and Guan, Tao and Zhang, Bin and Ju, Lili},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2025}
+}
+
+@inproceedings{jin2025planargs,
+  title={{PlanarGS}: High-Fidelity Indoor {3D} {Gaussian} Splatting Guided by Vision-Language Planar Priors},
+  author={Jin, Xirui and Jin, Renbiao and Li, Boying and Zou, Danping and Yu, Wenxian},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2025}
+}
+
+@inproceedings{xiang2025gaussianroom,
+  title={{GaussianRoom}: Improving {3D} {Gaussian} Splatting with {SDF} Guidance and Monocular Cues for Indoor Scene Reconstruction},
+  author={Xiang, Haodong and Li, Xinghui and Cheng, Kai and Lai, Xiansong and Zhang, Wanting and Liao, Zhichao and Zeng, Long and Liu, Xueping},
+  booktitle={Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
+  year={2025}
+}
+
+@inproceedings{han2026lighthousegs,
+  title={{LighthouseGS}: Indoor Structure-aware {3D} {Gaussian} Splatting for Panorama-Style Mobile Captures},
+  author={Han, Seungoh and Jang, Jaehoon and Kim, Hyunsu and Surh, Jaeheung and Kwak, Junhyung and Ha, Hyowon and Joo, Kyungdon},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year={2026}
+}
+
+@article{guo2026pocketgs,
+  title={{PocketGS}: On-Device Training of {3D} {Gaussian} Splatting for High Perceptual Modeling},
+  author={Guo, Wenzhi and Fang, Guangchi and Yang, Shu and Wang, Bing},
+  journal={arXiv preprint arXiv:2601.17354},
+  year={2026}
+}
+
+% ---------------- Poses from images alone (2024 onward) ---------------
+
+@inproceedings{wang2025vggt,
+  title={{VGGT}: Visual Geometry Grounded Transformer},
+  author={Wang, Jianyuan and Chen, Minghao and Karaev, Nikita and Vedaldi, Andrea and Rupprecht, Christian and Novotny, David},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2025}
+}
+
+@inproceedings{duisterhof2025mast3rsfm,
+  title={{MASt3R-SfM}: A Fully-Integrated Solution for Unconstrained Structure-from-Motion},
+  author={Duisterhof, Bardienus and {\v{Z}}ust, Lojze and Weinzaepfel, Philippe and Leroy, Vincent and Cabon, Yohann and Revaud, Jerome},
+  booktitle={Proceedings of the International Conference on 3D Vision (3DV)},
+  year={2025}
+}
+
+% ---------------- Walking and navigating in splats (2024 onward) ------
+
+@article{chen2025splatnav,
+  title={{Splat-Nav}: Safe Real-Time Robot Navigation in {Gaussian} Splatting Maps},
+  author={Chen, Timothy and Shorinwa, Ola and Bruno, Joseph and Swann, Aiden and Yu, Javier and Zeng, Weijia and Nagami, Keiko and Dames, Philip and Schwager, Mac},
+  journal={IEEE Transactions on Robotics},
+  year={2025},
+  note={arXiv:2403.02751}
+}
+
+@article{liu2026navgsim,
+  title={{NavGSim}: High-Fidelity {Gaussian} Splatting Simulator for Large-Scale Navigation},
+  author={Liu, Jiahang and Duan, Yuanxing and Zhang, Jiazhao and Li, Minghan and Wang, Shaoan and Zhang, Zhizheng and Wang, He},
+  journal={arXiv preprint arXiv:2603.15186},
+  year={2026}
+}
+
+@article{chen2026neverwhere,
+  title={The {Neverwhere} Visual Parkour Benchmark Suite},
+  author={Chen, Ziyu and Bao, Henghui and Chang, Haoran and Yu, Alan and Choi, Ran and McClennen, Kai and Huh, Gio and Yang, Kevin and Qiu, Ri-Zhao and Ravan, Yajvan and Leonard, John J. and Wang, Xiaolong and Isola, Phillip and Yang, Ge and Wang, Yue},
+  journal={arXiv preprint arXiv:2609.16443},
+  year={2026},
+  note={Accepted to IROS 2026}
+}
+
+@inproceedings{yu2024lucidsim,
+  title={Learning Visual Parkour from Generated Images},
+  author={Yu, Alan and Yang, Ge and Choi, Ran and Ravan, Yajvan and Leonard, John and Isola, Phillip},
+  booktitle={Proceedings of the 8th Conference on Robot Learning (CoRL)},
+  series={Proceedings of Machine Learning Research},
+  volume={270},
+  pages={2500--2516},
+  year={2024}
+}
+
+% ---------------- Capture guidance and view selection (2024 onward) ---
+
+@article{chen2026cover,
+  title={Coverage Optimization for Camera View Selection},
+  author={Chen, Timothy and Dai, Adam and Adang, Maximilian and Gao, Grace and Schwager, Mac},
+  journal={arXiv preprint arXiv:2604.05259},
+  year={2026}
+}
+
+@article{zhang2026objectcentered,
+  title={An Object-Centered Data Acquisition Method for {3D} {Gaussian} Splatting using Mobile Phones},
+  author={Zhang, Yuezhe and Bai, Luqian and Yu, Mengting and Wei, Lei and Wan, Shuai and Zhang, Yifan},
+  journal={arXiv preprint arXiv:2604.19216},
+  year={2026}
+}
+
+@inproceedings{yasunaga2025userloop,
+  title={User-in-the-Loop View Sampling with Error Peaking Visualization},
+  author={Yasunaga, Ayaka and Saito, Hideo and Mori, Shohei},
+  booktitle={Proceedings of the IEEE International Conference on Image Processing (ICIP)},
+  year={2025},
+  note={arXiv:2506.21009}
+}
+
+@article{chang2026limrsf,
+  title={{3D} Reconstruction by Looking: Instantaneous Blind Spot Detector for Indoor {SLAM} through Mixed Reality},
+  author={Chang, Hanbeom and Choi, Jongseong Brad and Yeum, Chul Min},
+  journal={Advanced Engineering Informatics},
+  pages={104065},
+  year={2026},
+  note={arXiv:2411.12514}
+}
+
+@inproceedings{xiao2024nerfdirector,
+  title={{NeRF} Director: Revisiting View Selection in Neural Volume Rendering},
+  author={Xiao, Wenhui and Santa Cruz, Rodrigo and Ahmedt-Aristizabal, David and Salvado, Olivier and Fookes, Clinton and Lebrat, Leo},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2024}
+}
+
+@inproceedings{jiang2024fisherrf,
+  title={{FisherRF}: Active View Selection and Mapping with Radiance Fields Using {Fisher} Information},
+  author={Jiang, Wen and Lei, Boshu and Daniilidis, Kostas},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  year={2024},
+  doi={10.1007/978-3-031-72624-8_24}
+}
+
+@article{khass2026agilegs,
+  title={{AGILE-GS}: Anchor-Guided Fast Next-Best-View Selection for Active {3D} {Gaussian} Splatting},
+  author={Mollaei Khass, Amirhossein and Motee, Nader},
+  journal={arXiv preprint arXiv:2609.34176},
+  year={2026}
+}
+
+@inproceedings{chen2026mugsqa,
+  title={{MUGSQA}: Novel Multi-Uncertainty-Based {Gaussian} Splatting Quality Assessment Method, Dataset, and Benchmarks},
+  author={Chen, Tianang and Jin, Jian and Cai, Shilv and Li, Zhuangzi and Lin, Weisi},
+  booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2026},
+  note={arXiv:2511.06830}
+}
+
+% ---------------- Used in v1 (journey section) ------------------------
+
+@article{campos2021orbslam3,
+  title={{ORB-SLAM3}: An Accurate Open-Source Library for Visual, Visual-Inertial and Multimap {SLAM}},
+  author={Campos, Carlos and Elvira, Richard and Rodr{\'i}guez, Juan J. G{\'o}mez and Montiel, Jos{\'e} M. M. and Tard{\'o}s, Juan D.},
+  journal={IEEE Transactions on Robotics},
+  volume={37},
+  number={6},
+  pages={1874--1890},
+  year={2021}
+}
+
+@inproceedings{detone2018superpoint,
+  title={{SuperPoint}: Self-Supervised Interest Point Detection and Description},
+  author={DeTone, Daniel and Malisiewicz, Tomasz and Rabinovich, Andrew},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), Deep Learning for Visual SLAM},
+  year={2018}
+}
+
+@inproceedings{lindenberger2023lightglue,
+  title={{LightGlue}: Local Feature Matching at Light Speed},
+  author={Lindenberger, Philipp and Sarlin, Paul-Edouard and Pollefeys, Marc},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages={17627--17638},
+  year={2023}
+}
+
+@inproceedings{sarlin2019hloc,
+  title={From Coarse to Fine: Robust Hierarchical Localization at Large Scale},
+  author={Sarlin, Paul-Edouard and Cadena, Cesar and Siegwart, Roland and Dymczyk, Marcin},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2019}
+}
+
+@inproceedings{kheradmand2024mcmc,
+  title={{3D} {Gaussian} Splatting as {Markov} Chain {Monte} {Carlo}},
+  author={Kheradmand, Shakiba and Rebain, Daniel and Sharma, Gopal and Sun, Weiwei and Tseng, Yang-Che and Isack, Hossam and Kar, Abhishek and Tagliasacchi, Andrea and Yi, Kwang Moo},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  volume={37},
+  year={2024}
+}
+
+% ---------------- Software, apps and data (credited) -----------------
+
+@misc{dnsplattercode,
+  title={{DN-Splatter} source code},
+  author={Turkulainen, Matias and others},
+  howpublished={\url{https://github.com/maturk/dn-splatter}},
+  note={Commit 97588b4, used 2026-10}
+}
+
+@misc{splattransform,
+  title={{SplatTransform}: {Gaussian} splat conversion and collision tool},
+  author={{PlayCanvas}},
+  howpublished={\url{https://github.com/playcanvas/splat-transform}},
+  note={Versions 3.9.0--3.10.1, used 2026-10}
+}
+
+@misc{supersplatviewer,
+  title={{SuperSplat} Viewer},
+  author={{PlayCanvas}},
+  howpublished={\url{https://github.com/playcanvas/supersplat-viewer}},
+  note={Version 1.37.0, used 2026-10}
+}
+
+@misc{supersplatwalk,
+  title={New in {SuperSplat}: Walk Mode, Streamed {LOD} and Easy Upload},
+  author={{PlayCanvas}},
+  howpublished={\url{https://blog.playcanvas.com/new-in-supersplat-walk-mode-streamed-lod-and-easy-upload}},
+  note={Blog post, accessed 2026-10-09}
+}
+
+@misc{polycam,
+  title={Polycam: {3D} scanning app},
+  author={{Polycam Inc.}},
+  howpublished={\url{https://poly.cam}},
+  note={iOS app, raw-data export used 2026-10}
+}
+
+@misc{nerfcapture,
+  title={{NeRFCapture}},
+  author={Abou-Chakra, Jad},
+  howpublished={\url{https://github.com/jc211/NeRFCapture}},
+  year={2023},
+  note={iOS app}
+}
+
+@misc{pixi,
+  title={pixi: package management made easy},
+  author={{prefix.dev}},
+  howpublished={\url{https://pixi.sh}},
+  note={Version 0.81.0}
+}
+
+@misc{gaussiansplats3d,
+  title={{GaussianSplats3D}: {Three.js}-based {Gaussian} splat viewer},
+  author={Kellogg, Mark},
+  howpublished={\url{https://github.com/mkkellogg/GaussianSplats3D}},
+  note={Version 0.4.7, used in v1 (2026-09)}
+}

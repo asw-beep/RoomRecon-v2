@@ -1,0 +1,4 @@
+SuperPoint: Self-Supervised Interest Point Detection and Description
+LightGlue: Local Feature Matching at Light Speed
+From Coarse to Fine: Robust Hierarchical Localization at Large Scale
+3D Gaussian Splatting as Markov Chain Monte Carlo

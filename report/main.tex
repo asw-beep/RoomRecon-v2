@@ -1,0 +1,88 @@
+\documentclass[preprint,12pt]{elsarticle}
+%% Preamble as in the course template (Sample_Template), plus TikZ libraries for the diagrams.
+\usepackage{lineno,hyperref}
+\usepackage{booktabs}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage{adjustbox}
+\usepackage{multicol}
+\usepackage[justification=centering]{caption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{comment}
+\usepackage{lscape}
+\usepackage{setspace}
+\doublespacing
+
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,fit,backgrounds,calc,shapes.geometric}
+\def\checkmark{\tikz\fill[scale=0.3](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\captionsetup{singlelinecheck=false, format=hang, justification=justified, font=footnotesize, labelsep=space}
+\modulolinenumbers[5]
+\journal{Elsevier}
+\bibliographystyle{elsarticle-num}
+
+%% Names used throughout
+\newcommand{\vrroom}{\texttt{vr\_room}}
+\newcommand{\captwo}{\texttt{cap2}}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{RoomRecon: Walkable Indoor Reconstruction from Smartphone Captures with Depth-Guided Gaussian Splatting, and an Evaluation of Walk-Collision Accuracy}
+
+\author[1]{Aswin M\corref{cor1}\fnref{roll1}}
+\author[1]{Sejal Satheesh\fnref{roll2}}
+\cortext[cor1]{Corresponding author}
+\fntext[roll1]{Roll No. 2023BCS0012}
+\fntext[roll2]{Roll No. 2023BCS0048}
+\address[1]{Indian Institute of Information Technology, Kottayam, India}
+
+\begin{abstract}
+\input{sections/00-abstract}
+\end{abstract}
+
+\begin{highlights}
+\item An iPhone room capture becomes a photoreal Gaussian splat you can walk through.
+\item Built by reusing maintained tools; our code is the glue and the evaluation.
+\item Collision from a depth-guided mesh fits a laser scan far better than from splats.
+\item Two other novelty attempts failed their pre-agreed tests; both are reported.
+\end{highlights}
+
+\begin{keyword}
+Gaussian splatting \sep Indoor reconstruction \sep Smartphone capture \sep LiDAR \sep Walk collision \sep Virtual walkthrough
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+\input{sections/01-introduction}
+\input{sections/02-related}
+\input{sections/03-journey}
+\input{sections/04-method}
+\input{sections/05-results}
+\input{sections/06-conclusion}
+
+\bibliography{refs}
+
+\end{document}

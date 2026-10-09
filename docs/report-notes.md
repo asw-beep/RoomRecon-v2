@@ -35,6 +35,7 @@ Shown on one web room (MuSHRoom `vr_room`) and one own room (`sejal-cap2`).
 | 2026-10-09 | Training for the new G8 on the A100 when IT restores GPU access, Kaggle T4 as backup | The container lost GPU access (NVML "Unknown Error", torch sees no CUDA) after the machine's outage | All three variants on the same machine and steps |
 | 2026-10-09 | Tracking repair dropped (cap3 needed no repair); third G8 attempt: accuracy of walk collision built from the splat vs from DN-Splatter's mesh or the phone's LiDAR, against `vr_room`'s laser scan; criteria P1-P4 fixed in the spec before any run | No published accuracy for splat-derived walk collision; needs no GPU (the A100 is down); likely positive (DN-Splatter's mesh was 1.8 cm from the scan in G3) | Spec `docs/spec/2026-10-09-g8c-collision-accuracy-design.md`. Alternatives: back to the capture check (fallback), simulated tracking breaks |
 | 2026-10-09 | Report: Elsevier `elsarticle` template (12 pt, double-spaced, line numbers) as given; template sections + one "what we explored and learned" section; ≥ 15 related works from 2024 onward plus credited foundations; collision study as the lead contribution, capture check and tracking repair as supporting/negative results; v1 in the journey; Polycam comparison added; highlights page if it comes naturally; ≤ 30 pages, not stretched; authors Aswin M (corresponding, 2023BCS0012) and Sejal Satheesh (2023BCS0048), IIIT Kottayam, as in the v1 paper | User's answers 2026-10-09 | — |
+| 2026-10-09 | Report draft in `report/` (branch `report`): neutral title; no AI acknowledgement; 45 references, each checked against arXiv metadata or the venue page (`report/refcheck/`), venues not confirmed cited as arXiv; figures made from `results/` by `report/make_figures.py`; diagrams in TikZ; two future directions only (template requirement) | User's instructions; "never guess" | First full draft 46 pages, tightened to 38 (body ~30 + double-spaced references ~8); whether the 30-page limit includes references is open (asked) |
 
 ## 3. Results
 
@@ -113,7 +114,7 @@ cite the works above and say what is reused.
 
 ## 6. Still to do for the report
 
-- ~~Walk recordings (G2, G4) and room-2 FPS~~ done 2026-10-09: `results/walk-recordings.md` (room 2 ~55 FPS, `vr_room` ~100 FPS, single overlay readings, PC).
+- ~~Walk recordings (G2, G4) and room-2 FPS~~ done 2026-10-09: `results/walk-recordings.md` (both rooms: frame 10.0 ms / 100 FPS at every sample, GPU 2.5-8.3 ms, PC). Correction 2026-10-09: room 2's first reading of 18.0 ms was a misread 10.0 (dotted zero); G2's 18.0 ms for `vr_room` may be the same misread and cannot be re-checked.
 - Report format (open).
 - G7: Polycam's own reconstruction of the same room, side by side.
 - G8: design, build and measure the novelty (this log gets its decisions and results).

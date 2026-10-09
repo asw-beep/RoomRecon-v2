@@ -1,0 +1,150 @@
+\section{Proposed method}
+\label{sec:method}
+
+RoomRecon turns a phone capture into a Gaussian splat that can be walked through with collision, and measures how accurate that collision is. Almost every stage is an existing program; our code connects the stages, adapts their defaults and adds the alignment and evaluation steps that do not exist elsewhere (Figure~\ref{fig:arch}).
+
+\begin{figure}[!htb]
+\centering
+\begin{adjustbox}{max width=\linewidth}
+\begin{tikzpicture}[
+  every node/.style={font=\footnotesize\setstretch{1}},
+  tool/.style={draw, rounded corners, fill=gray!12, text width=3.9cm, align=center, minimum height=11mm},
+  ours/.style={draw, rounded corners, fill=blue!14, text width=3.9cm, align=center, minimum height=11mm},
+  side/.style={draw, rounded corners, dashed, fill=orange!10, text width=3.9cm, align=center, minimum height=11mm},
+  lane/.style={font=\small\bfseries\setstretch{1}, text width=4.2cm, align=center},
+  arr/.style={-{Stealth[length=2mm]}, thick},
+  opt/.style={-{Stealth[length=2mm]}, thick, dashed}]
+\node[lane] at (0,0) {iPhone / dataset};
+\node[lane] at (5.0,0) {GPU machine (shared A100)};
+\node[lane] at (10.0,0) {Laptop (RTX 3050)};
+\node[tool] (cap) at (0,-1.5) {\textbf{Capture}\\Polycam raw export};
+\node[tool] (mush) at (0,-3.3) {\textbf{Web data}\\MuSHRoom: iPhone data, laser scan};
+\node[side] (cc) at (0,-5.9) {\textbf{Capture check}\\coverage, texture, tracking (supporting)};
+\node[tool] (imp) at (5.0,-1.5) {\textbf{Import}\\nerfstudio / MuSHRoom loader};
+\node[tool] (nrm) at (5.0,-3.3) {\textbf{Normals}\\Omnidata (batch 4)};
+\node[ours] (trn) at (5.0,-5.1) {\textbf{Train} DN-Splatter\\safe settings, auto-resume};
+\node[tool] (exp) at (5.0,-6.9) {\textbf{Export}\\splat, mesh (TSDF 2\,cm)};
+\node[ours] (aln) at (5.0,-8.7) {\textbf{Align}: up, floor,\\scale, spawn (Alg.~\ref{alg:scene})};
+\node[tool] (evl) at (5.0,-10.5) {\textbf{Evaluate}\\images; mesh vs scan};
+\node[tool] (rot) at (10.0,-1.5) {\textbf{Transform}\\splat-transform};
+\node[tool] (col) at (10.0,-3.3) {\textbf{Collision} (5\,cm voxels)\\from splat or mesh};
+\node[ours] (walk) at (10.0,-5.1) {\textbf{Walk}\\SuperSplat Viewer};
+\node[ours] (acc) at (10.0,-6.9) {\textbf{Collision accuracy}\\vs laser scan (Alg.~\ref{alg:collision})};
+\node[ours] (dem) at (10.0,-8.7) {\textbf{Demo bundle}\\offline};
+\draw[arr] (cap) -- (imp);
+\draw[arr] (mush.east) -- ++(0.3,0) |- (imp.west);
+\draw[opt] (mush) -- (cc);
+\draw[arr] (imp) -- (nrm);
+\draw[arr] (nrm) -- (trn);
+\draw[arr] (trn) -- (exp);
+\draw[arr] (exp) -- (aln);
+\draw[arr] (aln) -- (evl);
+\draw[arr] (aln.east) -- ++(0.3,0) |- (rot.west);
+\draw[arr] (rot) -- (col);
+\draw[arr] (col) -- (walk);
+\draw[opt] (col.east) -- ++(0.25,0) |- (acc.east);
+\draw[arr] (walk) -- (acc);
+\draw[arr] (acc) -- (dem);
+\node[tool, text width=2.2cm, minimum height=6mm] (lg1) at (0,-8.4) {existing tool};
+\node[ours, text width=2.2cm, minimum height=6mm, below=2mm of lg1] (lg2) {our code};
+\node[side, text width=2.2cm, minimum height=6mm, below=2mm of lg2] {negative result};
+\begin{scope}[on background layer]
+\foreach \x in {0,5.0,10.0} \fill[gray!4] (\x-2.2,0.45) rectangle (\x+2.2,-11.4);
+\end{scope}
+\end{tikzpicture}
+\end{adjustbox}
+\caption{Architecture of RoomRecon. Grey: existing tools, used as they are or with small patches; blue: boxes containing our code (configuration, alignment, evaluation, packaging); orange: the supporting capture check, which failed its validation. Heavy work runs on the shared GPU machine; the laptop builds collision, shows the walk and runs the collision evaluation.}
+\label{fig:arch}
+\end{figure}
+
+\subsection{Capture and import}
+Own rooms are captured with Polycam's raw-data export \cite{polycam} on an iPhone with LiDAR: images, ARKit poses and intrinsics, a depth and confidence map per frame, and per-frame tracking data. nerfstudio's \texttt{ns-process-data polycam -{}-use-depth} converts it into a dataset; for MuSHRoom, DN-Splatter's own loader is used. Normals for the normal prior come from Omnidata \cite{eftekhar2021omnidata} through DN-Splatter's script, run in batches of four because the default batch does not fit beside the other GPU user. The initial Gaussians are 300,000 points back-projected from the LiDAR depth.
+
+\subsection{Training with settings that suit a shared GPU}
+\label{sec:training}
+DN-Splatter \cite{turkulainen2025dnsplatter} adds three terms to the photometric loss of 3DGS: a depth loss against the LiDAR depth, weighted by image gradients so that edges are trusted less; a depth-smoothness term; and a loss against the monocular normals. We train for 30,000 steps with the changes in Table~\ref{tab:settings}. Besides memory, the pose setting matters: nerfstudio re-centres and re-scales poses by default, which would make the exports non-metric, while the phone's poses are already metric.
+
+\begin{table}[!htb]
+\caption{Training settings changed from the DN-Splatter / nerfstudio defaults. The two ``lite'' changes may cost quality; that cost was not measured.}
+\label{tab:settings}
+\centering
+\small
+\begin{tabular}{L{3.0cm}L{2.5cm}L{2.7cm}L{3.6cm}}
+\hline
+\textbf{Setting} & \textbf{Default} & \textbf{Ours} & \textbf{Why} \\
+\hline
+Seed points (lite) & 1,000,000 & 300,000 & out of memory with 5--7\,GB free \\
+Stop splitting (lite) & step 15,000 & step 10,000 & caps the peak number of Gaussians \\
+Checkpoints & only at the end & every 1k, keep all & a crash must not cost the run \\
+Evaluation & effectively off & every 1k, all test images & a final-only metric hid a collapse \\
+Pose processing & re-centre, re-scale & none (own data) & keep metric phone poses \\
+Image cache & GPU & CPU & GPU memory \\
+After a crash & manual restart & automatic resume & shared GPU \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Export and scene alignment}
+The model is exported as a standard 3DGS PLY file and as a mesh, extracted by DN-Splatter with Open3D's TSDF fusion \cite{zhou2018open3d} at 2\,cm voxels. Neither file says which way is up, where the floor is, how large the room is or where to start. Algorithm~\ref{alg:scene} computes these from the cameras and the mesh, using two facts about handheld capture: the phone is held roughly upright, so the cameras' mean up vector gives gravity; and it is held near eye height, so the median camera height above the floor gives the scale. A scale near 1 confirms that the phone's poses were metric (1.038 for both of our rooms).
+
+\begin{algorithm}[!htb]
+	\caption{Scene alignment (\texttt{scene.json})}
+	\label{alg:scene}
+	\begin{algorithmic}[1]
+		\Procedure{SceneFrame}{camera-to-world poses $\{T_i\}$, mesh vertices $V$}
+		\State $u \gets$ mean of the cameras' $+y$ axes; \textbf{if} $\lVert u\rVert < 0.5$ \textbf{then} $u \gets$ mean of $-x$ axes
+		\State \textbf{if} $\lVert u\rVert < 0.5$ \textbf{then fail} ``cannot estimate up''
+		\State rotate camera centres $c_i$ and $V$ by $R$, which takes $u/\lVert u\rVert$ to $+y$
+		\State $H \gets$ histogram (2\,cm bins) of vertex heights below the lowest camera
+		\State $y_f \gets$ centre of the lowest local peak of $H$ holding $\ge 0.3 \max H$ \Comment{not the bed tops}
+		\State $s \gets 1.45\,\mathrm{m} \,/\, \operatorname{median}_i (c_{i,y} - y_f)$ \Comment{eye height}
+		\State $k \gets \arg\min_i \lVert c_i - \operatorname{median}_j c_j\rVert$ \Comment{a camera position is free space}
+		\State spawn $\gets s\,c_k$ at height $s\,y_f + 1.45$\,m, facing camera $k$'s horizontal view
+		\State \Return $R$ (as Euler angles in the viewer's frame), $s$, floor $s\,y_f$, spawn
+		\EndProcedure
+	\end{algorithmic}
+\end{algorithm}
+
+\subsection{Collision and walking}
+On the laptop, splat-transform \cite{splattransform} applies the rotation and scale and builds the collision: it keeps the cluster of Gaussians connected to the spawn, voxelises it at 5\,cm (solid above an opacity of 0.1), fills the space outside the room, carves the space reachable from the spawn by a capsule 1.6\,m tall with a 0.2\,m radius, and writes a collision mesh. The SuperSplat Viewer \cite{supersplatviewer} 1.37.0 loads the splat, the collision and a settings file that places the start camera at the spawn, and its walk mode gives first-person movement. We patched only its interface size. For a demo independent of the network and the GPU machine, a script packs the viewer and the room into one folder.
+
+\subsection{Evaluating walk-collision accuracy}
+\label{sec:collision-method}
+Our main measurement compares collision from DN-Splatter's mesh with the default collision from the splat, on \texttt{vr\_room}, which has a laser scan. Five sources go through exactly the demo's splat-transform pipeline, with the same rotation, scale and spawn:
+\textbf{S}, the trained splat (the default, used in our demo);
+\textbf{M}, points sampled every centimetre on DN-Splatter's mesh;
+\textbf{L}, the raw phone LiDAR (depth maps back-projected into 3\,cm voxels, no training);
+\textbf{P}, Polycam's own mesh of the same capture, shipped with MuSHRoom and aligned to the scan by ICP from 24 starting orientations (a best case for Polycam); and
+\textbf{GT}, points on the laser scan, moved into the model's frame with MuSHRoom's alignment.
+M, L, P and GT are written as small opaque splats (2\,cm) so that splat-transform treats them like a trained splat.
+
+Each collision mesh is reduced to what matters for a walking person. Let $O_X$ be the 5\,cm floor-plan cells that contain collision surface between 0.2 and 1.8\,m above the floor, $W_X$ the free cells reachable from the spawn by four-connected steps, $d(c, O)$ the distance from cell $c$ to the nearest cell of $O$, and $\mathcal{S}$ the GT-occupied cells that the phone's LiDAR also saw (within 10\,cm). The measures are
+\begin{align}
+\mathrm{IoU}_X &= \frac{|W_X \cap W_{GT}|}{|W_X \cup W_{GT}|}, &
+\mathrm{Phantom}_X &= A\{c \in O_X \cap W_{GT} : d(c, O_{GT}) > 10\,\mathrm{cm}\}, \\
+\mathrm{Missed}_X &= \frac{|\{g \in \mathcal{S} : d(g, O_X) > 10\,\mathrm{cm}\}|}{|\mathcal{S}|}, &
+\mathrm{Offset}_X &= \{d(c, O_{GT}) : c \in O_X,\ d(c, O_{GT}) \le 50\,\mathrm{cm}\},
+\end{align}
+where $A$ is area and the offset is summarised by its median and 95th percentile. A phantom obstacle blocks a place where the real room is free; a missed wall lets the walker through a real wall.
+
+\begin{algorithm}[!htb]
+	\caption{Walk-collision accuracy against a laser scan}
+	\label{alg:collision}
+	\begin{algorithmic}[1]
+		\Procedure{CollisionAccuracy}{collision meshes $C_X$, scan and LiDAR points, \texttt{scene.json}}
+		\State align the points with \texttt{scene.json}; $y_f \gets$ floor of the scan (Alg.~\ref{alg:scene}, line 6)
+		\State grid $\gets$ 5\,cm cells over the scan's floor plan plus a 0.5\,m margin
+		\ForEach{source $X \in \{S, M, L, P, GT\}$}
+			\State sample $C_X$ every 1\,cm; $O_X \gets$ cells with samples at $0.2 \le y - y_f \le 1.8$\,m
+			\State $W_X \gets$ flood fill from the spawn cell through cells not in $O_X$
+		\EndFor
+		\State compute Eqs.~(1)--(2) for each $X$ against GT; \textbf{pass} if M beats S on P1--P4
+		\EndProcedure
+	\end{algorithmic}
+\end{algorithm}
+
+The criteria, fixed before any run, were: P1, $\mathrm{IoU}_M \ge \mathrm{IoU}_S + 0.02$; P2, $\mathrm{Phantom}_M \le \mathrm{Phantom}_S$; P3, $\mathrm{Missed}_M \le \mathrm{Missed}_S + 2$ percentage points; P4, median $\mathrm{Offset}_M \le$ median $\mathrm{Offset}_S$.
+
+\subsection{Capture check (supporting)}
+\label{sec:capcheck-method}
+The capture check runs right after a capture, before training, on what the phone recorded. It merges every frame's LiDAR depth (high-confidence pixels) into 3\,cm surface voxels, finds the frames that see each surface point by comparing its projection with each frame's own depth (so hidden walls do not count), and labels each point \textbf{under-covered} if fewer than 5 frames see it (the overlap that Pix4D's photogrammetry quality reports treat as sufficient) or its viewing directions fill fewer than 3 of 64 direction bins (COVER's angular coverage \cite{chen2026cover}, moved before training); \textbf{textureless} if the median image gradient around it is below a threshold tuned on \texttt{vr\_room} only; and \textbf{broken tracking} if every frame that sees it is flagged by a tracking-segment change, limited world mapping, a weakly connected frame, or a jump faster than 1.5\,m/s or 180$^\circ$/s. It outputs a verdict (OK, recapture, broken tracking), a top-down map and a coloured 3D map for the viewer.
