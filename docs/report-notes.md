@@ -110,7 +110,7 @@ cite the works above and say what is reused.
 
 ## 6. Still to do for the report
 
-- Walk recordings (G2, G4) and room-2 FPS.
+- ~~Walk recordings (G2, G4) and room-2 FPS~~ done 2026-10-09: `results/walk-recordings.md` (room 2 ~55 FPS, `vr_room` ~100 FPS, single overlay readings, PC).
 - Report format (open).
 - G7: Polycam's own reconstruction of the same room, side by side.
 - G8: design, build and measure the novelty (this log gets its decisions and results).
