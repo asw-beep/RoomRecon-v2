@@ -11,3 +11,15 @@ too large for git; they live outside the repo:
 
 FPS values are single readings of the on-screen overlay, not averages. The `vr_room` recording's
 collision source (default splat-based or the mesh-based study version) was not noted.
+
+The user's own copies are in the repo's `Recordings/` folder (git-ignored, `*.mp4`): `room-1.mp4` is
+the `vr_room` walk; the room-2 (own room) walk was still named `Screen Recording 2026-10-09
+185405.mp4` there on 2026-10-09 (to be renamed `room-2.mp4`).
+
+## Walk test of the collision study (S vs M), 2026-10-09
+
+Aswin walked `vr_room` with the default splat-based collision (S) and with the mesh-based collision
+(M) in the local viewer: **"personally I didn't feel anything different."** The measured differences
+(`g8c-collision-accuracy.md`: 17.8 % vs 1.7 % of real walls missing at body height) were not felt in
+a free walk; they are concentrated in places such a walk may not reach (furniture and wall stretches
+off the usual path). This is reported as is: the offline measurement and the felt experience differ.

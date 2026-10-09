@@ -51,3 +51,9 @@ mid-room, makes collision unusable without the trained model's filtering.
 One room (the only one with a laser scan); the scan's own collision through the same 5 cm voxel
 pipeline is the reference; 5 cm cells make the median offset coarse; the walk test of the demo
 (G2) felt right, so the leaks are in places the user did not walk.
+
+## Walk test (user, PC, 2026-10-09)
+
+Walking both versions freely, the user felt no difference between S and M
+(`walk-recordings.md`). The measured gap is therefore not a noticeable everyday difference in a free
+walk; it is where the collision is wrong at furniture and some wall stretches.
