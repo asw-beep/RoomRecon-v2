@@ -1,0 +1,27 @@
+{
+ "mesh": "collision-study/polycam_mesh_aligned.ply (Polycam mesh shipped with MuSHRoom vr_room, ICP-aligned to the laser scan in the model frame)",
+ "mesh_md5": "fb9e33050f7ad702bee36740a84e2d04",
+ "protocol": "DN-Splatter eval_mesh_mushroom_vis_cull.py --device iphone, unmodified, commit 97588b4",
+ "machine": "Kaggle notebook aswbeep/roomrecon-meval-polycam-vr-room-run v2 (Tesla T4), 2026-10-09",
+ "env": [
+  "renderer=egl",
+  "python 3.10.22",
+  "numpy 1.26.4",
+  "scipy 1.13.0",
+  "open3d 0.18.0",
+  "trimesh 4.3.1",
+  "pyrender 0.1.45",
+  "OpenGL 3.1.0",
+  "torch 2.2.2+cu121",
+  "tyro 0.8.3",
+  "GPU 0: Tesla T4 (UUID: GPU-b7c68e2a-e407-3b17-8dba-a386f18de60c)",
+  "GPU 1: Tesla T4 (UUID: GPU-0777c140-a928-2f8b-ffd0-6291d373357c)"
+ ],
+ "metrics_m": {
+  "Acc": 0.01856172074112732,
+  "Comp": 0.024478286700772393,
+  "C-L1": 0.021520003720949858,
+  "NC": 0.896173257545533,
+  "F-score": 0.9202747334139578
+ }
+}
