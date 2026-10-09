@@ -17,18 +17,22 @@ KG="$HOME/.pixi/bin/kaggle"
 DNS="$HOME/roomrecon/tools/dn-splatter"
 CMD="$1"; NAME="$2"
 U="${KAGGLE_USERNAME:?set KAGGLE_USERNAME to your Kaggle user name}"
-SLUG="roomrecon-meval-$NAME"          # data dataset
+SLUG="roomrecon-meval-${NAME//_/-}"   # data dataset (Kaggle slugs allow only letters, digits, "-")
 KSLUG="$SLUG-run"                     # notebook
 
 meta() {  # meta <dir> <slug>: dataset-metadata.json for a private dataset
   printf '{"title": "%s", "id": "%s/%s", "licenses": [{"name": "other"}]}\n' "$2" "$U" "$2" > "$1/dataset-metadata.json"
 }
 upload() {  # upload <dir> <slug>: create the dataset, or add a new version, then wait until ready
+  local out
   if "$KG" datasets status "$U/$2" >/dev/null 2>&1; then
-    "$KG" datasets version -p "$1" -m "$(date -u +%FT%TZ)" -r zip -t -q
+    out=$("$KG" datasets version -p "$1" -m "$(date -u +%FT%TZ)" -r zip -t -q 2>&1)
   else
-    "$KG" datasets create -p "$1" -r zip -t -q
+    out=$("$KG" datasets create -p "$1" -r zip -t -q 2>&1)
   fi
+  echo "$out"
+  # the CLI can print an error and still exit 0
+  if grep -qi "error" <<<"$out"; then echo "upload of $2 failed" >&2; return 1; fi
   for _ in $(seq 90); do
     [ "$("$KG" datasets status "$U/$2" 2>/dev/null)" = ready ] && return 0; sleep 10
   done
