@@ -70,3 +70,22 @@ v3.10.1 fetched by npx for this one source; v3.10.0 for the others). S, M and L 
 exactly in the five-source rerun. Result: Polycam's mesh makes walk collision as good as DN-Splatter's
 mesh (IoU 0.794 vs 0.809, missed walls 1.8 % vs 1.7 %) with more phantom obstacles (0.22 vs 0.04 m²);
 both are far better than the splat-derived default.
+
+## Added 2026-10-09: Polycam's mesh accuracy with DN-Splatter's protocol (G7-lite)
+
+The same mesh (`polycam_mesh_aligned.ply`, md5 `fb9e3305...`) evaluated with DN-Splatter's MuSHRoom
+protocol (`eval_mesh_mushroom_vis_cull.py --device iphone`, unmodified, commit `97588b4`), exactly as
+G3 did for our meshes. Machine: **Kaggle T4** (the GPU machine has no GPU access; the protocol's
+visibility culling renders depth maps with pyrender/EGL), Python 3.10 env with the GPU machine's
+library versions (open3d 0.18.0, trimesh 4.3.1, pyrender 0.1.45, numpy 1.26.4), renderer EGL.
+Script `scripts/kaggle/mesh_eval_kaggle.sh`; evidence `g7-polycam-mesh-metrics.json`.
+
+| Mesh | Acc (cm) | Comp (cm) | Chamfer-L1 (cm) | Normal consistency | F-score @5 cm | Machine |
+|---|---|---|---|---|---|---|
+| DN-Splatter `dns-30k-lite` (G3) | 1.76 | 2.29 | 2.03 | 0.896 | 0.926 | GPU machine |
+| Polycam (app), ICP-aligned to the scan | 1.86 | 2.45 | 2.15 | 0.896 | 0.920 | Kaggle T4 |
+| Plain splats `plain-30k-lite2` (G3) | 5.85 | 5.86 | 5.86 | 0.809 | 0.638 | GPU machine |
+
+Polycam's mesh is about as accurate as DN-Splatter's (0.1 cm worse on accuracy, 0.006 lower F-score)
+even though its alignment was fitted to the same laser scan it is measured against, which favours it.
+Caveat: different machines (the DN-Splatter numbers were not re-run on Kaggle).
