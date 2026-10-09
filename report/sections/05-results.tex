@@ -136,10 +136,10 @@ The difference was not felt in practice: walking both versions freely, Aswin not
 \textbf{Tracking repair.} The second attempt registered \texttt{cap3}'s separate sweeps to each other before training. The registration worked (fitness 0.87, turn $-0.9^\circ$, tilt $0.6^\circ$), but there was nothing to repair: before any repair the first sweep's depth already lay within 2.4\,cm of the main sweep with Polycam's corrected poses (2.7\,cm with ARKit's), close to the main sweep's 1.9\,cm agreement with itself. ARKit had relocalised, and only seven transition frames (118--124) carried the 2\,m jumps. The pre-agreed premise was false, and the added surface (4.7\%) fell below the required 5\%.
 
 \subsection{Comparison with existing implementations}
-Table~\ref{tab:compare} compares existing ways to obtain the model or its walk collision with our pipeline, all run and measured by us on \texttt{vr\_room}. Plain splats render the training walk best but give the least accurate geometry; the viewer's default collision from the splat leaks out of the room; raw phone LiDAR cannot be used for collision; and Polycam's mesh gives collision almost as good as ours, with more phantom obstacles (we did not evaluate the app's other outputs). Our combination, DN-Splatter's splat for viewing and its mesh for collision, has the most accurate geometry and the best collision on every measure except phantom obstacles.
+Table~\ref{tab:compare} compares existing ways to obtain the model or its walk collision with our pipeline, all run and measured by us on \texttt{vr\_room}. Plain splats render the training walk best but give the least accurate geometry; the viewer's default collision from the splat leaks out of the room; raw phone LiDAR cannot be used for collision; and Polycam's mesh is almost as accurate as DN-Splatter's (1.86 vs 1.76\,cm, F-score 0.920 vs 0.926) and gives collision almost as good, with more phantom obstacles, even though its alignment was fitted to the same laser scan, which favours it (we did not evaluate the app's other outputs). Polycam's mesh accuracy was measured on a Kaggle T4, because the GPU machine had lost GPU access and the protocol renders depth maps on the GPU; the environment used the same library versions. Our combination, DN-Splatter's splat for viewing and its mesh for collision, has the most accurate geometry and the best collision on every measure except phantom obstacles, but its margin over Polycam's mesh is small.
 
 \begin{table}[!htb]
-\caption{Comparison of existing implementations with ours on \texttt{vr\_room} (our measurements; ``--'': not applicable or not measured).}
+\caption{Comparison of existing implementations with ours on \texttt{vr\_room} (our measurements; ``--'': not applicable or not measured). Mesh metrics follow DN-Splatter's MuSHRoom protocol (GPU machine; Polycam's on a Kaggle T4).}
 \label{tab:compare}
 \centering
 \begin{adjustbox}{max width=\linewidth}
@@ -150,7 +150,7 @@ Table~\ref{tab:compare} compares existing ways to obtain the model or its walk c
 Plain 3DGS splats \cite{kerbl3dgs} (nerfstudio, priors off) & \textbf{26.84} / 23.24\,dB & 5.85\,cm & 0.638 & -- & -- & -- \\
 SuperSplat default: collision from the splat \cite{splattransform} & same splat as ours & -- & -- & 0.577 & \textbf{0.00}\,m$^2$ & 17.8\% \\
 Raw phone LiDAR, no reconstruction & -- & -- & -- & 0.059 & 4.27\,m$^2$ & 47.0\% \\
-Polycam app mesh \cite{polycam} & -- & -- & -- & 0.794 & 0.22\,m$^2$ & 1.8\% \\
+Polycam app mesh \cite{polycam} & -- & 1.86\,cm & 0.920 & 0.794 & 0.22\,m$^2$ & 1.8\% \\
 \textbf{Ours}: DN-Splatter splat + mesh collision & 26.32 / \textbf{23.50}\,dB & \textbf{1.76\,cm} & \textbf{0.926} & \textbf{0.809} & 0.04\,m$^2$ & \textbf{1.7\%} \\
 \hline
 \end{tabular}
