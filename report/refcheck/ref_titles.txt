@@ -1,0 +1,31 @@
+DN-Splatter: Depth and Normal Priors for Gaussian Splatting and Meshing
+gsplat: An Open-Source Library for Gaussian Splatting
+MuSHRoom: Multi-Sensor Hybrid Room Dataset for Joint 3D Reconstruction and Novel View Synthesis
+2D Gaussian Splatting for Geometrically Accurate Radiance Fields
+AGS-Mesh: Adaptive Gaussian Splatting and Meshing with Geometric Priors for Indoor Room Reconstruction Using Smartphones
+IndoorGS: Geometric Cues Guided Gaussian Splatting for Indoor Scene Reconstruction
+PlanarGS: High-Fidelity Indoor 3D Gaussian Splatting Guided by Vision-Language Planar Priors
+GaussianRoom: Improving 3D Gaussian Splatting with SDF Guidance and Monocular Cues for Indoor Scene Reconstruction
+LighthouseGS: Indoor Structure-aware 3D Gaussian Splatting for Panorama-Style Mobile Captures
+Coverage Optimization for Camera View Selection
+An Object-Centered Data Acquisition Method for 3D Gaussian Splatting using Mobile Phones
+User-in-the-Loop View Sampling with Error Peaking Visualization
+3D Reconstruction by Looking: Instantaneous Blind Spot Detector for Indoor SLAM through Mixed Reality
+FisherRF: Active View Selection and Uncertainty Quantification for Radiance Fields using Fisher Information
+NeRF Director: Revisiting View Selection in Neural Volume Rendering
+Splat-Nav: Safe Real-Time Robot Navigation in Gaussian Splatting Maps
+NavGSim: High-Fidelity Gaussian Splatting Simulator for Large-Scale Navigation
+The Neverwhere Visual Parkour Benchmark Suite
+Learning Visual Parkour from Generated Images
+AGILE-GS: Anchor-Guided Fast Next-Best-View Selection for Active 3D Gaussian Splatting
+MUGSQA: Novel Multi-Uncertainty-Based Gaussian Splatting Quality Assessment Method, Dataset, and Benchmarks
+VGGT: Visual Geometry Grounded Transformer
+MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion
+PocketGS: On-Device Training of 3D Gaussian Splatting for High Perceptual Modeling
+Improving NeRF Quality by Progressive Camera Placement for Unrestricted Navigation in Complex Environments
+3D Gaussian Splatting for Real-Time Radiance Field Rendering
+NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis
+Nerfstudio: A Modular Framework for Neural Radiance Field Development
+ARKitScenes: A Diverse Real-World Dataset For 3D Indoor Scene Understanding Using Mobile RGB-D Data
+Omnidata: A Scalable Pipeline for Making Multi-Task Mid-Level Vision Datasets from 3D Scans
+Open3D: A Modern Library for 3D Data Processing

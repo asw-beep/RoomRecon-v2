@@ -1,0 +1,332 @@
+\documentclass[preprint,12pt]{elsarticle}
+%\documentclass[review]{elsarticle}
+\usepackage{lineno,hyperref}
+\usepackage{booktabs}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{amssymb,amsmath}
+\usepackage{float}
+\usepackage{ragged2e}
+
+\usepackage[utf8]{inputenc}
+\usepackage{adjustbox}
+\usepackage{multicol}
+\usepackage{mwe}
+%\usepackage{caption}
+\usepackage[justification=centering]{caption}
+
+\usepackage{algorithm}
+%\usepackage{algorithm2e}
+%\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+\usepackage{multirow}
+\usepackage{mathtools}  
+\usepackage{graphicx}
+
+\usepackage{color}
+\usepackage{soul}
+\usepackage{comment}
+
+\usepackage{lscape}
+
+\usepackage{setspace}
+\doublespacing
+%\linespread{1.5}
+
+
+%\usepackage{caption,tabularx,booktabs}
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+
+\newcommand\tab[1][0.73cm]{\hspace*{#1}}
+
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.3](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+
+%for vertical lines
+\def\arrvline{\hfil\kern\arraycolsep\vline\kern-\arraycolsep\hfilneg}
+
+\modulolinenumbers[5]
+
+\journal{Elsevier}
+
+
+%% `Elsevier LaTeX' style     
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	
+
+\begin{frontmatter}
+
+\title{"Face recognition" using "Resnet" for "Smart Attendance System"}
+\author[1]{Sridhar Raj S\corref{cor1}}
+\ead{sridharselva394@gmail.com}
+\author[2]{}
+\ead{}
+\author[3]{}
+\ead{}
+\cortext[cor1]{Corresponding author}
+\address[1]{Indian Institute of Information Technology, Kottayam, India}
+\address[2]{}
+\address[3]{}
+
+\begin{abstract}
+% 1) One or two lines about the problem which you have taken
+% 2) What is the issue which you are going to address in that problem/application
+% 3) Using what method, give the name of the method/technique
+% 4) What results you have acheived and how it is better than existing, mention the accuracy values or anyother metric which you have used.
+\end{abstract}
+
+\begin{keyword}
+ Clustering \sep Deep Learning \sep Computer vision
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+\section{Introduction} 
+% 1) Give an introduction about your problem and domain knowledge. Add few figures which could give insights about your problem.
+
+% 2) Give a brief intro about your proposal, in detail you can add in third section.
+% 3) Add 2-3 points highlighting your novel contribution for the proposal. See the eg given below.
+
+The salient contributions of the paper are,
+\begin{enumerate}
+    \item A segment-pose wise optimal distance threshold is determined based on multi-clustering approach. 
+    \item A generative model is proposed to generate images based on the corresponding segment-pose characteristics to handle the sample scarcity.
+    \item A segment-pose threshold based validation strategy is proposed in addition to the conventional discriminator to efficiently match the generated reliable samples to its corresponding ground-truth identity.
+\end{enumerate}
+
+
+% 4) Add organization of the paper as given below.
+The organization of the paper is as follows. Section 2 presents the discussion on the benchmark person re-ID generative models and limitations. Section 3 presents the proposed generative segment-pose augmentation method. Section 4 discusses the details of the datasets, experimental setup and comparative results analysis with discussion. Section 5 presents the conclusion and opens further discussion with future scope.
+
+\section{Related works} \label{section2}
+% 1) Give a brief intro about the literature survey section
+In this section, the existing supervised and unsupervised person re-ID approaches which are related to the proposed segment-pose representation are discussed. The existing person re-ID generative models utilize the datasets which has manually pre-defined labels. However, the real-time surveillance environment containing unknown person which denotes the images are naturally unlabeled. Thus, an unsupervised generative model is essential to improve the number of reliable images and increase the feature robustness. 
+
+
+
+% 2) Discuss 2-3 lines of each work. For each work, discuss about the problem, method and results they have obtained. Minimum 15 articles (published after 2024) has to be discussed. See the sample of how to discuss about it in the below paragraph. 
+
+A feature distilling generative model \cite{fd} is proposed with a siamese structure as the base by considering the identity related features. A generative model \cite{ptgan} introduces a dataset which contains images with 15 diverse viewing angles. A cross-modality and identity loss based model \cite{cross} is proposed to identify discriminative features. Deep attribute learning based generative model \cite{deepattr} transfers attributes from source to the generated images. The attributes of a single image are matched with many images for diverse sample generation. A structural feature alignment method \cite{lit3} explores the structural features to analyze the cross-domain diverseness. An asymmetric dictionary learning approach \cite{umdl} is proposed to transfer the domain features from source to target. A reliable sample selection strategy \cite{pul} is proposed to effectively cluster and fine-tune the unlabeled images. To avoid the randomness due to a single loss function, a centralized loss function based clustering method \cite{cclf} is proposed. 
+
+
+
+% 3) List out the limitations (4-5 points) which you have observed from the above discussed existing works
+Limitations of the existing methods are,
+\begin{itemize}
+    \item Lack of unsupervised setup for the generative networks.
+    \item Lack of segment-pose wise threshold determination.
+    \item Same distance threshold is used to evaluate the entire image region irrespective of segments, poses and camera setup.
+    \item Lack of contextual segment-pose validation for the generated images.
+\end{itemize}
+
+% 4) Discuss in one paragraph about which limitations you are going to solve in your proposal. 
+
+
+
+\section{Proposed Method}
+
+% 1) Give a brief introduction about your proposal. 
+
+% 2) Add the architecture diagram. Find the sample below.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\linewidth]{images/architecture.jpeg}
+	\captionsetup{singlelinecheck = false, format= hang, justification=justified, font=footnotesize, labelsep=space}
+	\caption{GSRA method data flow is as follows, 1) Unlabeled images given as input, 2) Feature extraction, 3) Clustering the extracted features, 4) Reliable sample selection, 5) Reliable clusters considered for pseudo pose determination, 6) Segment-post wise aggregation, 7,8) Optimal segment-pose determination, 9) Consider occluded samples for unoccluded region detection, 10) Estimate the target unoccluded region's pose and segment to validate the generated image using 11) Optimal Segment-pose distance threshold, 12) Update labels with the augmented reliable samples, 13) Matching accuracy based final model evaluation and fine-tune}
+	\label{arch}
+\end{figure}
+
+ 
+
+%3) Discuss in detail about the architecture diagram
+
+%4) You can add a algorithm for your entire your proposed method
+
+\subsection{Clustering }
+\begin{algorithm}[H]
+	\caption{Clustering and reliable sample selection} 
+	\begin{algorithmic}[1]
+		\Procedure {Clustering and selection}{}
+		\State {\bf Input:}{ Unlabeled images $U$ = $\{u_{i}\}_{i=1}^n$, clusters $C = \{c_{j}\}_{i=1}^m$}
+		\State {\bf Output:} $C_R$ \Comment Initial set of reliable samples
+		\State {\bf Initialize:}\quad $\theta_{f}$ \Comment pre-trained model with full image
+		\State $features_{j\gets1~to~m} \gets \phi(u_i,\theta_{f})~\forall u_i \in U$ \Comment $j$ denotes the first set of features extracted
+		\State $C_t \gets agglomerative.fit(features_{j\gets1~to~m})$
+		\If {$\lambda_{c_j} \geq \delta_d $} 
+		\State $C_R \gets c_j $
+		\Else
+		\State $C_{O} \gets c_j$		
+		\EndIf 	
+		\EndProcedure
+	\end{algorithmic}
+	\label{algo1}
+\end{algorithm}
+
+% 5) Add explanation of the algorithm
+
+\section{Datasets and Experimental results analysis}
+
+% 1) Discuss about the datasets which you have used for your experiments
+
+\begin{table}[H]
+\caption{Dataset details}
+\centering
+\label{table2}
+	\begin{tabular}{l|c|c|c|c|c}
+		\hline 
+		\textbf{Datasets} & \multicolumn{1}{p{1.8cm}|}{\centering \bf \#Images} & \multicolumn{1}{p{1.7cm}|}{\centering \bf \#Cams}& \multicolumn{1}{p{1.7cm}|}{\centering \bf \#Ids} & \multicolumn{1}{p{1.7cm}|}{\centering \bf \#Train} & \multicolumn{1}{p{1.7cm}}{\centering \bf \#Test}\\
+		\hline
+		DukeMTMC re-ID \cite{dukemtmc} & 36,411 & 8 & 1,812 & 702 & 1,110 \\
+		Market1501 \cite{market1501} & 32,668  & 6 & 1,501 & 751 & 750  \\
+		CUHK03 \cite{cuhk03} & 14,097 & 2 & 1,467 & 767 & 700  \\
+		MSMT17  \cite{ptgan} & 126,411 & 15 & 4,101 & 1,041 & 3,060 \\
+		\hline 
+\end{tabular} 
+\end{table}
+
+% 2) Add explanation about the datasets
+
+% 3) Add experimental setup. Refer the sample below
+
+
+
+\textbf{Experimental setup}. Dropout of ResNet50 is set as 0.5. Images are auto-rotated, 224 x 224 pixels resizing, set batch size as 16, stochastic gradient descent is set with a momentum of 0.9 and 0.001 as learning rate. The experiments are performed using Python 3.8 on Ubuntu version 18.04 LTS. Hardware details are as follows: 2 x Intel Xeon E5-2640 v4 Processor(20 Core/2.4GHz/25M Cache), 2 x 16GB ECC DDR4 213 MHz RAM and NVIDIA Quadro P5000 16GB GDDR5X graphics card.
+
+
+
+% 4) Add appropriate tables, graphs and case studies. All these has to be discussed in detail.
+
+
+\begin{landscape}
+\begin{table}[H] 
+\captionsetup{justification=justified}
+\captionof{table}{Segment-pose wise threshold evaluation performed on DukeMTMC re-ID dataset (R denotes rank)}
+\label{table3}
+\centering
+%\resizebox{18cm}{5cm}{
+\begin{tabular}{l|ccccc|ccccc|ccccc}
+		\hline
+		\bf $\lambda$& \multicolumn{5}{c|}{\bf TOP} &\multicolumn{5}{c|}{\bf MIDDLE} &\multicolumn{5}{c}{\bf BOTTOM}\\ \cline{2-16}
+		&\multicolumn{1}{p{0.9cm}}{R1} & \multicolumn{1}{p{0.9cm}}{R5} & \multicolumn{1}{p{0.9cm}}{R10} & \multicolumn{1}{p{0.9cm}}{R20} & \multicolumn{1}{p{0.9cm}|}{mAP}&\multicolumn{1}{p{0.9cm}}{R1} & \multicolumn{1}{p{0.9cm}}{R5} & \multicolumn{1}{p{0.9cm}}{R10} & \multicolumn{1}{p{0.9cm}}{R20} & \multicolumn{1}{p{0.9cm}|}{mAP}&\multicolumn{1}{p{0.9cm}}{R1} & \multicolumn{1}{p{0.9cm}}{R5} & \multicolumn{1}{p{0.9cm}}{R10} & \multicolumn{1}{p{0.9cm}}{R20} & \multicolumn{1}{p{0.9cm}}{mAP}\\
+		\hline
+		& \multicolumn{5}{c}{} &\multicolumn{5}{c}{\bf FRONT} &\multicolumn{5}{c}{}\\ \cline{2-16}
+		\hline
+		0.90 &26.4&35.4&41.8&47.5&15.8&33.3&45.8&52.0&58.2&16.8&11.9&23.8&28.3&37.2&7.3\\[0.4ex]
+	\bf	0.85 &26.9&36.1&42.2&48.7&15.9&34.1&46.3&53.1&60.6&17.6&13.5&24.1&29.7&38.2&7.5\\[0.4ex]
+	\bf	0.80 &28.4&38.1&43.4&49.8&16.2&33.8&45.1&52.0&58.3&17.1&13.6&24.1&30.1&38.4&7.5\\[0.4ex]
+	\bf	0.75 &25.1&34.9&39.0&44.3&15.8&31.4&43.8&49.5&55.7&16.3&14.4&24.9&31.8&39.3&7.6\\[0.4ex]
+		0.70 &23.0&31.4&34.8&39.8&13.1&25.3&36.2&40.7&44.8&12.2&11.3&20.2&25.7&30.8&5.9\\[0.4ex]
+
+		\hline
+		& \multicolumn{5}{c}{} &\multicolumn{5}{c}{\bf BACK} &\multicolumn{5}{c}{}\\ \cline{2-16}		
+		\hline
+		0.90 &18.5&25.8&29.2&33.1&5.8&21.5&30.4&34.7&38.9&9.6&12.3&19.3&24.7&27.9&6.8\\[0.4ex] 
+	\bf	0.85 &18.8&25.8&29.9&33.2&5.8&22.7&31.8&35.1&39.6&9.8&12.4&19.3&24.5&27.9&6.8\\[0.4ex]
+	\bf	0.80 &19.5&28.8&32.0&36.3&6.8&20.3&28.6&33.5&37.8&9.3&13.1&20.4&25.6&28.2&7.0 \\[0.4ex]
+		0.75 &13.3&20.2&24.6&27.9&4.2&12.6&19.2&23.8&27.8&7.4&11.8&17.3&22.0&25.5&5.8\\[0.4ex]
+		0.70 &10.8&14.8&17.9&21.2&3.3&10.7&16.3&20.1&24.0&6.4&11.1&16.6&20.2&23.9&5.1 \\[0.4ex]
+		\hline
+		& \multicolumn{5}{c}{} &\multicolumn{5}{c}{\bf LEFT} &\multicolumn{5}{c}{}\\ \cline{2-16}		
+		\hline
+		0.90&16.6&24.6&27.2&31.8&6.0&17.6&25.2&27.9&30.5&6.0&8.7&13.9&16.7&18.2&4.1\\[0.4ex]
+	\bf	0.85&17.9&25.4&28.3&32.3&6.2&17.7&25.2&28.8&30.9&6.0&9.1&14.8&17.4&19.3&4.5\\[0.4ex]
+	\bf	0.80&16.7&24.4&27.0&31.3&5.9&18.4&25.9&29.2&31.2&6.2&9.3&14.9&17.8&20.2&4.8\\[0.4ex]
+		0.75&14.2&23.2&25.8&30.0&5.2&15.2&22.2&26.1&28.3&5.3&7.0&12.7&15.1&17.6&4.3\\[0.4ex]
+		0.70&13.3&22.8&25.1&28.9&4.9&14.4&20.6&23.9&25.4&4.7&6.8&12.7&14.7&17.2&4.2\\[0.4ex]
+		\hline
+		& \multicolumn{5}{c}{} &\multicolumn{5}{c}{\bf RIGHT} &\multicolumn{5}{c}{}\\ \cline{2-16}
+		\hline
+		0.90&16.8&24.6&27.8&30.2&5.9&16.3&22.1&25.1&26.2&5.3&6.8&10.9&13.2&14.6&3.3 \\[0.4ex]
+	\bf	0.85&17.1&24.7&28.9&31.3&6.2&17.2&22.6&25.2&26.8&5.4&7.3&11.2&13.6&15.1&3.7 \\[0.4ex]
+	\bf 0.80&16.2&23.8&27.0&30.1&5.8&17.9&23.0&25.9&27.1&5.5&7.4&11.2&13.9&15.2&3.8 \\[0.4ex]
+		0.75&14.9&20.7&24.9&28.2&5.1&15.7&20.3&24.1&26.0&5.1&6.7&9.8&12.2&13.8&3.2 \\[0.4ex]
+		0.70&12.8&18.7&21.8&24.7&4.6&13.6&17.1&20.5&22.7&4.2&5.4&8.7&10.9&11.9&2.9 \\[0.4ex]
+		\hline 
+	\end{tabular} 
+\end{table}
+
+
+
+\end{landscape}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width= 1\textwidth]{images/duke_threshold.jpeg}
+	\captionsetup{singlelinecheck = false, format= hang, justification=justified, font=footnotesize, labelsep=space}
+	\caption{Segment-pose wise threshold analysis on three segments and four poses on DukeMTMC re-ID dataset}
+	\label{segmentposeduke}
+\end{figure} 
+
+\iffalse
+\begin{figure*}[H]
+	\centering
+	\includegraphics[width= 0.7\linewidth]{images/final5.jpeg}
+	\caption{Matching accuracy improvement from baseline to the proposed GSRA method evaluated on the four benchmark person re-ID datasets}
+	\label{final}
+\end{figure*}
+\fi 
+
+%5) The last table of this section must contain the performance comparison with the existing works
+
+\begin{table}[H] 
+\caption{Reported matching accuracy evaluated on the benchmark person re-ID datasets}
+\centering
+\label{table4}
+		\begin{tabular}{l|ccccc}
+			\hline
+			\multirow{2}{*}{\bf Methods} & \multicolumn{5}{c}{\bf DukeMTMC re-ID}\\ \cline{2-6}
+			&\multicolumn{1}{c}{Rank-1} & \multicolumn{1}{c}{Rank-5} & \multicolumn{1}{c}{Rank-10} & \multicolumn{1}{c}{Rank-20} & \multicolumn{1}{c}{mAP}\\
+			\hline
+			Existing 1 \cite{umdl} &18.5&31.4&37.6&-&7.3\\ [0.4ex]
+			Existing 2\citep{ptgan}&27.4&-	&50.7&-   & - \\ [0.4ex]
+			Existing 3 \cite{pul}	&30.4&44.5&50.7&56&16.4\\[0.4ex]
+		
+			
+			\hline
+			\bf Proposed &\bf32.9&\bf48.8&\bf54.0&\bf51.6&\bf19.4\\ [0.4ex]
+			\hline
+	\end{tabular} 
+\end{table}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width= 1\textwidth]{images/fourdataset.jpeg}
+	\captionsetup{singlelinecheck = false, format= hang, justification=justified, font=footnotesize, labelsep=space}
+	\caption{Segment-pose wise rank-1 matching accuracy analysis evaluated on the benchmark person re-ID datasets}
+	\label{fourdatasetscmc}
+\end{figure} 
+
+% 6) Overall discuss about the results which you have obtained and how it is better than the existing methods.
+
+\section{Conclusion and future scope}
+%1) Discuss what issue you have resolved, using what method, how much performance has improved in your proposed work from the existing and add 2 points for future directions.
+
+The proposed generative segment-pose representation based augmentation improves the matching performance of unlabeled person re-ID model through validation of the generative networks. The segmented analysis is performed to handle occlusion and analyze the features essential to mine the underlying canonical poses. The combined segment-pose optimal distance threshold determination has improved the matching performance and increases the number of reliable images selected. The proposed generative model is validated by the segment-pose threshold representation in addition to the conventional discriminator. The proposed method has reported +2.6 \% as the highest rank-1 matching accuracy improvement due to the robust generative network validation techniques and fine-tuning process. The proposed validation method eliminates the unreliable mismatched images generated by the conventional generative models. Since the main concentration of our proposed work is to efficiently match the generated images, the proposed work could have a robust validation technique which combines different domains and its attributes. In future, we plan to strengthen the proposed validation method using soft attributes which will improve the accuracy of the proposed GSRA person re-ID method. \par 
+
+
+
+% For adding the references, refer the mybibfile.bib file in the left panel. You can get those details of the articles from the google scholar site.
+\bibliography{mybibfile}
+
+\end{document}

@@ -1,0 +1,65 @@
+{
+ "SuperPoint: Self-Supervised Interest Point Detection and Description": [
+  {
+   "title": "SuperPoint: Self-Supervised Interest Point Detection and Description",
+   "id": "1712.07629v4",
+   "published": "2017-12-20",
+   "authors": [
+    "Daniel DeTone",
+    "Tomasz Malisiewicz",
+    "Andrew Rabinovich"
+   ],
+   "comment": "Camera-ready version for CVPR 2018 Deep Learning for Visual SLAM Workshop (DL4VSLAM2018)",
+   "journal_ref": ""
+  }
+ ],
+ "LightGlue: Local Feature Matching at Light Speed": [
+  {
+   "title": "LightGlue: Local Feature Matching at Light Speed",
+   "id": "2306.13643v1",
+   "published": "2023-06-23",
+   "authors": [
+    "Philipp Lindenberger",
+    "Paul-Edouard Sarlin",
+    "Marc Pollefeys"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "From Coarse to Fine: Robust Hierarchical Localization at Large Scale": [
+  {
+   "title": "From Coarse to Fine: Robust Hierarchical Localization at Large Scale",
+   "id": "1812.03506v2",
+   "published": "2018-12-09",
+   "authors": [
+    "Paul-Edouard Sarlin",
+    "Cesar Cadena",
+    "Roland Siegwart",
+    "Marcin Dymczyk"
+   ],
+   "comment": "Camera-ready for CVPR 2019",
+   "journal_ref": ""
+  }
+ ],
+ "3D Gaussian Splatting as Markov Chain Monte Carlo": [
+  {
+   "title": "3D Gaussian Splatting as Markov Chain Monte Carlo",
+   "id": "2404.09591v3",
+   "published": "2024-04-15",
+   "authors": [
+    "Shakiba Kheradmand",
+    "Daniel Rebain",
+    "Gopal Sharma",
+    "Weiwei Sun",
+    "Jeff Tseng",
+    "Hossam Isack",
+    "Abhishek Kar",
+    "Andrea Tagliasacchi",
+    "Kwang Moo Yi"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ]
+}

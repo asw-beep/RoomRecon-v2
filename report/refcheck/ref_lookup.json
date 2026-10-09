@@ -1,0 +1,518 @@
+{
+ "DN-Splatter: Depth and Normal Priors for Gaussian Splatting and Meshing": [
+  {
+   "title": "DN-Splatter: Depth and Normal Priors for Gaussian Splatting and Meshing",
+   "id": "2403.17822v3",
+   "published": "2024-03-26",
+   "authors": [
+    "Matias Turkulainen",
+    "Xuqian Ren",
+    "Iaroslav Melekhov",
+    "Otto Seiskari",
+    "Esa Rahtu",
+    "Juho Kannala"
+   ],
+   "comment": "To be published in 2025 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+   "journal_ref": ""
+  }
+ ],
+ "gsplat: An Open-Source Library for Gaussian Splatting": [
+  {
+   "title": "gsplat: An Open-Source Library for Gaussian Splatting",
+   "id": "2409.06765v1",
+   "published": "2024-09-10",
+   "authors": [
+    "Vickie Ye",
+    "Ruilong Li",
+    "Justin Kerr",
+    "Matias Turkulainen",
+    "Brent Yi",
+    "Zhuoyang Pan",
+    "Otto Seiskari",
+    "Jianbo Ye",
+    "Jeffrey Hu",
+    "Matthew Tancik",
+    "Angjoo Kanazawa"
+   ],
+   "comment": "17 pages, 2 figures, JMLR MLOSS",
+   "journal_ref": ""
+  }
+ ],
+ "MuSHRoom: Multi-Sensor Hybrid Room Dataset for Joint 3D Reconstruction and Novel View Synthesis": [
+  {
+   "title": "MuSHRoom: Multi-Sensor Hybrid Room Dataset for Joint 3D Reconstruction and Novel View Synthesis",
+   "id": "2311.02778v3",
+   "published": "2023-11-05",
+   "authors": [
+    "Xuqian Ren",
+    "Wenjia Wang",
+    "Dingding Cai",
+    "Tuuli Tuominen",
+    "Juho Kannala",
+    "Esa Rahtu"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "2D Gaussian Splatting for Geometrically Accurate Radiance Fields": [
+  {
+   "title": "2D Gaussian Splatting for Geometrically Accurate Radiance Fields",
+   "id": "2403.17888v3",
+   "published": "2024-03-26",
+   "authors": [
+    "Binbin Huang",
+    "Zehao Yu",
+    "Anpei Chen",
+    "Andreas Geiger",
+    "Shenghua Gao"
+   ],
+   "comment": "13 pages, 12 figures. Corrected Eq.7",
+   "journal_ref": ""
+  }
+ ],
+ "AGS-Mesh: Adaptive Gaussian Splatting and Meshing with Geometric Priors for Indoor Room Reconstruction Using Smartphones": [
+  {
+   "title": "AGS-Mesh: Adaptive Gaussian Splatting and Meshing with Geometric Priors for Indoor Room Reconstruction Using Smartphones",
+   "id": "2411.19271v2",
+   "published": "2024-11-28",
+   "authors": [
+    "Xuqian Ren",
+    "Matias Turkulainen",
+    "Jiepeng Wang",
+    "Otto Seiskari",
+    "Iaroslav Melekhov",
+    "Juho Kannala",
+    "Esa Rahtu"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "IndoorGS: Geometric Cues Guided Gaussian Splatting for Indoor Scene Reconstruction": [],
+ "PlanarGS: High-Fidelity Indoor 3D Gaussian Splatting Guided by Vision-Language Planar Priors": [
+  {
+   "title": "PlanarGS: High-Fidelity Indoor 3D Gaussian Splatting Guided by Vision-Language Planar Priors",
+   "id": "2510.23930v1",
+   "published": "2025-10-27",
+   "authors": [
+    "Xirui Jin",
+    "Renbiao Jin",
+    "Boying Li",
+    "Danping Zou",
+    "Wenxian Yu"
+   ],
+   "comment": "Accepted by NeurIPS 2025. Project page: https://planargs.github.io",
+   "journal_ref": ""
+  }
+ ],
+ "GaussianRoom: Improving 3D Gaussian Splatting with SDF Guidance and Monocular Cues for Indoor Scene Reconstruction": [
+  {
+   "title": "GaussianRoom: Improving 3D Gaussian Splatting with SDF Guidance and Monocular Cues for Indoor Scene Reconstruction",
+   "id": "2405.19671v2",
+   "published": "2024-05-30",
+   "authors": [
+    "Haodong Xiang",
+    "Xinghui Li",
+    "Kai Cheng",
+    "Xiansong Lai",
+    "Wanting Zhang",
+    "Zhichao Liao",
+    "Long Zeng",
+    "Xueping Liu"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "LighthouseGS: Indoor Structure-aware 3D Gaussian Splatting for Panorama-Style Mobile Captures": [
+  {
+   "title": "LighthouseGS: Indoor Structure-aware 3D Gaussian Splatting for Panorama-Style Mobile Captures",
+   "id": "2507.06109v2",
+   "published": "2025-07-08",
+   "authors": [
+    "Seungoh Han",
+    "Jaehoon Jang",
+    "Hyunsu Kim",
+    "Jaeheung Surh",
+    "Junhyung Kwak",
+    "Hyowon Ha",
+    "Kyungdon Joo"
+   ],
+   "comment": "WACV 2026",
+   "journal_ref": ""
+  }
+ ],
+ "Coverage Optimization for Camera View Selection": [
+  {
+   "title": "Coverage Optimization for Camera View Selection",
+   "id": "2604.05259v1",
+   "published": "2026-04-06",
+   "authors": [
+    "Timothy Chen",
+    "Adam Dai",
+    "Maximilian Adang",
+    "Grace Gao",
+    "Mac Schwager"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "An Object-Centered Data Acquisition Method for 3D Gaussian Splatting using Mobile Phones": [
+  {
+   "title": "An Object-Centered Data Acquisition Method for 3D Gaussian Splatting using Mobile Phones",
+   "id": "2604.19216v1",
+   "published": "2026-04-21",
+   "authors": [
+    "Yuezhe Zhang",
+    "Luqian Bai",
+    "Mengting Yu",
+    "Lei Wei",
+    "Shuai Wan",
+    "Yifan Zhang"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "User-in-the-Loop View Sampling with Error Peaking Visualization": [
+  {
+   "title": "User-in-the-Loop View Sampling with Error Peaking Visualization",
+   "id": "2506.21009v1",
+   "published": "2025-06-26",
+   "authors": [
+    "Ayaka Yasunaga",
+    "Hideo Saito",
+    "Shohei Mori"
+   ],
+   "comment": "Accepted at IEEE ICIP 2025, Project Page: https://mediated-reality.github.io/projects/yasunaga_icip25/",
+   "journal_ref": ""
+  }
+ ],
+ "3D Reconstruction by Looking: Instantaneous Blind Spot Detector for Indoor SLAM through Mixed Reality": [
+  {
+   "title": "3D Reconstruction by Looking: Instantaneous Blind Spot Detector for Indoor SLAM through Mixed Reality",
+   "id": "2411.12514v1",
+   "published": "2024-11-19",
+   "authors": [
+    "Hanbeom Chang",
+    "Jongseong Brad Choi",
+    "Chul Min Yeum"
+   ],
+   "comment": "21 pages, 13 figures, 3 tables",
+   "journal_ref": "Advanced Engineering Informatics, 2026, Article 104065"
+  }
+ ],
+ "FisherRF: Active View Selection and Uncertainty Quantification for Radiance Fields using Fisher Information": [
+  {
+   "title": "FisherRF: Active View Selection and Uncertainty Quantification for Radiance Fields using Fisher Information",
+   "id": "2311.17874v2",
+   "published": "2023-11-29",
+   "authors": [
+    "Wen Jiang",
+    "Boshu Lei",
+    "Kostas Daniilidis"
+   ],
+   "comment": "Project page: https://jiangwenpl.github.io/FisherRF/",
+   "journal_ref": ""
+  }
+ ],
+ "NeRF Director: Revisiting View Selection in Neural Volume Rendering": [
+  {
+   "title": "NeRF Director: Revisiting View Selection in Neural Volume Rendering",
+   "id": "2406.08839v1",
+   "published": "2024-06-13",
+   "authors": [
+    "Wenhui Xiao",
+    "Rodrigo Santa Cruz",
+    "David Ahmedt-Aristizabal",
+    "Olivier Salvado",
+    "Clinton Fookes",
+    "Leo Lebrat"
+   ],
+   "comment": "CVPR2024",
+   "journal_ref": ""
+  }
+ ],
+ "Splat-Nav: Safe Real-Time Robot Navigation in Gaussian Splatting Maps": [
+  {
+   "title": "Splat-Nav: Safe Real-Time Robot Navigation in Gaussian Splatting Maps",
+   "id": "2403.02751v3",
+   "published": "2024-03-05",
+   "authors": [
+    "Timothy Chen",
+    "Ola Shorinwa",
+    "Joseph Bruno",
+    "Aiden Swann",
+    "Javier Yu",
+    "Weijia Zeng",
+    "Keiko Nagami",
+    "Philip Dames",
+    "Mac Schwager"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "NavGSim: High-Fidelity Gaussian Splatting Simulator for Large-Scale Navigation": [
+  {
+   "title": "NavGSim: High-Fidelity Gaussian Splatting Simulator for Large-Scale Navigation",
+   "id": "2603.15186v1",
+   "published": "2026-03-16",
+   "authors": [
+    "Jiahang Liu",
+    "Yuanxing Duan",
+    "Jiazhao Zhang",
+    "Minghan Li",
+    "Shaoan Wang",
+    "Zhizheng Zhang",
+    "He Wang"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "The Neverwhere Visual Parkour Benchmark Suite": [
+  {
+   "title": "The Neverwhere Visual Parkour Benchmark Suite",
+   "id": "2609.16443v1",
+   "published": "2026-09-14",
+   "authors": [
+    "Ziyu Chen",
+    "Henghui Bao",
+    "Haoran Chang",
+    "Alan Yu",
+    "Ran Choi",
+    "Kai McClennen",
+    "Gio Huh",
+    "Kevin Yang",
+    "Ri-Zhao Qiu",
+    "Yajvan Ravan",
+    "John J. Leonard",
+    "Xiaolong Wang",
+    "Phillip Isola",
+    "Ge Yang",
+    "Yue Wang"
+   ],
+   "comment": "9 pages, 14 figures. Accepted to IROS 2026. Project page: https://ziyc.github.io/neverwhere-bench/",
+   "journal_ref": ""
+  }
+ ],
+ "Learning Visual Parkour from Generated Images": [
+  {
+   "title": "Learning Visual Parkour from Generated Images",
+   "id": "2411.00083v1",
+   "published": "2024-10-31",
+   "authors": [
+    "Alan Yu",
+    "Ge Yang",
+    "Ran Choi",
+    "Yajvan Ravan",
+    "John Leonard",
+    "Phillip Isola"
+   ],
+   "comment": "17 pages, 19 figures",
+   "journal_ref": ""
+  }
+ ],
+ "AGILE-GS: Anchor-Guided Fast Next-Best-View Selection for Active 3D Gaussian Splatting": [
+  {
+   "title": "AGILE-GS: Anchor-Guided Fast Next-Best-View Selection for Active 3D Gaussian Splatting",
+   "id": "2609.34176v1",
+   "published": "2026-09-28",
+   "authors": [
+    "Amirhossein Mollaei Khass",
+    "Nader Motee"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "MUGSQA: Novel Multi-Uncertainty-Based Gaussian Splatting Quality Assessment Method, Dataset, and Benchmarks": [
+  {
+   "title": "MUGSQA: Novel Multi-Uncertainty-Based Gaussian Splatting Quality Assessment Method, Dataset, and Benchmarks",
+   "id": "2511.06830v3",
+   "published": "2025-11-10",
+   "authors": [
+    "Tianang Chen",
+    "Jian Jin",
+    "Shilv Cai",
+    "Zhuangzi Li",
+    "Weisi Lin"
+   ],
+   "comment": "ICASSP 2026",
+   "journal_ref": ""
+  }
+ ],
+ "VGGT: Visual Geometry Grounded Transformer": [
+  {
+   "title": "VGGT: Visual Geometry Grounded Transformer",
+   "id": "2503.11651v1",
+   "published": "2025-03-14",
+   "authors": [
+    "Jianyuan Wang",
+    "Minghao Chen",
+    "Nikita Karaev",
+    "Andrea Vedaldi",
+    "Christian Rupprecht",
+    "David Novotny"
+   ],
+   "comment": "CVPR 2025, Project Page: https://vgg-t.github.io/",
+   "journal_ref": ""
+  }
+ ],
+ "MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion": [
+  {
+   "title": "MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion",
+   "id": "2409.19152v1",
+   "published": "2024-09-27",
+   "authors": [
+    "Bardienus Duisterhof",
+    "Lojze Zust",
+    "Philippe Weinzaepfel",
+    "Vincent Leroy",
+    "Yohann Cabon",
+    "Jerome Revaud"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "PocketGS: On-Device Training of 3D Gaussian Splatting for High Perceptual Modeling": [
+  {
+   "title": "PocketGS: On-Device Training of 3D Gaussian Splatting for High Perceptual Modeling",
+   "id": "2601.17354v5",
+   "published": "2026-01-24",
+   "authors": [
+    "Wenzhi Guo",
+    "Guangchi Fang",
+    "Shu Yang",
+    "Bing Wang"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "Improving NeRF Quality by Progressive Camera Placement for Unrestricted Navigation in Complex Environments": [
+  {
+   "title": "Improving NeRF Quality by Progressive Camera Placement for Unrestricted Navigation in Complex Environments",
+   "id": "2309.00014v2",
+   "published": "2023-08-24",
+   "authors": [
+    "Georgios Kopanas",
+    "George Drettakis"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "3D Gaussian Splatting for Real-Time Radiance Field Rendering": [
+  {
+   "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+   "id": "2308.04079v1",
+   "published": "2023-08-08",
+   "authors": [
+    "Bernhard Kerbl",
+    "Georgios Kopanas",
+    "Thomas Leimkühler",
+    "George Drettakis"
+   ],
+   "comment": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/",
+   "journal_ref": "ACM Transactions on Graphics, volume 42(4), July 2023"
+  }
+ ],
+ "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis": [
+  {
+   "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+   "id": "2003.08934v2",
+   "published": "2020-03-19",
+   "authors": [
+    "Ben Mildenhall",
+    "Pratul P. Srinivasan",
+    "Matthew Tancik",
+    "Jonathan T. Barron",
+    "Ravi Ramamoorthi",
+    "Ren Ng"
+   ],
+   "comment": "ECCV 2020 (oral). Project page with videos and code: http://tancik.com/nerf",
+   "journal_ref": ""
+  }
+ ],
+ "Nerfstudio: A Modular Framework for Neural Radiance Field Development": [
+  {
+   "title": "Nerfstudio: A Modular Framework for Neural Radiance Field Development",
+   "id": "2302.04264v4",
+   "published": "2023-02-08",
+   "authors": [
+    "Matthew Tancik",
+    "Ethan Weber",
+    "Evonne Ng",
+    "Ruilong Li",
+    "Brent Yi",
+    "Justin Kerr",
+    "Terrance Wang",
+    "Alexander Kristoffersen",
+    "Jake Austin",
+    "Kamyar Salahi",
+    "Abhik Ahuja",
+    "David McAllister",
+    "Angjoo Kanazawa"
+   ],
+   "comment": "Project page at https://nerf.studio",
+   "journal_ref": ""
+  }
+ ],
+ "ARKitScenes: A Diverse Real-World Dataset For 3D Indoor Scene Understanding Using Mobile RGB-D Data": [
+  {
+   "title": "ARKitScenes: A Diverse Real-World Dataset For 3D Indoor Scene Understanding Using Mobile RGB-D Data",
+   "id": "2111.08897v3",
+   "published": "2021-11-17",
+   "authors": [
+    "Gilad Baruch",
+    "Zhuoyuan Chen",
+    "Afshin Dehghan",
+    "Tal Dimry",
+    "Yuri Feigin",
+    "Peter Fu",
+    "Thomas Gebauer",
+    "Brandon Joffe",
+    "Daniel Kurz",
+    "Arik Schwartz",
+    "Elad Shulman"
+   ],
+   "comment": "",
+   "journal_ref": ""
+  }
+ ],
+ "Omnidata: A Scalable Pipeline for Making Multi-Task Mid-Level Vision Datasets from 3D Scans": [
+  {
+   "title": "Omnidata: A Scalable Pipeline for Making Multi-Task Mid-Level Vision Datasets from 3D Scans",
+   "id": "2110.04994v1",
+   "published": "2021-10-11",
+   "authors": [
+    "Ainaz Eftekhar",
+    "Alexander Sax",
+    "Roman Bachmann",
+    "Jitendra Malik",
+    "Amir Zamir"
+   ],
+   "comment": "ICCV 2021: See project website https://omnidata.vision",
+   "journal_ref": ""
+  }
+ ],
+ "Open3D: A Modern Library for 3D Data Processing": [
+  {
+   "title": "Open3D: A Modern Library for 3D Data Processing",
+   "id": "1801.09847v1",
+   "published": "2018-01-30",
+   "authors": [
+    "Qian-Yi Zhou",
+    "Jaesik Park",
+    "Vladlen Koltun"
+   ],
+   "comment": "http://www.open3d.org",
+   "journal_ref": ""
+  }
+ ]
+}
